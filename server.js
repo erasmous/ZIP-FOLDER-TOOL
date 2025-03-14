@@ -148,6 +148,29 @@ app.post("/upload", upload.single("zipFile"), async (req, res) => {
               }
             }
           }
+
+          // ✅ Modify `skinnerConfigs.json` to keep only the relevant object in the correct folder
+          const skinnerConfigPath = path.join(jsonFolderPath, "skinnerConfigs.json");
+
+          if (fs.existsSync(skinnerConfigPath)) {
+            const rawSkinnerData = fs.readFileSync(skinnerConfigPath, "utf8");
+            let skinnerData = JSON.parse(rawSkinnerData);
+
+            if (skinnerData.pages && Array.isArray(skinnerData.pages)) {
+              // ✅ Find the object where "PageName" matches the HTML filename
+              const matchedSkinnerPage = skinnerData.pages.find(page => page.PageName === fileNameWithoutExt);
+
+              if (matchedSkinnerPage) {
+                const newSkinnerConfigPath = path.join(newFolderPath, "assets", "JSON", "skinnerConfigs.json");
+                fs.ensureDirSync(path.dirname(newSkinnerConfigPath)); // Ensure directory exists
+
+                // ✅ Write the filtered object inside the correct folder
+                fs.writeFileSync(newSkinnerConfigPath, JSON.stringify(matchedSkinnerPage, null, 2), "utf8");
+
+              }
+            }
+          }
+
         }
       });
     }
