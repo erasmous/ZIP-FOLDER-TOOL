@@ -1,0 +1,5 @@
+# Ignore the processed folder and all its subfolders/files
+processed/
+
+# Ignore the uploads folder and all its subfolders/files
+uploads/
