@@ -139,7 +139,9 @@ app.post("/upload", upload.single("zipFile"), async (req, res) => {
               const matchedPage = jsonData.pages.find(page => page.PageName === fileNameWithoutExt);
 
               if (matchedPage) {
-                const newStudioConfigPath = path.join(newFolderPath, "studioConfigs.json");
+                const newStudioConfigPath = path.join(newFolderPath, "assets", "JSON", "studioConfigs.json");
+                fs.ensureDirSync(path.dirname(newStudioConfigPath)); // Ensure the directory exists
+
 
                 // ✅ Overwrite JSON to contain only the matched object inside the generated folder
                 fs.writeFileSync(newStudioConfigPath, JSON.stringify(matchedPage, null, 2), "utf8");
