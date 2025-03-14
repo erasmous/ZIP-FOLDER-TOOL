@@ -1,0 +1,564 @@
+<!DOCTYPE html><html><head><title></title><style data-react-tooltip="true">.__react_component_tooltip {
+  border-radius: 3px;
+  display: inline-block;
+  font-size: 13px;
+  left: -999em;
+  opacity: 0;
+  position: fixed;
+  pointer-events: none;
+  transition: opacity 0.3s ease-out;
+  top: -999em;
+  visibility: hidden;
+  z-index: 999;
+}
+.__react_component_tooltip.allow_hover, .__react_component_tooltip.allow_click {
+  pointer-events: auto;
+}
+.__react_component_tooltip::before, .__react_component_tooltip::after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+.__react_component_tooltip.show {
+  opacity: 0.9;
+  margin-top: 0;
+  margin-left: 0;
+  visibility: visible;
+}
+.__react_component_tooltip.place-top::before {
+  bottom: 0;
+  left: 50%;
+  margin-left: -11px;
+}
+.__react_component_tooltip.place-bottom::before {
+  top: 0;
+  left: 50%;
+  margin-left: -11px;
+}
+.__react_component_tooltip.place-left::before {
+  right: 0;
+  top: 50%;
+  margin-top: -9px;
+}
+.__react_component_tooltip.place-right::before {
+  left: 0;
+  top: 50%;
+  margin-top: -9px;
+}
+.__react_component_tooltip .multi-line {
+  display: block;
+  padding: 2px 0;
+  text-align: center;
+}</style><script src="./../../global/JS/blc-pageConfig-global.js"></script><link href="./../../global/CSS/blc-pageConfig-global.css" rel="stylesheet"><script src="/simulations/cores/1.5/4/helpers.js"></script><script src="/simulations/cores/1.5/4/polyfills.js"></script><script src="/simulations/cores/1.5/4/hints.js"></script><script src="/simulations/cores/1.5/4/host.js"></script><script src="/simulations/cores/1.5/4//bpi2.js"></script><link href="/simulations/cores/1.5/4/core.css" rel="stylesheet"></head><body onbeforeunload="if(confirmationOnClose() &amp;&amp; confirmOnClose &amp;&amp; !donotclose &amp;&amp; !sessionEnd) { isBackButtonClicked = false; event.returnValue ='OMXW0011: Désirez vous vraiment fermer ? Toutes les informations seront supprimées'; }" onunload="if (confirmationOnClose() &amp;&amp; popup &amp;&amp; popup.open &amp;&amp; !popup.closed){popup.close();} onSuccessfulSubmit();if(!sessionEnd){closeSession();}" style="overflow: hidden;"><p class="accessAlt" id="accessAlt-0">This site uses some technologies that might reduce or interrupt your browsing experience. If it's the case, you can disable those technologies for a period of one year by clicking on the following link.<a href="javascript:void(0)" title="" id="blc-id-1ve38gj5p0">Disable technologies that may cause accessibility issues.</a></p><meta content="text html;charset="utf-8&quot;&nbsp;http-equiv=&quot;Content-Type&quot;"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><!--<meta http-equiv="X-UA-Compatible" content="IE=10"/>--><!-- <meta http-equiv="X-UA-Compatible" content="IE=8"/>  --><!-- Disables Cache for all browsers --><meta http-equiv="cache-control" content="max-age=0"><meta http-equiv="cache-control" content="no-cache"><meta http-equiv="expires" content="0"><meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT"><meta http-equiv="pragma" content="no-cache"><!--[if lt IE 9]><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8"><![endif]--><link rel="stylesheet" type="text/css" media="all" href="./../assets/css/bell_master.css
+"><!--[if IE 6]><link href="./../assets/css/bell_ie6.css" type="text/css" media="all" rel="stylesheet"><![endif]--><!--[if IE 7]><link href="./../assets/css/bell_ie7.css" type="text/css" media="all" rel="stylesheet"><![endif]--><!--[if IE 8]><link href="./../assets/css/bell_ie8.css" type="text/css" media="all" rel="stylesheet"><![endif]--><link rel="stylesheet" type="text/css" media="all" href="./../assets/css/customOverrides.css
+"><!-- <script type="text/javascript" src="./../assets/js/backfix.min.js"></script> --><!-- <script language="Javascript" src="./../assets/js/dtsPluginStub.js" type="text/javascript"></script>--><!--  <div id="blanket"></div> 
+	
+	var mouse;
+
+	--><style>.noJs h1, .noJs .txtRep, .noJs .buttonize, .noJs .labelOver, .noJs .labelOverAct {visibility: hidden;}.noJs .hScrollBarJs .refLine {height: 65px;visibility: hidden;}.noJs .filterBox {display: none;}</style><div class="wrapper" id="wrapper-0"><!-- Header Starts   --><!-- IBM Confidential Licensed Materials - Property of IBM 6949-31H (c) Copyright IBM Corp. 2006 All Rights Reserved --><!-- IBM Confidential Licensed Materials - Property of IBM 6949-31H (c) Copyright IBM Corp. 2006 All Rights Reserved --><!--	 --><!--[if IE 6]><link rel="stylesheet" type="text/css" media="all" href="./../assets/css/om_ie6.css"><![endif]--><link rel="stylesheet" href="./../assets/css/csspopup.css
+" type="text/css"><!-- retrieve bean update --><!-- <link rel="stylesheet" href="./../assets/css/TemplateStyle.css" type="text/css"> --><div class="wrapHeader" style="width:100%" id="wrapHeader-1"><div class="subWrap header" id="topBanner" style="width:100%; z-index:5"><div class="topNav" id="topNav-3"><div style="float:right" class="omSessionPage" id="omSessionPag-4"><a id="UndoChangesFrench" class="buttonize btnAltAct" href="javascript:void(0)"><span id="blc-id-uc950mjfyh"><span class="accessAlt" id="accessAlt-1"></span>Annuler les changements
+ <span id="blc-id-hzwovrnekp"><!-- --></span></span></a><span class="buttonize btnAltAct" id="linksButton" title=""><span id="blc-id-aa2t4nrqca"> Liens
+							<span id="blc-id-o5c1gc3uuc"><!--  --></span></span></span><!--[if IE 6]><style>
+.omSessionPage .omFlyOutF{	right:480px !important;
+}
+.omSessionPage. omFlyOutE{	right:350px !important;
+}
+.omFlyOutF{	right:430px;
+}
+.omFlyOutE{	right:320px;
+}
+</style><![endif]--><div id="linksSelect" class="flyOut hide omFlyOut omFlyOutE" style="right: 480px;background: rgb(236, 234, 234);padding: 0px;"><ul id="blc-id-vzxrougmni"><li id="blc-id-vh5y9topz7"><a href="javascript:void(0)" id="blc-id-lxah77otj3">CALRS web</a></li><li id="blc-id-216kt8y51v"><a href="javascript:void(0)" id="blc-id-ch9l9lcyvb">Form simplifiés</a></li><li id="blc-id-epq096a0i3"><a href="javascript:void(0)" id="blc-id-7axxje0lv3">iQual</a></li><li id="blc-id-28f3u0nptu"><a href="javascript:void(0)" id="blc-id-cu6vfnw3kz">OMC</a></li><li id="blc-id-p00gxx6coo"><a href="javascript:void(0)" id="blc-id-qm5s4yhhmd">UniSource</a></li></ul></div><!-- BRS43 Seamless Switch Enhancements OFA remarks: Commented below code --><!--[if IE 6]><style>
+						.ofaContent{
+							overflow:hidden !important;
+						}
+						.ofaContent .cBox{
+							height:399px !important;
+							width:780px !important;
+							overflow-y:auto !important;
+							padding:10px 0px !important;
+						}
+					</style><![endif]--><div id="ofaRemarks" class="ofaContent hide"><div class="cBox col10" id="cBoxCol10-7"><p class="lightBoxTitleJs" id="lightBoxTitl-1">Remarques OFA</p><div class="lining" id="lining-8"><table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-color: green;" id="blc-id-0o096wnvil"><tbody><tr id="blc-id-hf5xbx5g1m"><td id="blc-id-fzdqe894sp"><table width="100%" border="0" cellspacing="0" cellpadding="0" id="blc-id-mypv0a8qpn"><tbody><tr id="blc-id-6phtqk4stg"><td bgcolor="#9BBADD" id="blc-id-6bp6d0358h"><table width="100%" border="0" cellspacing="0" cellpadding="2" id="blc-id-dr2rmf4k8g"><tbody><tr bgcolor="#FFFFFF" id="blc-id-jvnhgiskre"><td width="100%" id="blc-id-znj3wd5vgi"><table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#E7F7FF" id="blc-id-064y4gwqj3"><tbody><tr valign="top" id="blc-id-8lwobq48rr"><td width="100%" id="blc-id-fqj2v0ztln"><table width="100%" cellspacing="0" id="blc-id-9vioavkthh"><tbody><tr id="blc-id-st7ktfacom"><td valign="top" width="1%" id="blc-id-9rx66k5kx5"><table border="0" cellspacing="0" id="blc-id-ymv749z8xr"><tbody><tr id="blc-id-3c3yoquc8q"><td id="blc-id-egn4aphijv"><input type="checkbox" id="remark0" name="remark0" value="Sélection NT"></td></tr></tbody></table></td><td valign="top" width="99%" id="blc-id-mpwz9u9u4x"><table border="0" cellspacing="0" id="blc-id-1tjh5ey7le"><tbody><tr id="blc-id-p5d4cw8uyh"><td width="200" valign="top" id="blc-id-j2icca41qh"><table width="200" border="0" id="blc-id-88kov0ymbr"><tbody><tr id="blc-id-nsbl4ayh7s"><td valign="top" id="blc-id-hxz1b2dpj6">Sélection NT</td></tr><tr style="height:6px" id="blc-id-cw4qa8hcjh"><td id="blc-id-0ebcx631mt"></td></tr></tbody></table></td><td width="25%" id="blc-id-ghax1z455y"><div id="remarkDiv0text" style="display:none"><table width="100%" border="0" id="blc-id-k8pnq3qolv"><tbody><tr height="10px" id="blc-id-cfmw1zz10l"><td align="right" height="10px" width="30%" id="blc-id-udv6vfhglg">
+						# de réservation et NT :
+						</td><td height="10px" width="1%" id="blc-id-bduihfhsax"></td><td align="left" width="69%" valign="top" height="10px" id="blc-id-53va3nbpbs"><input type="text" id="remark0text" name="remark0text" value="" size="21" maxlength="21"></td></tr></tbody></table></div></td></tr><tr id="blc-id-fbmh0f5eci"><td width="200" id="blc-id-6qhwqitves"><div id="remarkDiv0" style="display:none"></div></td><td width="70%" id="blc-id-dxwjq916rs"></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr valign="top" id="blc-id-y9c45pgce8"><td width="100%" id="blc-id-3wf2q0arra"><table width="100%" cellspacing="0" id="blc-id-hbshdhbpm8"><tbody><tr id="blc-id-hhqsoxlzhg"><td valign="top" width="1%" id="blc-id-1n9jbhnh1e"><table border="0" cellspacing="0" id="blc-id-n5x4tt3e2l"><tbody><tr id="blc-id-8b5e0lzjon"><td id="blc-id-na9yoakk8m"><input type="checkbox" id="remark1" name="remark1" value="NT déménagé est disponible"></td></tr></tbody></table></td><td valign="top" width="99%" id="blc-id-sqyo40qiqz"><table border="0" cellspacing="0" id="blc-id-pt76x2zop4"><tbody><tr id="blc-id-scx0tcrg4b"><td width="200" valign="top" id="blc-id-sopev1c466"><table width="200" border="0" id="blc-id-ir229n9528"><tbody><tr id="blc-id-e3bavf5vwi"><td valign="top" id="blc-id-66me8x39xk">NT déménagé est disponible</td></tr><tr style="height:6px" id="blc-id-vsq65423ys"><td id="blc-id-f4u6bbnd65"></td></tr></tbody></table></td><td width="25%" id="blc-id-42y8h43e7e"><div id="remarkDiv1text" style="display:none"><table width="100%" border="0" id="blc-id-5f36dr05dl"><tbody><tr height="10px" id="blc-id-1l36k3g3mh"><td align="right" height="10px" width="30%" id="blc-id-6zsdauhtrv">
+						NT de la cde F :
+						</td><td height="10px" width="1%" id="blc-id-5jorwd9456"></td><td align="left" width="69%" valign="top" height="10px" id="blc-id-85nt366sac"><input type="text" id="remark1text" name="remark1text" value="" size="10" maxlength="10"></td></tr></tbody></table></div></td></tr><tr id="blc-id-mdg08etx13"><td width="200" id="blc-id-zcgnz3n2ls"><div id="remarkDiv1" style="display:none"></div></td><td width="70%" id="blc-id-las2agtt8n"></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr valign="top" id="blc-id-rp6e2d5ez2"><td width="100%" id="blc-id-4zux60loax"><table width="100%" cellspacing="0" id="blc-id-0mm8zq6ig0"><tbody><tr id="blc-id-k7lmx5kr1o"><td valign="top" width="1%" id="blc-id-xpql3nff7n"><table border="0" cellspacing="0" id="blc-id-gex78gv5z5"><tbody><tr id="blc-id-xpqxp5lgvk"><td id="blc-id-0hme1h7wwm"><input type="checkbox" id="remark2" name="remark2" value="Ajouter un produit"></td></tr></tbody></table></td><td valign="top" width="99%" id="blc-id-1w8tqd0eyb"><table border="0" cellspacing="0" id="blc-id-5kgmae5zw8"><tbody><tr id="blc-id-01ebx2s867"><td width="200" valign="top" id="blc-id-682syua0ro"><table width="200" border="0" id="blc-id-z8bo2t0r4z"><tbody><tr id="blc-id-dcjuko58dh"><td valign="top" id="blc-id-zdvcf96eyq">Ajouter un produit</td></tr><tr style="height:6px" id="blc-id-7atn27yzvi"><td id="blc-id-3r4ww5nnyu"></td></tr></tbody></table></td><td width="25%" id="blc-id-4bf1dm6db5"><div id="remarkDiv2text" style="display:none"><table width="100%" border="0" id="blc-id-7mvqsb5bmj"><tbody><tr height="10px" id="blc-id-9rvd66rzul"><td align="right" height="10px" width="30%" id="blc-id-gkzbb9o57k"></td><td height="10px" width="1%" id="blc-id-6wr5ojxfvh"></td><td align="left" width="69%" valign="top" height="10px" id="blc-id-d69o9sdd5a"></td></tr></tbody></table></div></td></tr><tr id="blc-id-n34b8he622"><td width="200" id="blc-id-ios37btjji"><div id="remarkDiv2" style="display:none"><table id="blc-id-rk6k4257dc"><tbody><tr valign="top" id="blc-id-cda2mcatat"><td width="1%" id="blc-id-fbtukcgxzm"><input type="checkbox" id="remark2sub0" name="remark2sub0" value="PRHAR"></td><td align="left" width="15%" id="blc-id-17cd4rp2ns">PRHAR</td></tr><tr valign="top" id="blc-id-rxbcxu4dy6"><td width="1%" id="blc-id-zq74zsf99v"><input type="checkbox" id="remark2sub1" name="remark2sub1" value="Trousse internet commuté anglais"></td><td align="left" width="15%" id="blc-id-fzpt1p993i">Trousse internet commuté anglais</td></tr><tr valign="top" id="blc-id-3kwnj7at19"><td width="1%" id="blc-id-04tzkr79iq"><input type="checkbox" id="remark2sub2" name="remark2sub2" value="Trousse internet commuté français"></td><td align="left" width="15%" id="blc-id-lmidyb1nko">Trousse internet commuté français</td></tr><tr valign="top" id="blc-id-7njwysh7s5"><td width="1%" id="blc-id-3ttm5si7id"><input type="checkbox" id="remark2sub3" name="remark2sub3" value="Touch-Tone (TTR)"></td><td align="left" width="15%" id="blc-id-qinqi1uvfb">Touch-Tone (TTR)</td></tr><tr valign="top" id="blc-id-ewbsmch27y"><td width="1%" id="blc-id-1t11dzfwsk"><input type="checkbox" id="remark2sub4" name="remark2sub4" value="Restriction d'interurbain (TDNO1) avec ajout ETR"></td><td align="left" width="15%" id="blc-id-bionbz3f6g">Restriction d'interurbain (TDNO1) avec ajout ETR</td></tr></tbody></table></div></td><td width="70%" id="blc-id-a2w3o48bd1"><div id="remarkDiv2sub0text" style="display:none"><table width="100%" style="height:10px;" border="0" id="blc-id-heuxlxk2j3"><tbody><tr style="height:10px;" id="blc-id-9frx2y0xcq"><td align="right" width="50%" id="blc-id-9qc9d8uybm"></td><td width="1%" id="blc-id-k8qtjcyaot"></td><td align="left" width="39%" id="blc-id-opl8tgp0fc"></td></tr></tbody></table></div><div id="remarkDiv2sub1text" style="display:none"><table width="100%" style="height:10px;" border="0" id="blc-id-e011xbevek"><tbody><tr style="height:10px;" id="blc-id-wrol4ndwvo"><td align="right" width="50%" id="blc-id-6yq9wv3btr"></td><td width="1%" id="blc-id-wa16o8fu8c"></td><td align="left" width="39%" id="blc-id-l0m77w5554"></td></tr></tbody></table></div><div id="remarkDiv2sub2text" style="display:none"><table width="100%" style="height:10px;" border="0" id="blc-id-l1w3qqo2wg"><tbody><tr style="height:10px;" id="blc-id-s8swkembi5"><td align="right" width="50%" id="blc-id-ca83fyyl0e"></td><td width="1%" id="blc-id-viy40f1sx1"></td><td align="left" width="39%" id="blc-id-39gwfm0xd6"></td></tr></tbody></table></div><div id="remarkDiv2sub3text" style="display:none"><table width="100%" style="height:10px;" border="0" id="blc-id-uzp2vmn37r"><tbody><tr style="height:10px;" id="blc-id-hayn2m1e7v"><td align="right" width="50%" id="blc-id-gmfyv2abke"></td><td width="1%" id="blc-id-ymfcnkxr2o"></td><td align="left" width="39%" id="blc-id-0nvu7s7yvg"></td></tr></tbody></table></div><div id="remarkDiv2sub4text" style="display:none"><table width="100%" style="height:10px;" border="0" id="blc-id-rk82o4rj0p"><tbody><tr style="height:10px;" id="blc-id-3a3o5tc9bb"><td align="right" width="50%" id="blc-id-ae19omwbxa"></td><td width="1%" id="blc-id-lxllqy7vy5"></td><td align="left" width="39%" id="blc-id-4zbaanyg50"></td></tr></tbody></table></div></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr valign="top" id="blc-id-fsm0dl0vb3"><td width="100%" id="blc-id-shtay82syf"><table width="100%" cellspacing="0" id="blc-id-44l2zs8yi7"><tbody><tr id="blc-id-pj50waeday"><td valign="top" width="1%" id="blc-id-hobr1vx9wb"><table border="0" cellspacing="0" id="blc-id-w6g1s1c4na"><tbody><tr id="blc-id-kihoxtolbk"><td id="blc-id-ye4e1trzbb"><input type="checkbox" id="remark3" name="remark3" value="Conserver produit existant sur profil du client"></td></tr></tbody></table></td><td valign="top" width="99%" id="blc-id-w3kiexba93"><table border="0" cellspacing="0" id="blc-id-wmn90yv77x"><tbody><tr id="blc-id-ofbpn4q7k9"><td width="200" valign="top" id="blc-id-zdoy6dhyz7"><table width="200" border="0" id="blc-id-s4vgi081vl"><tbody><tr id="blc-id-v4imv9go97"><td valign="top" id="blc-id-t3vzowu1wx">Conserver produit existant sur profil du client</td></tr><tr style="height:6px" id="blc-id-8b79esnhnq"><td id="blc-id-67ky1a5uwl"></td></tr></tbody></table></td><td width="25%" id="blc-id-98tymyxgzm"><div id="remarkDiv3text" style="display:none"><table width="100%" border="0" id="blc-id-ai41kws3gp"><tbody><tr height="10px" id="blc-id-b4ju11k3q3"><td align="right" height="10px" width="30%" id="blc-id-unzvhif5qh"></td><td height="10px" width="1%" id="blc-id-hbpsh9dwwc"></td><td align="left" width="69%" valign="top" height="10px" id="blc-id-vgju6ihesv"></td></tr></tbody></table></div></td></tr><tr id="blc-id-v37bwjcxcn"><td width="200" id="blc-id-ku0cqyaacj"><div id="remarkDiv3" style="display:none"><table id="blc-id-iwc79vprx5"><tbody><tr valign="top" id="blc-id-lpdpdf7kmr"><td width="1%" id="blc-id-x9ibrhla9z"><input type="checkbox" id="remark3sub0" name="remark3sub0" value="TRGM (anglais)"></td><td align="left" width="15%" id="blc-id-bh17rwxoy6">TRGM (anglais)</td></tr></tbody></table></div></td><td width="70%" id="blc-id-6yt94o4v0c"><div id="remarkDiv3sub0text" style="display:none"><table width="100%" style="height:10px;" border="0" id="blc-id-p1kccbn1zn"><tbody><tr style="height:10px;" id="blc-id-9sjabanbqh"><td align="right" width="50%" id="blc-id-5112vb4xrv"></td><td width="1%" id="blc-id-bmww6sqkxj"></td><td align="left" width="39%" id="blc-id-6sx499heig"></td></tr></tbody></table></div></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr valign="top" id="blc-id-35kgkactxh"><td width="100%" id="blc-id-nfs4bynony"><table width="100%" cellspacing="0" id="blc-id-7dgjfgv16x"><tbody><tr id="blc-id-17ukkev9nq"><td valign="top" width="1%" id="blc-id-psugjozbf7"><table border="0" cellspacing="0" id="blc-id-1j848fw36j"><tbody><tr id="blc-id-4row0k3kt3"><td id="blc-id-owblpe89ht"><input type="checkbox" id="remark4" name="remark4" value="Inscription adresse non-publiée"></td></tr></tbody></table></td><td valign="top" width="99%" id="blc-id-i2aqv4dadr"><table border="0" cellspacing="0" id="blc-id-8n94dctp7z"><tbody><tr id="blc-id-extf71e9ib"><td width="200" valign="top" id="blc-id-ees66qk1d5"><table width="200" border="0" id="blc-id-y8k6f7l1xb"><tbody><tr id="blc-id-63d4iytmga"><td valign="top" id="blc-id-atvl10tlqw">Inscription adresse non-publiée</td></tr><tr style="height:6px" id="blc-id-eugzonm12o"><td id="blc-id-h80dcljawe"></td></tr></tbody></table></td><td width="25%" id="blc-id-l17qrq16gl"><div id="remarkDiv4text" style="display:none"><table width="100%" border="0" id="blc-id-h1caojqnr9"><tbody><tr height="10px" id="blc-id-6bycal2r8z"><td align="right" height="10px" width="30%" id="blc-id-j1z36uk84a"></td><td height="10px" width="1%" id="blc-id-d0p01837do"></td><td align="left" width="69%" valign="top" height="10px" id="blc-id-7uhozcfc1n"></td></tr></tbody></table></div></td></tr><tr id="blc-id-e9hgsvxtn7"><td width="200" id="blc-id-hoowad11sa"><div id="remarkDiv4" style="display:none"></div></td><td width="70%" id="blc-id-2wexasfh20"></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr valign="top" id="blc-id-4pogwpayvw"><td width="100%" id="blc-id-d3sra6aiis"><table width="100%" cellspacing="0" id="blc-id-9z6b6cv22v"><tbody><tr id="blc-id-cviukivnm0"><td valign="top" width="1%" id="blc-id-n8icxo55s6"><table border="0" cellspacing="0" id="blc-id-4mg3iwb08e"><tbody><tr id="blc-id-ougals8jjp"><td id="blc-id-vswo5wxbyi"><input type="checkbox" id="remark5" name="remark5" value="Facturation par versement"></td></tr></tbody></table></td><td valign="top" width="99%" id="blc-id-gv5lj8ykwk"><table border="0" cellspacing="0" id="blc-id-fow9j5w7vm"><tbody><tr id="blc-id-5o791fh97l"><td width="200" valign="top" id="blc-id-t9j4mq3a3c"><table width="200" border="0" id="blc-id-6j7l38lx1z"><tbody><tr id="blc-id-gcc16453by"><td valign="top" id="blc-id-csmeavlal5">Facturation par versement</td></tr><tr style="height:6px" id="blc-id-21myawl3fh"><td id="blc-id-djh1qjiwju"></td></tr></tbody></table></td><td width="25%" id="blc-id-pv5n7ijr3y"><div id="remarkDiv5text" style="display:none"><table width="100%" border="0" id="blc-id-1vn0bvpava"><tbody><tr height="10px" id="blc-id-v476rbimfq"><td align="right" height="10px" width="30%" id="blc-id-rh8l0ibij7">
+						Mois :
+						</td><td height="10px" width="1%" id="blc-id-xebaz5zain"></td><td align="left" width="69%" valign="top" height="10px" id="blc-id-rwblmluip5"><input type="text" id="remark5text" name="remark5text" value="" size="1" maxlength="1"></td></tr></tbody></table></div></td></tr><tr id="blc-id-7th8mgrluc"><td width="200" id="blc-id-oe1okjudna"><div id="remarkDiv5" style="display:none"></div></td><td width="70%" id="blc-id-gu2jbzb1b8"></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr valign="top" id="blc-id-9mxj203zj2"><td width="100%" id="blc-id-f1nzi8n2ia"><table width="100%" cellspacing="0" id="blc-id-g51olh4dn9"><tbody><tr id="blc-id-elavgqxubc"><td valign="top" width="1%" id="blc-id-x2whyvplns"><table border="0" cellspacing="0" id="blc-id-26ian89qji"><tbody><tr id="blc-id-lpam6ofgru"><td id="blc-id-y8vm0ssybd"><input type="checkbox" id="remark6" name="remark6" value="Câblage intérieur"></td></tr></tbody></table></td><td valign="top" width="99%" id="blc-id-ujjqzqey96"><table border="0" cellspacing="0" id="blc-id-npslze3w4k"><tbody><tr id="blc-id-nul83976xu"><td width="200" valign="top" id="blc-id-hlge7htfth"><table width="200" border="0" id="blc-id-1xuk8ewbsb"><tbody><tr id="blc-id-mhko416zlt"><td valign="top" id="blc-id-afb86ue8u8">Câblage intérieur</td></tr><tr style="height:6px" id="blc-id-v8f8ds3n2p"><td id="blc-id-r9ri9jx6ix"></td></tr></tbody></table></td><td width="25%" id="blc-id-qvgpt7kwpn"><div id="remarkDiv6text" style="display:none"><table width="100%" border="0" id="blc-id-4tujfae510"><tbody><tr height="10px" id="blc-id-mihzqvzyxy"><td align="right" height="10px" width="30%" id="blc-id-2yr2xdi899"></td><td height="10px" width="1%" id="blc-id-tw7ofhuhag"></td><td align="left" width="69%" valign="top" height="10px" id="blc-id-92c0po3bsd"></td></tr></tbody></table></div></td></tr><tr id="blc-id-o5studurvb"><td width="200" id="blc-id-n4jolfdgc2"><div id="remarkDiv6" style="display:none"><table id="blc-id-2z8olpzh6h"><tbody><tr valign="top" id="blc-id-iiroji2cee"><td width="1%" id="blc-id-a7nvrbi9ni"><input type="checkbox" id="remark6sub0" name="remark6sub0" value="Modifier une prise"></td><td align="left" width="15%" id="blc-id-8hdzk3ed0v">Modifier une prise</td></tr><tr valign="top" id="blc-id-mwgq1uwx1c"><td width="1%" id="blc-id-sgame1j5mv"><input type="checkbox" id="remark6sub1" name="remark6sub1" value="Réparer une prise"></td><td align="left" width="15%" id="blc-id-1cyikb5xj0">Réparer une prise</td></tr></tbody></table></div></td><td width="70%" id="blc-id-ndti6vmb4e"><div id="remarkDiv6sub0text" style="display:none"><table width="100%" style="height:10px;" border="0" id="blc-id-uo38lnhkx5"><tbody><tr style="height:10px;" id="blc-id-ariwjitpai"><td align="right" width="50%" id="blc-id-d1nqpd507j">
+							Quantité ($75 première prise; $50 par prise additionnelle) :
+							</td><td width="1%" id="blc-id-1mnmbso096"></td><td align="left" width="39%" id="blc-id-zvftv5s973"><input type="text" id="remark6sub0text" name="remark6sub0text" value="" size="1" maxlength="1"></td></tr></tbody></table></div><div id="remarkDiv6sub1text" style="display:none"><table width="100%" style="height:10px;" border="0" id="blc-id-jne4j01j52"><tbody><tr style="height:10px;" id="blc-id-47p8qi73ys"><td align="right" width="50%" id="blc-id-5qth323szj">
+							Quantité ($75 première prise; $50 par prise additionnelle) :
+							</td><td width="1%" id="blc-id-v1ddi3f8z7"></td><td align="left" width="39%" id="blc-id-t577hprsvw"><input type="text" id="remark6sub1text" name="remark6sub1text" value="" size="1" maxlength="1"></td></tr></tbody></table></div></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr valign="top" id="blc-id-oq0ykqu135"><td width="100%" id="blc-id-we0y7exhks"><table width="100%" cellspacing="0" id="blc-id-ge3yt5nev3"><tbody><tr id="blc-id-b8s7vril3y"><td valign="top" width="1%" id="blc-id-7vksbri5x1"><table border="0" cellspacing="0" id="blc-id-n2xzhhdiba"><tbody><tr id="blc-id-pp0msiiej7"><td id="blc-id-93l3kdk7ck"><input type="checkbox" id="remark7" name="remark7" value="Exemption assistance annuaire"></td></tr></tbody></table></td><td valign="top" width="99%" id="blc-id-de3rxqr0wy"><table border="0" cellspacing="0" id="blc-id-y2gte0aedk"><tbody><tr id="blc-id-pqhpjgsui8"><td width="200" valign="top" id="blc-id-woflmb651"><table width="200" border="0" id="blc-id-zqafjd3d5z"><tbody><tr id="blc-id-qthnfm9mb1"><td valign="top" id="blc-id-amwywzvxt2">Exemption assistance annuaire</td></tr><tr style="height:6px" id="blc-id-230z2p5s2m"><td id="blc-id-d3cve8zqfl"></td></tr></tbody></table></td><td width="25%" id="blc-id-b269ovx408"><div id="remarkDiv7text" style="display:none"><table width="100%" border="0" id="blc-id-1age3xq38y"><tbody><tr height="10px" id="blc-id-7y4wrdrqok"><td align="right" height="10px" width="30%" id="blc-id-z8m3r1nhvy">
+						Date de naissance (AAMMJJ) :
+						</td><td height="10px" width="1%" id="blc-id-mbxtdhe5pn"></td><td align="left" width="69%" valign="top" height="10px" id="blc-id-asw7oulocg"><input type="text" id="remark7text" name="remark7text" value="" size="6" maxlength="6"></td></tr></tbody></table></div></td></tr><tr id="blc-id-xtvackh1db"><td width="200" id="blc-id-i5k5lb2riu"><div id="remarkDiv7" style="display:none"></div></td><td width="70%" id="blc-id-wspnicxjcu"></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr valign="top" id="blc-id-h2hfqx9t1m"><td width="100%" id="blc-id-x523121wz0"><table width="100%" cellspacing="0" id="blc-id-psxwidxp85"><tbody><tr id="blc-id-e5lb9qnj88"><td valign="top" width="1%" id="blc-id-puqi83yx5e"><table border="0" cellspacing="0" id="blc-id-8xjo44wobe"><tbody><tr id="blc-id-hksg1k3pqh"><td id="blc-id-013yhsxnpz"><input type="checkbox" id="remark8" name="remark8" value="Facturation rétroactive"></td></tr></tbody></table></td><td valign="top" width="99%" id="blc-id-7mb3grc639"><table border="0" cellspacing="0" id="blc-id-jr9r36k83b"><tbody><tr id="blc-id-c81ohnbx8b"><td width="200" valign="top" id="blc-id-5mjcvmpnsh"><table width="200" border="0" id="blc-id-7x79zwdr4u"><tbody><tr id="blc-id-mtedkhrsmj"><td valign="top" id="blc-id-13dps8tddq">Facturation rétroactive</td></tr><tr style="height:6px" id="blc-id-iv98dls2xh"><td id="blc-id-lsl9staq95"></td></tr></tbody></table></td><td width="25%" id="blc-id-tfmdje2zxx"><div id="remarkDiv8text" style="display:none"><table width="100%" border="0" id="blc-id-i7h6kkkp3w"><tbody><tr height="10px" id="blc-id-2qjsw9uv9p"><td align="right" height="10px" width="30%" id="blc-id-bt9eualkyz">
+						Date (AAMMJJ) :
+						</td><td height="10px" width="1%" id="blc-id-tcsp0m7q6q"></td><td align="left" width="69%" valign="top" height="10px" id="blc-id-ippx73j6n4"><input type="text" id="remark8text" name="remark8text" value="" size="6" maxlength="6"></td></tr></tbody></table></div></td></tr><tr id="blc-id-18i3rvgf32"><td width="200" id="blc-id-1iqwdfn0lb"><div id="remarkDiv8" style="display:none"></div></td><td width="70%" id="blc-id-bzlh9qce9r"></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr valign="top" id="blc-id-kppcq2es39"><td width="100%" id="blc-id-vwa910n9k2"><table width="100%" cellspacing="0" id="blc-id-qo8zmlm95h"><tbody><tr id="blc-id-nl6wc1kyct"><td valign="top" width="1%" id="blc-id-a17ylfioit"><table border="0" cellspacing="0" id="blc-id-m4cmz3vefp"><tbody><tr id="blc-id-r52w0ngppm"><td id="blc-id-44fcawvlud"><input type="checkbox" id="remark9" name="remark9" value="Annuler frais de service"></td></tr></tbody></table></td><td valign="top" width="99%" id="blc-id-k5ewxb5q85"><table border="0" cellspacing="0" id="blc-id-irjne6gbdy"><tbody><tr id="blc-id-ddbsm5h4pp"><td width="200" valign="top" id="blc-id-lo3uidrzfn"><table width="200" border="0" id="blc-id-l17wrdakf6"><tbody><tr id="blc-id-jhkuxn8sjg"><td valign="top" id="blc-id-6omps6ytjb">Annuler frais de service</td></tr><tr style="height:6px" id="blc-id-k7x6hso0cc"><td id="blc-id-863jlr1p27"></td></tr></tbody></table></td><td width="25%" id="blc-id-u4pmb1o5q2"><div id="remarkDiv9text" style="display:none"><table width="100%" border="0" id="blc-id-0fzse7bnvg"><tbody><tr height="10px" id="blc-id-uvvrn72pmr"><td align="right" height="10px" width="30%" id="blc-id-yzswwmby2d"></td><td height="10px" width="1%" id="blc-id-2dwrmjgg6v"></td><td align="left" width="69%" valign="top" height="10px" id="blc-id-6l01l4jpxy"></td></tr></tbody></table></div></td></tr><tr id="blc-id-j1c24zncg6"><td width="200" id="blc-id-cpf4papj5h"><div id="remarkDiv9" style="display:none"><table id="blc-id-qfov5cpehu"><tbody><tr valign="top" id="blc-id-et9apy0fb1"><td width="1%" id="blc-id-bgkz4303n4"><input type="checkbox" id="remark9sub0" name="remark9sub0" value="Feu (LIN 49.95$)"></td><td align="left" width="15%" id="blc-id-i5oj0ga6f8">Feu (LIN 49.95$)</td></tr><tr valign="top" id="blc-id-jcc8qo9f9c"><td width="1%" id="blc-id-mbdhrzh3f0"><input type="checkbox" id="remark9sub1" name="remark9sub1" value="Inondation (LIN 49.95$)"></td><td align="left" width="15%" id="blc-id-dfkchoh329">Inondation (LIN 49.95$)</td></tr><tr valign="top" id="blc-id-lwglm1ox5s"><td width="1%" id="blc-id-2gr1hr3c5t"><input type="checkbox" id="remark9sub2" name="remark9sub2" value="ErrCie (AI 25$)"></td><td align="left" width="15%" id="blc-id-hatfmqktp4">ErrCie (AI 25$)</td></tr><tr valign="top" id="blc-id-fyqes5xwo8"><td width="1%" id="blc-id-h3gr237zx6"><input type="checkbox" id="remark9sub3" name="remark9sub3" value="ErrAnn (AI 25$)"></td><td align="left" width="15%" id="blc-id-dc8zo05im4">ErrAnn (AI 25$)</td></tr><tr valign="top" id="blc-id-kqsoibp3af"><td width="1%" id="blc-id-f72jbs7n40"><input type="checkbox" id="remark9sub4" name="remark9sub4" value="ErrCie (LIN 49.95$)"></td><td align="left" width="15%" id="blc-id-ny9qivp395">ErrCie (LIN 49.95$)</td></tr><tr valign="top" id="blc-id-76aw4qenr0"><td width="1%" id="blc-id-q8vonlsnzy"><input type="checkbox" id="remark9sub5" name="remark9sub5" value="ErrCie (IAI 75$)"></td><td align="left" width="15%" id="blc-id-uv7q9409q6">ErrCie (IAI 75$)</td></tr><tr valign="top" id="blc-id-d5171lnlsq"><td width="1%" id="blc-id-lvf9lg06gd"><input type="checkbox" id="remark9sub6" name="remark9sub6" value="ErrCie (AAI 50$)"></td><td align="left" width="15%" id="blc-id-l8z2r4fmj6">ErrCie (AAI 50$)</td></tr><tr valign="top" id="blc-id-swuj5y93jr"><td width="1%" id="blc-id-egqb9092sh"><input type="checkbox" id="remark9sub7" name="remark9sub7" value="Frais de résiliation"></td><td align="left" width="15%" id="blc-id-x0jcjfwfe7">Frais de résiliation</td></tr></tbody></table></div></td><td width="70%" id="blc-id-cbfu5rpvh6"><div id="remarkDiv9sub0text" style="display:none"><table width="100%" style="height:10px;" border="0" id="blc-id-j4vekysj26"><tbody><tr style="height:10px;" id="blc-id-vjo1xcp7ea"><td align="right" width="50%" id="blc-id-s5v23034d"></td><td width="1%" id="blc-id-uuu5soqy86"></td><td align="left" width="39%" id="blc-id-vzv9b1dyw4"></td></tr></tbody></table></div><div id="remarkDiv9sub1text" style="display:none"><table width="100%" style="height:10px;" border="0" id="blc-id-fne0sm2y7j"><tbody><tr style="height:10px;" id="blc-id-4oni4ue4hr"><td align="right" width="50%" id="blc-id-wrycjb9zfo"></td><td width="1%" id="blc-id-9j05mwvzuk"></td><td align="left" width="39%" id="blc-id-5ndjkzqw46"></td></tr></tbody></table></div><div id="remarkDiv9sub2text" style="display:none"><table width="100%" style="height:10px;" border="0" id="blc-id-rdqopri77"><tbody><tr style="height:10px;" id="blc-id-riqw06ifb4"><td align="right" width="50%" id="blc-id-n7a648tsnt"></td><td width="1%" id="blc-id-hvhese8bhv"></td><td align="left" width="39%" id="blc-id-8p6pz1zz2p"></td></tr></tbody></table></div><div id="remarkDiv9sub3text" style="display:none"><table width="100%" style="height:10px;" border="0" id="blc-id-udhh9vcsnh"><tbody><tr style="height:10px;" id="blc-id-jzl4xc09tw"><td align="right" width="50%" id="blc-id-pk6x2aymkq"></td><td width="1%" id="blc-id-h8u7hk6h1e"></td><td align="left" width="39%" id="blc-id-2kwlkpunjn"></td></tr></tbody></table></div><div id="remarkDiv9sub4text" style="display:none"><table width="100%" style="height:10px;" border="0" id="blc-id-efesq7yq8l"><tbody><tr style="height:10px;" id="blc-id-2ondy6dufw"><td align="right" width="50%" id="blc-id-w7equpbmuf"></td><td width="1%" id="blc-id-m2do926tx7"></td><td align="left" width="39%" id="blc-id-xd81ktt0ea"></td></tr></tbody></table></div><div id="remarkDiv9sub5text" style="display:none"><table width="100%" style="height:10px;" border="0" id="blc-id-o04ncdlnrk"><tbody><tr style="height:10px;" id="blc-id-pfzlk59zkf"><td align="right" width="50%" id="blc-id-za2it0z8uf"></td><td width="1%" id="blc-id-r3e5bsmtc6"></td><td align="left" width="39%" id="blc-id-alyxfb1r43"></td></tr></tbody></table></div><div id="remarkDiv9sub6text" style="display:none"><table width="100%" style="height:10px;" border="0" id="blc-id-dvidhgeoli"><tbody><tr style="height:10px;" id="blc-id-yn2gjeilww"><td align="right" width="50%" id="blc-id-yxych6vs9y"></td><td width="1%" id="blc-id-yxv9ir7ze5"></td><td align="left" width="39%" id="blc-id-lrxotlkm9f"></td></tr></tbody></table></div><div id="remarkDiv9sub7text" style="display:none"><table width="100%" style="height:10px;" border="0" id="blc-id-3skje6b003"><tbody><tr style="height:10px;" id="blc-id-39n7mqgop3"><td align="right" width="50%" id="blc-id-ok1lzqkqhq"></td><td width="1%" id="blc-id-p5k9e420vs"></td><td align="left" width="39%" id="blc-id-k3ass6cogs"></td></tr></tbody></table></div></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr valign="top" id="blc-id-3q1uqqyxw6"><td width="100%" id="blc-id-jxuxnk188a"><table width="100%" cellspacing="0" id="blc-id-4yrvl9iooa"><tbody><tr id="blc-id-z2alblawsq"><td valign="top" width="1%" id="blc-id-5c8u8okzks"><table border="0" cellspacing="0" id="blc-id-ntm6bbxlz5"><tbody><tr id="blc-id-c3kam867i6"><td id="blc-id-nq0t5djm5p"><input type="checkbox" id="remark10" name="remark10" value="Co-usager additionnel"></td></tr></tbody></table></td><td valign="top" width="99%" id="blc-id-swpevokctg"><table border="0" cellspacing="0" id="blc-id-6ih59oql1b"><tbody><tr id="blc-id-z6ydt6pxts"><td width="200" valign="top" id="blc-id-qkcsi2fne1"><table width="200" border="0" id="blc-id-96oyqlsc4y"><tbody><tr id="blc-id-q3deivcxgc"><td valign="top" id="blc-id-cgk8wq9m02">Co-usager additionnel</td></tr><tr style="height:6px" id="blc-id-ln8czv8cbl"><td id="blc-id-431nxpsyn1"></td></tr></tbody></table></td><td width="25%" id="blc-id-u3jqroeasp"><div id="remarkDiv10text" style="display:none"><table width="100%" border="0" id="blc-id-6ywj865cuy"><tbody><tr height="10px" id="blc-id-axlu8chx8h"><td align="right" height="10px" width="30%" id="blc-id-6bppfqt3g6">
+						Nom :
+						</td><td height="10px" width="1%" id="blc-id-67iajk3n2z"></td><td align="left" width="69%" valign="top" height="10px" id="blc-id-m7b4c6debg"><input type="text" id="remark10text" name="remark10text" value="" size="50" maxlength="50"></td></tr></tbody></table></div></td></tr><tr id="blc-id-t8cdv20y3f"><td width="200" id="blc-id-j68vsqlay0"><div id="remarkDiv10" style="display:none"></div></td><td width="70%" id="blc-id-jt1u08l35s"></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr valign="top" id="blc-id-t901nzg1ie"><td width="100%" id="blc-id-na0r31ubcd"><table width="100%" cellspacing="0" id="blc-id-pffegk6epn"><tbody><tr id="blc-id-p50r8a9wzz"><td valign="top" width="1%" id="blc-id-2h5dyg83tw"><table border="0" cellspacing="0" id="blc-id-7ara81k7bl"><tbody><tr id="blc-id-q2wyt7n7rb"><td id="blc-id-632hxzzek7"><input type="checkbox" id="remark11" name="remark11" value="Rendez-vous avec visite requise"></td></tr></tbody></table></td><td valign="top" width="99%" id="blc-id-dersk6xquo"><table border="0" cellspacing="0" id="blc-id-lvv6gva5iy"><tbody><tr id="blc-id-nrlzzxm2zg"><td width="200" valign="top" id="blc-id-dosqycso5g"><table width="200" border="0" id="blc-id-4t5zfhhbzx"><tbody><tr id="blc-id-ullmsrn5mn"><td valign="top" id="blc-id-h01o3mvde">Rendez-vous avec visite requise</td></tr><tr style="height:6px" id="blc-id-aw6xq6wafj"><td id="blc-id-3622j6qv1i"></td></tr></tbody></table></td><td width="25%" id="blc-id-qr79whk8w9"><div id="remarkDiv11text" style="display:none"><table width="100%" border="0" id="blc-id-bx3jlzmzdw"><tbody><tr height="10px" id="blc-id-7n3tggvd33"><td align="right" height="10px" width="30%" id="blc-id-ohrsilhdr3">
+						Raison :
+						</td><td height="10px" width="1%" id="blc-id-tp6e773bzb"></td><td align="left" width="69%" valign="top" height="10px" id="blc-id-3ptrhyyzjm"><input type="text" id="remark11text" name="remark11text" value="" size="50" maxlength="100"></td></tr></tbody></table></div></td></tr><tr id="blc-id-5nuxuom0mf"><td width="200" id="blc-id-qd64inhpci"><div id="remarkDiv11" style="display:none"></div></td><td width="70%" id="blc-id-krwa9f060b"></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr valign="top" id="blc-id-w6omvlns6d"><td width="100%" id="blc-id-9npqqzmep5"><table width="100%" cellspacing="0" id="blc-id-68mleydvt7"><tbody><tr id="blc-id-f1ufymxjch"><td valign="top" width="1%" id="blc-id-f5eylhhx55"><table border="0" cellspacing="0" id="blc-id-23pbjt4ksp"><tbody><tr id="blc-id-t8cc7nhl1t"><td id="blc-id-33v4yl3iqu"><input type="checkbox" id="remark12" name="remark12" value="Retour à Bell interurbain (déménagement seulement)"></td></tr></tbody></table></td><td valign="top" width="99%" id="blc-id-e5rcjsjfxt"><table border="0" cellspacing="0" id="blc-id-ntjt7qh9xq"><tbody><tr id="blc-id-rrtirx6h6b"><td width="200" valign="top" id="blc-id-8687xsltbf"><table width="200" border="0" id="blc-id-7y0hlkgm0w"><tbody><tr id="blc-id-mbych82y7g"><td valign="top" id="blc-id-yoa4s2r1g8">Retour à Bell interurbain (déménagement seulement)</td></tr><tr style="height:6px" id="blc-id-0ejepzw8xu"><td id="blc-id-a6i9u6jz7n"></td></tr></tbody></table></td><td width="25%" id="blc-id-hu57lac526"><div id="remarkDiv12text" style="display:none"><table width="100%" border="0" id="blc-id-mcvrbxqo8e"><tbody><tr height="10px" id="blc-id-otj7xsjtc9"><td align="right" height="10px" width="30%" id="blc-id-o2iexe760b"></td><td height="10px" width="1%" id="blc-id-nddocxqs0y"></td><td align="left" width="69%" valign="top" height="10px" id="blc-id-kjy4izd12h"></td></tr></tbody></table></div></td></tr><tr id="blc-id-7poc6uxlmf"><td width="200" id="blc-id-e10v2r67lu"><div id="remarkDiv12" style="display:none"></div></td><td width="70%" id="blc-id-boq0b4t2pj"></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr valign="top" id="blc-id-z3m2cwwadf"><td width="100%" id="blc-id-v4bb6i4q7m"><table width="100%" cellspacing="0" id="blc-id-ve5193epth"><tbody><tr id="blc-id-x69nxah2cy"><td valign="top" width="1%" id="blc-id-p8su9o9q0w"><table border="0" cellspacing="0" id="blc-id-vponrb4w5b"><tbody><tr id="blc-id-mmnwcufdjp"><td id="blc-id-3b3hdqvlbn"><input type="checkbox" id="remark13" name="remark13" value="CPS impartiteur interurbain"></td></tr></tbody></table></td><td valign="top" width="99%" id="blc-id-5hmszljpc0"><table border="0" cellspacing="0" id="blc-id-k9s0vh3ra4"><tbody><tr id="blc-id-aajc0y2g8p"><td width="200" valign="top" id="blc-id-w4wk1n3mg2"><table width="200" border="0" id="blc-id-mlolchunhu"><tbody><tr id="blc-id-9idddxveru"><td valign="top" id="blc-id-4u9qb8rwa1">CPS impartiteur interurbain</td></tr><tr style="height:6px" id="blc-id-7k46lxur82"><td id="blc-id-h9fewmfu8u"></td></tr></tbody></table></td><td width="25%" id="blc-id-67flaf9llq"><div id="remarkDiv13text" style="display:none"><table width="100%" border="0" id="blc-id-u25reilxkn"><tbody><tr height="10px" id="blc-id-c6kpawzqxg"><td align="right" height="10px" width="30%" id="blc-id-td4wcmgg12">
+						Promo Interurbain :
+						</td><td height="10px" width="1%" id="blc-id-p24gx6ypal"></td><td align="left" width="69%" valign="top" height="10px" id="blc-id-kb6szm39v8"><input type="text" id="remark13text" name="remark13text" value="" size="50" maxlength="100"></td></tr></tbody></table></div></td></tr><tr id="blc-id-tcmtnhinuv"><td width="200" id="blc-id-cinvn697wg"><div id="remarkDiv13" style="display:none"></div></td><td width="70%" id="blc-id-aatpqv7lhz"></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr valign="top" id="blc-id-spfhg9z3ro"><td width="100%" id="blc-id-02kh61ogsc"><table width="100%" cellspacing="0" id="blc-id-rczlj2nkx0"><tbody><tr id="blc-id-x4rnp2dqxf"><td valign="top" width="1%" id="blc-id-qt0ml416yc"><table border="0" cellspacing="0" id="blc-id-fd6i3fegcm"><tbody><tr id="blc-id-1h4j3aciub"><td id="blc-id-pg2ag0dcuc"><input type="checkbox" id="remark14" name="remark14" value="Transfert des NT additionnels à Bell"></td></tr></tbody></table></td><td valign="top" width="99%" id="blc-id-msdzbe70ts"><table border="0" cellspacing="0" id="blc-id-3lovwyyjtv"><tbody><tr id="blc-id-sfdpjej65"><td width="200" valign="top" id="blc-id-zyqrcfiaag"><table width="200" border="0" id="blc-id-yhyv4dssqz"><tbody><tr id="blc-id-yd7j3rkczp"><td valign="top" id="blc-id-1q0yj2n8g2">Transfert des NT additionnels à Bell</td></tr><tr style="height:6px" id="blc-id-751c4m7kd3"><td id="blc-id-lnpbsp8d9t"></td></tr></tbody></table></td><td width="25%" id="blc-id-1r1o9zg9wk"><div id="remarkDiv14text" style="display:none"><table width="100%" border="0" id="blc-id-cee21jmxqf"><tbody><tr height="10px" id="blc-id-dyfg56zwfe"><td align="right" height="10px" width="30%" id="blc-id-1qf5rh0rhb"></td><td height="10px" width="1%" id="blc-id-myfrjzko14"></td><td align="left" width="69%" valign="top" height="10px" id="blc-id-cxmcsw15z"></td></tr></tbody></table></div></td></tr><tr id="blc-id-cyd3phz328"><td width="200" id="blc-id-zp2yg0q5uv"><div id="remarkDiv14" style="display:none"><table id="blc-id-3k5mo52zpd"><tbody><tr valign="top" id="blc-id-ksb2yhh1ej"><td width="1%" id="blc-id-af3t355em0"><input type="checkbox" id="remark14sub0" name="remark14sub0" value="Transfer du 2em NT"></td><td align="left" width="15%" id="blc-id-dc4ulwu90e">Transfer du 2em NT</td></tr><tr valign="top" id="blc-id-0gb905xq67"><td width="1%" id="blc-id-ercfs2pnev"><input type="checkbox" id="remark14sub1" name="remark14sub1" value="Transfer du 3em NT"></td><td align="left" width="15%" id="blc-id-uoexc6tci0">Transfer du 3em NT</td></tr></tbody></table></div></td><td width="70%" id="blc-id-3hmpkk015n"><div id="remarkDiv14sub0text" style="display:none"><table width="100%" style="height:10px;" border="0" id="blc-id-tmmwg4d3mk"><tbody><tr style="height:10px;" id="blc-id-6ntm3sgxdo"><td align="right" width="50%" id="blc-id-cb60pg4i3w">
+							NT :
+							</td><td width="1%" id="blc-id-1e4wqode31"></td><td align="left" width="39%" id="blc-id-4ck83n6zmt"><input type="text" id="remark14sub0text" name="remark14sub0text" value="" size="10" maxlength="10"></td></tr></tbody></table></div><div id="remarkDiv14sub1text" style="display:none"><table width="100%" style="height:10px;" border="0" id="blc-id-qjqwqiadmm"><tbody><tr style="height:10px;" id="blc-id-syddn1y8ah"><td align="right" width="50%" id="blc-id-nqg54d8rhv">
+							NT :
+							</td><td width="1%" id="blc-id-ucrco1416b"></td><td align="left" width="39%" id="blc-id-973p790kr9"><input type="text" id="remark14sub1text" name="remark14sub1text" value="" size="10" maxlength="10"></td></tr></tbody></table></div></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr valign="top" id="blc-id-n3q1lxkekc"><td width="100%" id="blc-id-a4vg4bip69"><table width="100%" cellspacing="0" id="blc-id-c7x9oz85ck"><tbody><tr id="blc-id-ir2gcngq9q"><td valign="top" width="1%" id="blc-id-csvqjqeskp"><table border="0" cellspacing="0" id="blc-id-zeftp4xm1m"><tbody><tr id="blc-id-pugd6tyxtd"><td id="blc-id-3jo2fadoao"><input type="checkbox" id="remark15" name="remark15" value="Frais de déclassement pour l'augmentation de tarif FBI"></td></tr></tbody></table></td><td valign="top" width="99%" id="blc-id-r21palkper"><table border="0" cellspacing="0" id="blc-id-ncc4r1kg5b"><tbody><tr id="blc-id-m9s5q0wfh7"><td width="200" valign="top" id="blc-id-fka7bqeznk"><table width="200" border="0" id="blc-id-fo6sq950qh"><tbody><tr id="blc-id-qum8g80076"><td valign="top" id="blc-id-2ozewu8lh6">Frais de déclassement pour l'augmentation de tarif FBI</td></tr><tr style="height:6px" id="blc-id-asxmstz5jp"><td id="blc-id-8czd7k416t"></td></tr></tbody></table></td><td width="25%" id="blc-id-sel44bjkgn"><div id="remarkDiv15text" style="display:none"><table width="100%" border="0" id="blc-id-ze7ysxvt64"><tbody><tr height="10px" id="blc-id-7q1ve1s59r"><td align="right" height="10px" width="30%" id="blc-id-66cfs113ls"></td><td height="10px" width="1%" id="blc-id-49uc2n4t19"></td><td align="left" width="69%" valign="top" height="10px" id="blc-id-7v4d1qdsgg"></td></tr></tbody></table></div></td></tr><tr id="blc-id-zwu22sqz3d"><td width="200" id="blc-id-xr8fwuvgqi"><div id="remarkDiv15" style="display:none"></div></td><td width="70%" id="blc-id-ahum83sc4x"></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table><div class="lining" id="lining-59"><div class="frmElmnt frmAlt fBtn" style="float:right" id="frmElmntFrm-60"><div class="fWidget" id="fWidget-61"><a id="saveButton" class="buttonize btnDftAct lightBoxCloseJs" href="javascript:void(0)"><span id="blc-id-xmtfaoj2w6">Sauver<span id="blc-id-36skv0rkxp"><!-- --></span></span></a><div class="clearer" id="clearer-62"></div></div><div class="clearer" id="clearer-63"></div></div></div></div><div class="cBoxExtra1" id="cBoxExtra1-64"><!-- --></div><div class="cBoxExtra2" id="cBoxExtra2-65"><!-- --></div><div class="cBoxExtra3" id="cBoxExtra3-66"><div class="cBoxExtra4" id="cBoxExtra4-67"><!-- --></div></div><div class="cBoxExtra5" id="cBoxExtra5-68"><div class="cBoxExtra6" id="cBoxExtra6-69"><!-- --></div></div></div></div><!--  BRS 36.0 Commenting the below code to hide multimax button in the header --><!-- 					<a class="buttonize btnAltAct" href="javascript:void(0)" --><!-- 								key="jsp.initiateOrderDisplay.MultiMaxButton" /><span></span></span> --><!-- 					</a> --><!-- <li id="topNavLanguageItem" ><a href="javascript:void(0)" onclick="window.open('/OrderMax/help.htm','HELP','width=600,height=400,statusbar=false,resizable=yes,left=150,top=150, scrollbars=yes');return false;"><span class="accessAlt">&nbsp;</span>Help</a></li> --><!-- Added for BRS 11 to disable the START OVER button for retail user --><span class="buttonize btnAltAct" id="StartOverButton"><span id="blc-id-k0gztt8jfo">Recommencer <span id="blc-id-rj6eaxshp5"><!-- --></span></span></span><span class="buttonize btnAltAct" id="buttonizeBt-11"><span id="blc-id-uw2anhp09j">Fermer<span id="blc-id-ctcdt8k0e9"><!-- --></span></span></span><!-- --><!-- margin-top: -5px; --><img src="./../assets/img/OrderMAXLogo_FR.gif" border="0"><div class="clearer" id="clearer-70"><!-- --></div></div></div><div class="clearer" id="clearer-71"><!-- --></div></div><!-- Address box starts --><div class="wrapper omCustContent" id="topBanner" style="z-index:1; position:inherit"><div class="col2" id="col2-73"><div id="primNavHomeButton"><!-- BRS58- Butterfly(NDA)-Updated Brand URL for Virgin --><a class="bellHome" title="Home" href="javascript:void(0)" id="bellHome-8">Home</a></div></div><div class="col10 omNavCust firstAddress" id="col10OmNavC-75"><div id="blc-id-q0ufmntglh"><span id="blc-id-56yn7sqrho"><b>Adresse de service:
+	</b></span><span id="blc-id-2wjwpmsdg3">33 LOYALIST CR, SOUTH STORMONT, ON, K0C1M0
+	</span></div></div><div class="col3 omNavCust" id="col3OmNavCu-77"><div id="blc-id-dm8spwmgz0"><span id="blc-id-bljs0qlz85"><b>Date:</b></span>	30 avril 2024
+	<span id="blc-id-nhdrw7sis6"></span></div><div id="blc-id-0cumyf2xlh"><b>Type de commande:</b>	Changement
+			</div></div><div class="col4 omNavCust" id="col4OmNavCu-80"><div id="blc-id-7eksj5ehnc"><span id="blc-id-yycn6dl8t0"><b>Client:</b></span><span id="blc-id-4st1hrovoc">	JAJ MAN
+	</span></div><div id="blc-id-0l10djtoo9"><span id="blc-id-0v4bnta8ih"><b>Originée par:</b></span><span id="blc-id-7hdnrtul5e">Centres d'Appels
+	</span></div></div><div class="col3 colLast omNavCust" style="top: -20px; padding-left: 40px;" id="col3ColLast-83"><div id="blc-id-n6mrx72vwv"><span id="blc-id-1zzg2ie0t0"><b>Numéro de commande:</b></span><span id="blc-id-8058zs7jfb">BC5R894T
+	</span></div><!-- BRS33 SQ defect fix 3002 Expiry Date--><!-- End for defect fix 3002 --><!-- Phone Number --></div><div class="clearer" id="clearer-85"><!-- --></div><div class="omCustContentExtra" id="omCustConten-86"></div></div></div><!-- Address box ends --><!-- BRS28 LightBox CR --><div id="startOverClose" class="hide"><div class="cBox" id="cBox-88"><div class="lbLining" id="lbLining-89"><div class="lining" id="lining-90"><p class="lightBoxTitleJs" id="lightBoxTitl-2">Confirmation   </p><div id="messageId"></div><div class="clearer" id="clearer-92"><!-- --></div></div></div><div class="lining processAction" id="liningProce-93"><div class="frmElmnt frmAlt fBtn" id="frmElmntFrm-94"><div class="fWidget" id="fWidget-95"><a href="javascript:void(0)" class="lightBoxCloseJs buttonize btnDftAct" id="lightBoxClos-9"><span id="blc-id-vbat6sakhh">Non<span id="blc-id-8ctmakyx1g"><!--  --></span></span></a><a href="javascript:void(0)" class="lightBoxCloseJs buttonize btnDftAct" id="lightBoxClos-10"><span id="blc-id-015f27l6dr">Oui<span id="blc-id-7zmy1tepya"><!--  --></span></span></a><html:image styleclass="hide" srckey="jsp.common.button_yes_crs" property="yesButton" border="0"><html:image styleclass="hide" srckey="jsp.common.button_no_crs" property="noButton" border="0"></html:image></html:image></div><div class="clearer" id="clearer-96"></div></div><div class="clearer" id="clearer-97"></div></div><div class="cBoxExtra1" id="cBoxExtra1-98"><!-- --></div><div class="cBoxExtra2" id="cBoxExtra2-99"><!-- --></div><div class="cBoxExtra3" id="cBoxExtra3-100"><div class="cBoxExtra4" id="cBoxExtra4-101"><!-- --></div></div><div class="cBoxExtra5" id="cBoxExtra5-102"><div class="cBoxExtra6" id="cBoxExtra6-103"><!-- --></div></div></div></div><!-- BRS28 LightBox CR --><!-- End Header   --><div class="wrapMain" id="wrapMain-104"><div class="subWrap main" style="width:100%" id="subWrapMain-105"><div class="content" id="content-106"><div class="cWrap" id="cWrap-107"><!-- Prasad Bolla: Need to revisit this code --><div id="dlmsg" class="cBox" style="display: none;"><div class="warning" id="warning-109"><div class="lining" id="lining-110"><div id="userMessagesId" class="userMsg"><h2 class="hType4"><!-- ---></h2><span class="omLocalMsg" id="omLocalMsg-28">OMXW0005: L''inscription du nom du client pour l''annuaire doit comporter l''utilisation des minuscules et des MAJUSCULES. (par exemple, Jean M Tremblay) (OM60201).</span></div></div></div><div class="cBoxExtra1" id="cBoxExtra1-112"><!-- --></div><div class="cBoxExtra2" id="cBoxExtra2-113"><!-- --></div><div class="cBoxExtra3" id="cBoxExtra3-114"><div class="cBoxExtra4" id="cBoxExtra4-115"><!-- --></div></div><div class="cBoxExtra5" id="cBoxExtra5-116"><div class="cBoxExtra6" id="cBoxExtra6-117"><!-- --></div></div></div><!-- Content Starts --><link type="text/css" rel="stylesheet" href="./../assets/css/main.css"><div id="container" style="display: none;"><div class="pgLoader" id="pgLoader-119"><div class="pgLoaderDesc" id="pgLoaderDesc-120">
+		Chargement de données. Veuillez patienter.
+		</div><span class="pgLoaderExtra1" id="pgLoaderExtr-29"></span></div></div><span id="ConfigProductForm"><div id="blc-id-5d3eyh359g"></div></span><div id="root"><div class="App" id="App-123"><style>ul,li{background:none!important};</style><div style="min-height: 100vh;" id="blc-id-jjkon2z8ih"><div class="main-container container liquid-container" style="margin-bottom: 100px;" id="mainContain-125"><div class="mainSection margin-60-bottom" id="mainSection--126"><div class="main-header" id="mainHeader-127"><div class="main-header" id="mainHeader-128"><span class=" mobility-heading-fr bellSlim txtSize30" id="MobilityHe-30">Configuration de Mobilité</span><a class="btn-back-arrow linksRightBorder disablefocus mobilityHeaderLinks txtNoUnderline disable-links" href="javascript:void(0)" role="button" id="btnBackArr-11"><span id="blc-id-rhod8h0id5">Annuler les changements</span><img src="./../assets/img/icn_Respond-1@1x.475f2de6.svg" alt="" class="cursor-pointer margin-5-left"></a><a href="javascript:void(0)" class="btn-back-arrow disablefocus mobilityHeaderLinks txtNoUnderline linksRightBorder" role="button" id="btnBackArr-12"><span class="icon txtSize20" aria-hidden="true" id="iconTxtSize-32"></span><span class="lineHeight22" id="lineHeight22-33">Retour à la page principale</span><img src="./../assets/img/icn_logout@1x.49703143.svg" alt="" class="cursor-pointer margin-5-left txtBlack"></a><span data-tip="This change will leave other lines of Share Group without data. You must also change the rate plan of one or all of the following lines to avoid incurring pay per use data charges.<br/>" data-for="_tootltip1" data-place="bottom" data-effect="solid" data-type="light" data-multiline="true" data-text-color="black" id="blc-id-yer0q8db9i"><a class="btn-back-arrow disablefocus mobilityHeaderLinks txtNoUnderline disable-links" href="javascript:void(0)" role="button" id="btnBackArr-13"><span id="blc-id-0j7ipvliih">Confirmer la commande</span><img src="./../assets/img/icn_disabled_apply.b9304eaf.svg" alt="" class="cursor-pointer margin-5-left"></a></span></div></div><div class="mobility-subs" id="mobilitySub-129"><div class="mobility-subscriber" id="mobilitySub-130"><div class="mobility-accordion" id="mobilityAcc-131"><div class="mobility-accordion--header flex flex-row" id="mobilityAcc-132"><span class="flex flex-grow" id="flexFlexGr-36"><span class="mobility-accordion--header__title bellSlim txtLeft txtSize24 txtBlack " id="mobilityAcc-37"><p class="nameDetails txtSize24 bellSlimRegular" id="nameDetails--3"><span id="blc-id-wmhz7mrztm">FNAME LNAME</span></p><p class="addressDetails txtSize14 " id="addressDetai-4"><span id="blc-id-uju0wn0k9o">33,LOYALIST INGLESIDE ON CANADA K0C1M0</span></p><p class="numberDetails txtSize14" id="numberDetail-5">(705) 792-2558</p></span><span class="margin-50-right" id="margin-50Ri-40"><div class="margin-10-left margin-50-right hypelinks-block" id="margin-10Le-133"><section><div class="txtSize14 txtDarkGrey hypelinks-alignment" id="txtSize14Tx-134"><span class="icon txtSize14  icon txtBlue margin-10-right" id="iconTxtSize-41"><img src="./../assets/img/checkmark@1x.9bd6e742.svg" alt="Success icon"></span><span id="blc-id-tgxse2lsuj">NIP validé</span></div></section><section><div class=" txtSize14 incomplete custom-cls" id="TxtSize14I-135"><a href="javascript:void(0)" class="hypelinks-alignment btn-back-arrow txtBlue disablefocus txtNoUnderline" role="button" id="hypelinksAl-14"><span class="icon txtSize14 margin-10-right" id="iconTxtSize-43"><img src="./../assets/img/Arrow pill@1x.1a782aaf.svg" alt="Arrow Icon"></span><span id="blc-id-hwocfnqaqo">Valider le texte</span></a></div></section></div></span></span></div><div class="product-details-section flex list-section txtLeft pad-10-bottom pad-20-left" id="productDeta-136"><div class="border-right-gray cursorPointer" id="borderRight-137"><div class="accordion" id="accessories"><span aria-label="view details" class="txtSize14 txtBlue bellSlimHeavy" id="txtSize14Tx-45"><span class="txtSize14 txtBlue bellSlimHeavy" id="txtSize14Tx-46"><i class="icon icon-expand-solid txtBlue txtSize16  margin-10-right cursorPointer"></i>Voir les détails</span></span><div id="collapseOne" class="accordion-body collapse" aria-expanded="false"><div aria-hidden="true" id="blc-id-16t1i0ka94"></div><div class="accordion-inner noRadius" id="accordionIn-141"></div></div></div></div></div><div class="flex flex-column" id="flexFlexCo-142"><div class="margin-20-left searchContainerNew" id="margin-20Le-143"></div><div class="bgGrayLight4 pad-30-top" id="bgGrayLight4-144"><div class="main-caurosel bgGray19" id="mainCaurose-145"><div class="flex-container flex-column" id="flexContain-146"><div class="flex-row spaceBetween  margin-20-left margin-50-right" id="flexRowSpa-147"><div id="blc-id-yt6xio0iu4"><div class="available-offers" id="availableOf-149">Offres Disponibles(7)</div></div><div class="personalize_filter_class" id="personalize_-150"><div class="cursorPointer" id="cursorPointe-151"><div class="btn-link text-decoration noPadding inlineBlock margins" id="btnLinkTex-152">Personnaliser les offres</div><div class="filterIcon inlineBlock paddingRight30" id="filterIconI-153"></div></div></div><div id="blc-id-lkmw3zp6wb"><div id="blc-id-dyyissxns5"><button class="promo-btn promo-btn-background txt-transform-none" id="promoBtnPr-0">Entrez les Codes Promo</button><div id="blc-id-fzweioflja"><div id="blc-id-ql76i3l3t3"></div></div></div></div></div><div id="blc-id-u6v4bkbdqz"></div></div><div class="nba_caurosel" id="nba_caurosel-159"><div class="react-multi-carousel-list carousel-container react-multi-carousel-list " dir="ltr" id="reactMulti--160"><ul class="react-multi-carousel-track " style="transition: none 0s ease 0s; overflow: unset; transform: translate3d(0px, 0px, 0px);" id="reactMulti--1"><li data-index="0" aria-hidden="false" class="react-multi-carousel-item react-multi-carousel-item--active image-item" style="flex: 1 1 auto; position: relative; width: 297px;" id="reactMulti--5"><div class="card mb-3" id="130f9.352a7.2ef2560e.ffffffffae37058ecard"><div class="card-body" id="cardBody-162"><div class="txtLeft" id="txtLeft-163"><span class="recommended-offer-tag txtWhite margin-5-left text-transform" id="recommended--47">Offre spéciale</span></div><div class="offer-title" id="offerTitle-164"><h2 class="txtSize18 txtBlack txtBold txtLeft margin-5-left margin-5-top">HUG4_OFFER_SHORT_FR</h2></div><div class="display-phone-numbers txtDarkGrey margin-5-left margin-5-top" id="displayPhon-165"><div class="numbers-row display-flex" id="numbersRow--166"><div class="numbers-column flipFloatLR " id="numbersColu-167"><p id="blc-id-w24ceqdmdf">(705) 817-5533</p></div></div><div class="display-flex" id="displayFlex-168"></div></div><div class="display-zone txtSize14 txtDarkGrey margin-5-left text-transform margin-5-top txtLeft" id="displayZone-169">Surclassement d’appareil<br>Changement de forfait<br>Changement d’option<br></div><div class="margin-5-top txtLeft margin-5-left description" id="margin-5Top-170"><p class="card-text" id="cardText-7">HUG4_OFFER_LONG_FR</p><div class="inline-flex" id="inlineFlex-171"><div class="btn-link txtBlue txtLeft flex-row text-underline cursor-pointer" id="btnLinkTxt-172"><span id="blc-id-0wz9je3f8x">Détails</span></div></div></div></div><div class="spacer1 bgGray1 line-spacer" id="spacer1BgGr-173"></div><div class="card-footer specialOffersBox txtLeft margin-5-left" id="cardFooter--174"><div class="btn-link txtBlue txtLeft text-decoration flex-row cursor-pointer" data-dismiss="modal" id="btnLinkTxt-175"><div class="accept_offers" id="accept_offer-176"><span id="blc-id-06zyq3jyam">Accepter l’offre</span></div><i class="icon icon-play-icon txtBlue margin-2-top margin-5-left" aria-hidden="true"></i></div></div></div></li><li data-index="1" aria-hidden="false" class="react-multi-carousel-item react-multi-carousel-item--active image-item" style="flex: 1 1 auto; position: relative; width: 297px;" id="reactMulti--6"><div class="card mb-3" id="130fd.35104.2a31e72e.68601baecard"><div class="card-body" id="cardBody-178"><div class="txtLeft" id="txtLeft-179"><span class="recommended-offer-tag txtWhite margin-5-left text-transform" id="recommended--50">Offre spéciale</span></div><div class="offer-title" id="offerTitle-180"><h2 class="txtSize18 txtBlack txtBold txtLeft margin-5-left margin-5-top">HUG6_OFFER_SHORT_FR</h2></div><div class="display-phone-numbers txtDarkGrey margin-5-left margin-5-top" id="displayPhon-181"><div class="numbers-row display-flex" id="numbersRow--182"><div class="numbers-column flipFloatLR " id="numbersColu-183"><p id="blc-id-e26txttd65">(705) 817-5533</p></div></div><div class="display-flex" id="displayFlex-184"></div></div><div class="display-zone txtSize14 txtDarkGrey margin-5-left text-transform margin-5-top txtLeft" id="displayZone-185">Surclassement d’appareil<br>Changement de forfait<br>Changement d’option<br></div><div class="margin-5-top txtLeft margin-5-left description" id="margin-5Top-186"><p class="card-text" id="cardText-9">HUG6_OFFER_LONG_FR</p><div class="inline-flex" id="inlineFlex-187"><div class="btn-link txtBlue txtLeft flex-row text-underline cursor-pointer" id="btnLinkTxt-188"><span id="blc-id-ohko5kfegt">Détails</span></div></div></div></div><div class="spacer1 bgGray1 line-spacer" id="spacer1BgGr-189"></div><div class="card-footer specialOffersBox txtLeft margin-5-left" id="cardFooter--190"><div class="btn-link txtBlue txtLeft text-decoration flex-row cursor-pointer" data-dismiss="modal" id="btnLinkTxt-191"><div class="accept_offers" id="accept_offer-192"><span id="blc-id-dfe1z18sh4">Accepter l’offre</span></div><i class="icon icon-play-icon txtBlue margin-2-top margin-5-left" aria-hidden="true"></i></div></div></div></li><li data-index="2" aria-hidden="false" class="react-multi-carousel-item react-multi-carousel-item--active image-item" style="flex: 1 1 auto; position: relative; width: 297px;" id="reactMulti--7"><div class="card mb-3" id="130ff.35102.ffffffffaf58885f.5340faafcard"><div class="card-body" id="cardBody-194"><div class="txtLeft" id="txtLeft-195"><span class="recommended-offer-tag txtWhite margin-5-left text-transform" id="recommended--53">Offre spéciale</span></div><div class="offer-title" id="offerTitle-196"><h2 class="txtSize18 txtBlack txtBold txtLeft margin-5-left margin-5-top">HUG5_OFFER_SHORT_FR</h2></div><div class="display-phone-numbers txtDarkGrey margin-5-left margin-5-top" id="displayPhon-197"><div class="numbers-row display-flex" id="numbersRow--198"><div class="numbers-column flipFloatLR " id="numbersColu-199"><p id="blc-id-wcxcoovckj">(705) 817-5533</p></div></div><div class="display-flex" id="displayFlex-200"></div></div><div class="display-zone txtSize14 txtDarkGrey margin-5-left text-transform margin-5-top txtLeft" id="displayZone-201">Surclassement d’appareil<br>Changement de forfait<br>Changement d’option<br></div><div class="margin-5-top txtLeft margin-5-left description" id="margin-5Top-202"><p class="card-text" id="cardText-11">HUG5_OFFER_LONG_FR</p><div class="inline-flex" id="inlineFlex-203"><div class="btn-link txtBlue txtLeft flex-row text-underline cursor-pointer" id="btnLinkTxt-204"><span id="blc-id-h37akdkcbh">Détails</span></div></div></div></div><div class="spacer1 bgGray1 line-spacer" id="spacer1BgGr-205"></div><div class="card-footer specialOffersBox txtLeft margin-5-left" id="cardFooter--206"><div class="btn-link txtBlue txtLeft text-decoration flex-row cursor-pointer" data-dismiss="modal" id="btnLinkTxt-207"><div class="accept_offers" id="accept_offer-208"><span id="blc-id-zf6e4w9i4k">Accepter l’offre</span></div><i class="icon icon-play-icon txtBlue margin-2-top margin-5-left" aria-hidden="true"></i></div></div></div></li><li data-index="3" aria-hidden="true" class="react-multi-carousel-item  image-item" style="flex: 1 1 auto; position: relative; width: 297px;" id="reactMulti--8"><div class="card mb-3" id="130fb.34fd3.71d92032.ffffffffe66f4412card"><div class="card-body" id="cardBody-210"><div class="txtLeft" id="txtLeft-211"><span class="recommended-offer-tag txtWhite margin-5-left text-transform" id="recommended--56">Offre spéciale</span></div><div class="offer-title" id="offerTitle-212"><h2 class="txtSize18 txtBlack txtBold txtLeft margin-5-left margin-5-top">FC1_OFFER_SHORT_FR</h2></div><div class="display-phone-numbers txtDarkGrey margin-5-left margin-5-top" id="displayPhon-213"><div class="numbers-row display-flex" id="numbersRow--214"><div class="numbers-column flipFloatLR " id="numbersColu-215"><p id="blc-id-xe397m0nkh">(705) 817-5533</p></div></div><div class="display-flex" id="displayFlex-216"></div></div><div class="display-zone txtSize14 txtDarkGrey margin-5-left text-transform margin-5-top txtLeft" id="displayZone-217">Surclassement d’appareil<br>Changement de forfait<br>Changement d’option<br></div><div class="margin-5-top txtLeft margin-5-left description" id="margin-5Top-218"><p class="card-text" id="cardText-13">FC1_OFFER_LONG_FR</p><div class="inline-flex" id="inlineFlex-219"><div class="btn-link txtBlue txtLeft flex-row text-underline cursor-pointer" id="btnLinkTxt-220"><span id="blc-id-tcgqq9nfh">Détails</span></div></div></div></div><div class="spacer1 bgGray1 line-spacer" id="spacer1BgGr-221"></div><div class="card-footer specialOffersBox txtLeft margin-5-left" id="cardFooter--222"><div class="btn-link txtBlue txtLeft text-decoration flex-row cursor-pointer" data-dismiss="modal" id="btnLinkTxt-223"><div class="accept_offers" id="accept_offer-224"><span id="blc-id-r5m7e5qkck">Accepter l’offre</span></div><i class="icon icon-play-icon txtBlue margin-2-top margin-5-left" aria-hidden="true"></i></div></div></div></li><li data-index="4" aria-hidden="true" class="react-multi-carousel-item  image-item" style="flex: 1 1 auto; position: relative; width: 297px;" id="reactMulti--9"><div class="card mb-3" id="12f9e.3519e.ffffffffe3052fea.5f635a8acard"><div class="card-body" id="cardBody-226"><div class="txtLeft" id="txtLeft-227"><span class="recommended-offer-tag txtWhite margin-5-left text-transform" id="recommended--59">Offre spéciale</span></div><div class="offer-title" id="offerTitle-228"><h2 class="txtSize18 txtBlack txtBold txtLeft margin-5-left margin-5-top">Hardware offer ($50 off) - Open_short desc fr</h2></div><div class="display-phone-numbers txtDarkGrey margin-5-left margin-5-top" id="displayPhon-229"><div class="numbers-row display-flex" id="numbersRow--230"><div class="numbers-column flipFloatLR " id="numbersColu-231"><p id="blc-id-gmyi7nd43q">(705) 817-5533</p></div></div><div class="display-flex" id="displayFlex-232"></div></div><div class="display-zone txtSize14 txtDarkGrey margin-5-left text-transform margin-5-top txtLeft" id="displayZone-233">Surclassement d’appareil<br></div><div class="margin-5-top txtLeft margin-5-left description" id="margin-5Top-234"><p class="card-text" id="cardText-15">Hardware offer ($50 off) - Open_longdesc fr</p><div class="inline-flex" id="inlineFlex-235"><div class="btn-link txtBlue txtLeft flex-row text-underline cursor-pointer" id="btnLinkTxt-236"><span id="blc-id-ka6jmms1zm">Détails</span></div></div></div></div><div class="spacer1 bgGray1 line-spacer" id="spacer1BgGr-237"></div><div class="card-footer specialOffersBox txtLeft margin-5-left" id="cardFooter--238"><div class="btn-link txtBlue txtLeft text-decoration flex-row cursor-pointer" data-dismiss="modal" id="btnLinkTxt-239"><div class="accept_offers" id="accept_offer-240"><span id="blc-id-6orwx6ulzs">Accepter l’offre</span></div><i class="icon icon-play-icon txtBlue margin-2-top margin-5-left" aria-hidden="true"></i></div></div></div></li><li data-index="5" aria-hidden="true" class="react-multi-carousel-item  image-item" style="flex: 1 1 auto; position: relative; width: 297px;" id="reactMulti--10"><div class="card mb-3" id="12fa0.3519c.fffffffffc1b218c.ffffffffddb74cdccard"><div class="card-body" id="cardBody-242"><div class="txtLeft" id="txtLeft-243"><span class="recommended-offer-tag txtWhite margin-5-left text-transform" id="recommended--62">Offre spéciale</span></div><div class="offer-title" id="offerTitle-244"><h2 class="txtSize18 txtBlack txtBold txtLeft margin-5-left margin-5-top">BYOD 45GB_short desc fr</h2></div><div class="display-phone-numbers txtDarkGrey margin-5-left margin-5-top" id="displayPhon-245"><div class="numbers-row display-flex" id="numbersRow--246"><div class="numbers-column flipFloatLR " id="numbersColu-247"><p id="blc-id-gejzth38x4">(705) 817-5533</p></div></div><div class="display-flex" id="displayFlex-248"></div></div><div class="display-zone txtSize14 txtDarkGrey margin-5-left text-transform margin-5-top txtLeft" id="displayZone-249">Surclassement d’appareil<br>Changement de forfait<br></div><div class="margin-5-top txtLeft margin-5-left description" id="margin-5Top-250"><p class="card-text" id="cardText-17">BYOD 45GB_longdesc fr</p><div class="inline-flex" id="inlineFlex-251"><div class="btn-link txtBlue txtLeft flex-row text-underline cursor-pointer" id="btnLinkTxt-252"><span id="blc-id-v4uaewp6j3">Détails</span></div></div></div></div><div class="spacer1 bgGray1 line-spacer" id="spacer1BgGr-253"></div><div class="card-footer specialOffersBox txtLeft margin-5-left" id="cardFooter--254"><div class="btn-link txtBlue txtLeft text-decoration flex-row cursor-pointer" data-dismiss="modal" id="btnLinkTxt-255"><div class="accept_offers" id="accept_offer-256"><span id="blc-id-b0czpw9qgp">Accepter l’offre</span></div><i class="icon icon-play-icon txtBlue margin-2-top margin-5-left" aria-hidden="true"></i></div></div></div></li><li data-index="6" aria-hidden="true" class="react-multi-carousel-item  image-item" style="flex: 1 1 auto; position: relative; width: 297px;" id="reactMulti--11"><div class="card mb-3" id="12fc0.351a6.479f719e.ffffffff96d4d62ecard"><div class="card-body" id="cardBody-258"><div class="txtLeft" id="txtLeft-259"><span class="recommended-offer-tag txtWhite margin-5-left text-transform" id="recommended--65">Offre spéciale</span></div><div class="offer-title" id="offerTitle-260"><h2 class="txtSize18 txtBlack txtBold txtLeft margin-5-left margin-5-top">WCO - $5x12 Bill credit - SmartPay_short desc fr</h2></div><div class="display-phone-numbers txtDarkGrey margin-5-left margin-5-top" id="displayPhon-261"><div class="numbers-row display-flex" id="numbersRow--262"><div class="numbers-column flipFloatLR " id="numbersColu-263"><p id="blc-id-k6pt68nflm">(705) 817-5533</p></div></div><div class="display-flex" id="displayFlex-264"></div></div><div class="display-zone txtSize14 txtDarkGrey margin-5-left text-transform margin-5-top txtLeft" id="displayZone-265">Surclassement d’appareil<br>Changement de forfait<br>Changement d’option<br></div><div class="margin-5-top txtLeft margin-5-left description" id="margin-5Top-266"><p class="card-text" id="cardText-19">WCO - $5x12 Bill credit - SmartPay_longdesc fr</p><div class="inline-flex" id="inlineFlex-267"><div class="btn-link txtBlue txtLeft flex-row text-underline cursor-pointer" id="btnLinkTxt-268"><span id="blc-id-d1tj4196k7">Détails</span></div></div></div></div><div class="spacer1 bgGray1 line-spacer" id="spacer1BgGr-269"></div><div class="card-footer specialOffersBox txtLeft margin-5-left" id="cardFooter--270"><div class="btn-link txtBlue txtLeft text-decoration flex-row cursor-pointer" data-dismiss="modal" id="btnLinkTxt-271"><div class="accept_offers" id="accept_offer-272"><span id="blc-id-ulapk15zv6">Accepter l’offre</span></div><i class="icon icon-play-icon txtBlue margin-2-top margin-5-left" aria-hidden="true"></i></div></div></div></li></ul><button aria-label="Go to next slide" class="react-multiple-carousel__arrow react-multiple-carousel__arrow--right" data-tip="<div><strong>Offres Disponibles</strong></div><div>
+                    3 of 7
+                  </div>" data-for="rightArrow" data-place="left" data-effect="solid" data-type="light" data-text-color="black" data-html="true" currentitem="false" id="reactMultip-1"></button><div class="__react_component_tooltip tcad3ddfe-866e-467d-9acd-db4fe36db9c4 place-top type-dark" id="rightArrow" data-id="tooltip"><style aria-hidden="true">
+  	.tcad3ddfe-866e-467d-9acd-db4fe36db9c4 {
+	    color: #fff;
+	    background: #222;
+	    border: 1px solid transparent;
+	    border-radius: undefinedpx;
+	    padding: 8px 21px;
+  	}
+
+  	.tcad3ddfe-866e-467d-9acd-db4fe36db9c4.place-top {
+        margin-top: -10px;
+    }
+    .tcad3ddfe-866e-467d-9acd-db4fe36db9c4.place-top::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: 2;
+        width: 20px;
+        height: 12px;
+    }
+    .tcad3ddfe-866e-467d-9acd-db4fe36db9c4.place-top::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        bottom: -6px;
+        left: 50%;
+        margin-left: -6px;
+        transform: rotate(135deg);
+    }
+
+    .tcad3ddfe-866e-467d-9acd-db4fe36db9c4.place-bottom {
+        margin-top: 10px;
+    }
+    .tcad3ddfe-866e-467d-9acd-db4fe36db9c4.place-bottom::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: -1;
+        width: 18px;
+        height: 10px;
+    }
+    .tcad3ddfe-866e-467d-9acd-db4fe36db9c4.place-bottom::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        top: -6px;
+        left: 50%;
+        margin-left: -6px;
+        transform: rotate(45deg);
+    }
+
+    .tcad3ddfe-866e-467d-9acd-db4fe36db9c4.place-left {
+        margin-left: -10px;
+    }
+    .tcad3ddfe-866e-467d-9acd-db4fe36db9c4.place-left::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: -1;
+        width: 10px;
+        height: 18px;
+    }
+    .tcad3ddfe-866e-467d-9acd-db4fe36db9c4.place-left::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        right: -6px;
+        top: 50%;
+        margin-top: -6px;
+        transform: rotate(45deg);
+    }
+
+    .tcad3ddfe-866e-467d-9acd-db4fe36db9c4.place-right {
+        margin-left: 10px;
+    }
+    .tcad3ddfe-866e-467d-9acd-db4fe36db9c4.place-right::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: -1;
+        width: 10px;
+        height: 18px;
+    }
+    .tcad3ddfe-866e-467d-9acd-db4fe36db9c4.place-right::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        left: -6px;
+        top: 50%;
+        margin-top: -6px;
+        transform: rotate(-135deg);
+    }
+  </style></div></div><ul class="react-multi-carousel-dot-list react-multi-carousel-dot-list" id="reactMulti--2"><li data-index="0" class="react-multi-carousel-dot react-multi-carousel-dot--active" id="reactMulti--12"><button aria-label="Go to slide 0" id="blc-id-x8w0t47u6u"></button></li><li data-index="1" class="react-multi-carousel-dot " id="reactMulti--13"><button aria-label="Go to slide 1" id="blc-id-dubmoy8zgz"></button></li><li data-index="2" class="react-multi-carousel-dot " id="reactMulti--14"><button aria-label="Go to slide 2" id="blc-id-swi4zivliz"></button></li></ul><div class="__react_component_tooltip t412fce41-5ac3-4674-9156-35ddceadbf20 place-top type-dark" id="nba-tooltip" data-id="tooltip"><style aria-hidden="true">
+  	.t412fce41-5ac3-4674-9156-35ddceadbf20 {
+	    color: #fff;
+	    background: #222;
+	    border: 1px solid transparent;
+	    border-radius: undefinedpx;
+	    padding: 8px 21px;
+  	}
+
+  	.t412fce41-5ac3-4674-9156-35ddceadbf20.place-top {
+        margin-top: -10px;
+    }
+    .t412fce41-5ac3-4674-9156-35ddceadbf20.place-top::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: 2;
+        width: 20px;
+        height: 12px;
+    }
+    .t412fce41-5ac3-4674-9156-35ddceadbf20.place-top::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        bottom: -6px;
+        left: 50%;
+        margin-left: -6px;
+        transform: rotate(135deg);
+    }
+
+    .t412fce41-5ac3-4674-9156-35ddceadbf20.place-bottom {
+        margin-top: 10px;
+    }
+    .t412fce41-5ac3-4674-9156-35ddceadbf20.place-bottom::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: -1;
+        width: 18px;
+        height: 10px;
+    }
+    .t412fce41-5ac3-4674-9156-35ddceadbf20.place-bottom::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        top: -6px;
+        left: 50%;
+        margin-left: -6px;
+        transform: rotate(45deg);
+    }
+
+    .t412fce41-5ac3-4674-9156-35ddceadbf20.place-left {
+        margin-left: -10px;
+    }
+    .t412fce41-5ac3-4674-9156-35ddceadbf20.place-left::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: -1;
+        width: 10px;
+        height: 18px;
+    }
+    .t412fce41-5ac3-4674-9156-35ddceadbf20.place-left::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        right: -6px;
+        top: 50%;
+        margin-top: -6px;
+        transform: rotate(45deg);
+    }
+
+    .t412fce41-5ac3-4674-9156-35ddceadbf20.place-right {
+        margin-left: 10px;
+    }
+    .t412fce41-5ac3-4674-9156-35ddceadbf20.place-right::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: -1;
+        width: 10px;
+        height: 18px;
+    }
+    .t412fce41-5ac3-4674-9156-35ddceadbf20.place-right::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        left: -6px;
+        top: 50%;
+        margin-top: -6px;
+        transform: rotate(-135deg);
+    }
+  </style></div></div></div></div></div></div></div></div></div><div class="flex flex-row pad-10" id="flexFlexRo-275"></div><div id="blc-id-05jarx7l2n"><main class="main-container"><article class="Mobility-Account-Information liquid-container flex"><aside class="left-panel"><ul class="list-unstyled null" id="listUnstyle-3"><li class="selected-user" id="4"><div class="flex-row spaceBetween align-center heightadded selected-user" id="flexRowSpa-277"><div class="sl-details" id="slDetails-278"><span class="flex-column txtLeft" id="flexColumn--68"><div class="user-info flex" id="userInfoFl-279"><span id="blc-id-0q0zjmr3yy"><span class="tooltip2" id="tooltip2-70"><img class="icon-tooltip mlpIcon" src="./../assets/img/tDywGtxVYvFy1AAAAAElFTkSuQmCC.svg" alt="" data-for="shareGroup-tooltip" data-tip="" data-place="top" data-effect="solid" data-type="light" data-text-color="black" data-html="true" data-id="shareGroup-tooltip"></span></span><span class="icon margin-10-right txtSize20 txtBlue  icon-tool" id="iconMargin--71"></span><span class=" txtLeft txtSize18 subsciber-name" id="TxtLeftTxt-72">17388290 17388290</span></div><span class="margin-30-left margin-5-top txtSize14 subsciber-number" id="margin-30Le-73"><span id="blc-id-0cguzzas7t">(705) 817-5533 - </span><span class="active-tag txtSize14" id="activeTagT-75">Actif<br></span><span id="blc-id-mc2an50xuk"></span></span></span><span class="suspended-subscriber margin-2-top" id="suspendedSu-77"></span></div><div class="price sl-details txtSize14 txtRight" id="priceSlDet-280"><span id="blc-id-4rvnseke31"> $34.00/mois</span></div></div></li></ul><span class="margin15 flex spaceBetween ratePlanCalling flex justify-center" id="margin15Fle-79"><span class="text-left" id="textLeft-80"></span><span data-tip="Le client devra verser un dépôt pour retirer son plafond de dépenses ou attendre que le plafond de dépenses soit levé pour ajouter une nouvelle ligne." data-for="_tootltip" data-place="top" data-effect="solid" data-multiline="true" data-arrow-color="#a1a5a6" id="blc-id-wrbsxbnhze"><button class=" btn-cls-fr btn btn-default margin-10-bottom margin-5-right  " id="BtnClsFr--5">Ajouter une nouvelle ligne</button></span></span></aside><article class="right-panel"><div class="user-display-block flex" id="userDisplay-281"><div class="img-phone" id="imgPhone-282"><img src="./../assets/img/phone.ce2fb6bb.png" alt="phone"></div><div class="user-name flex flex-column" id="userNameFl-283"><span class="phone-number txtSize18 bellSlimHeavy" id="phoneNumber-82">(705) 817-5533</span><span class="name bellSlim txtSize40" id="nameBellSli-83">17388290 17388290</span></div></div><section class="nav-block"><div class="nav-content list-unstyled flex nav-item" id="navContent--284"><button class="active-tab" id="1">Commander un Service</button><button id="2">Appareil</button><button id="3">Caractéristiques et forfait</button></div></section><div id="blc-id-2abu3jms9f"><p class="txtSize14 txtDarkGrey txtLeft pad-20-left" id="txtSize14Tx-20">Commencer la nouvelle mise à jour de ce compte avec l’une des actions suivantes</p></div><div id="blc-id-3rnuwsu4s8"><div class="order-services-container" id="orderServic-287"><ul class="list-unstyled txtLeft" id="listUnstyle-4"><li id="blc-id-gzqmjw6iqt"><span id="blc-id-or4zhw3aq2"><img src="./../assets/img/hardwareupgradechangeIcon.7add9a30.svg" alt=""></span><span class="icon margin-10-right txtSize18 txtBlue " id="iconMargin--85"></span><div class="tooltip1" id="tooltip1-288"><span class="CTA-3 txtSize14 txtBlue txtBold order-services-links tooltip1 text-decoration:none outline:none " data-for="unavailability-reasons" id="CTA-3TxtSiz-86">Surclassement d’appareil</span></div></li></ul></div></div><div id="blc-id-2cy8zvbh2q"><div class="order-services-container" id="orderServic-290"><ul class="list-unstyled txtLeft" id="listUnstyle-5"><li id="blc-id-cy5ux3zn6q"><span id="blc-id-5eota51g81"><img src="./../assets/img/rateplanchangeIcon.e3c67a66.svg" alt=""></span><span class="icon margin-10-right txtSize18 txtBlue " id="iconMargin--88"></span><div class="tooltip1" id="tooltip1-291"><span class="CTA-3 txtSize14 txtBlue txtBold order-services-links tooltip1 text-decoration:none outline:none " id="CTA-3TxtSiz-89">Changement de forfait</span></div></li></ul></div></div><div id="blc-id-bmi60c4d5s"><div class="order-services-container" id="orderServic-293"><ul class="list-unstyled txtLeft" id="listUnstyle-6"><li id="blc-id-moj4918n2x"><span id="blc-id-58ure6ljw3"><img src="./../assets/img/featurechangeIcon.13f566f1.svg" alt=""></span><span class="icon margin-10-right txtSize18 txtBlue " id="iconMargin--91"></span><div class="tooltip1" id="tooltip1-294"><span class="CTA-3 txtSize14 txtBlue txtBold order-services-links tooltip1 text-decoration:none outline:none " id="CTA-3TxtSiz-92">Changement d’option</span></div></li></ul></div></div><div class="__react_component_tooltip t925c3e6d-7262-4f53-aaed-2d3dd3d7bf92 place-right type-light" id="mlp-leftpane-subscriber" data-id="tooltip"><style aria-hidden="true">
+  	.t925c3e6d-7262-4f53-aaed-2d3dd3d7bf92 {
+	    color: #222;
+	    background: #fff;
+	    border: 1px solid transparent;
+	    border-radius: undefinedpx;
+	    padding: 8px 21px;
+  	}
+
+  	.t925c3e6d-7262-4f53-aaed-2d3dd3d7bf92.place-top {
+        margin-top: -10px;
+    }
+    .t925c3e6d-7262-4f53-aaed-2d3dd3d7bf92.place-top::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: 2;
+        width: 20px;
+        height: 12px;
+    }
+    .t925c3e6d-7262-4f53-aaed-2d3dd3d7bf92.place-top::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #fff;
+        z-index: -2;
+        bottom: -6px;
+        left: 50%;
+        margin-left: -6px;
+        transform: rotate(135deg);
+    }
+
+    .t925c3e6d-7262-4f53-aaed-2d3dd3d7bf92.place-bottom {
+        margin-top: 10px;
+    }
+    .t925c3e6d-7262-4f53-aaed-2d3dd3d7bf92.place-bottom::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: -1;
+        width: 18px;
+        height: 10px;
+    }
+    .t925c3e6d-7262-4f53-aaed-2d3dd3d7bf92.place-bottom::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #fff;
+        z-index: -2;
+        top: -6px;
+        left: 50%;
+        margin-left: -6px;
+        transform: rotate(45deg);
+    }
+
+    .t925c3e6d-7262-4f53-aaed-2d3dd3d7bf92.place-left {
+        margin-left: -10px;
+    }
+    .t925c3e6d-7262-4f53-aaed-2d3dd3d7bf92.place-left::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: -1;
+        width: 10px;
+        height: 18px;
+    }
+    .t925c3e6d-7262-4f53-aaed-2d3dd3d7bf92.place-left::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #fff;
+        z-index: -2;
+        right: -6px;
+        top: 50%;
+        margin-top: -6px;
+        transform: rotate(45deg);
+    }
+
+    .t925c3e6d-7262-4f53-aaed-2d3dd3d7bf92.place-right {
+        margin-left: 10px;
+    }
+    .t925c3e6d-7262-4f53-aaed-2d3dd3d7bf92.place-right::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: -1;
+        width: 10px;
+        height: 18px;
+    }
+    .t925c3e6d-7262-4f53-aaed-2d3dd3d7bf92.place-right::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #fff;
+        z-index: -2;
+        left: -6px;
+        top: 50%;
+        margin-top: -6px;
+        transform: rotate(-135deg);
+    }
+  </style><span class="" id="blc-id-28hb1u5ms6"><div class="" id="blc-id-qf77shzznh"><div class="margin-30-bottom " id="margin-30Bo-297"><p class="txtSize18" id="txtSize18-21"><strong>Groupe de partage limité</strong></p></div><div class="margin-30-bottom" id="margin-30Bo-298"><div class="margin-20-bottom" id="margin-20Bo-299"><p id="blc-id-hla9snnkcu"><strong>Membres</strong></p></div><ul class="margin-30-bottom" id="margin-30Bo-7"><li id="blc-id-h9c4j5a9zj"></li><li id="blc-id-ge5ls8j91p"></li></ul><p id="blc-id-uw428lvzml"><strong>Volume de données total à partager</strong></p><p id="blc-id-urd0cwl6r7"></p></div></div></span></div></article><div class="__react_component_tooltip t052d0801-09c1-4c81-8f46-397437e4e943 place-right type-light" id="shareGroup-tooltip" data-id="tooltip"><style aria-hidden="true">
+  	.t052d0801-09c1-4c81-8f46-397437e4e943 {
+	    color: #222;
+	    background: #fff;
+	    border: 1px solid transparent;
+	    border-radius: undefinedpx;
+	    padding: 8px 21px;
+  	}
+
+  	.t052d0801-09c1-4c81-8f46-397437e4e943.place-top {
+        margin-top: -10px;
+    }
+    .t052d0801-09c1-4c81-8f46-397437e4e943.place-top::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: 2;
+        width: 20px;
+        height: 12px;
+    }
+    .t052d0801-09c1-4c81-8f46-397437e4e943.place-top::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #fff;
+        z-index: -2;
+        bottom: -6px;
+        left: 50%;
+        margin-left: -6px;
+        transform: rotate(135deg);
+    }
+
+    .t052d0801-09c1-4c81-8f46-397437e4e943.place-bottom {
+        margin-top: 10px;
+    }
+    .t052d0801-09c1-4c81-8f46-397437e4e943.place-bottom::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: -1;
+        width: 18px;
+        height: 10px;
+    }
+    .t052d0801-09c1-4c81-8f46-397437e4e943.place-bottom::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #fff;
+        z-index: -2;
+        top: -6px;
+        left: 50%;
+        margin-left: -6px;
+        transform: rotate(45deg);
+    }
+
+    .t052d0801-09c1-4c81-8f46-397437e4e943.place-left {
+        margin-left: -10px;
+    }
+    .t052d0801-09c1-4c81-8f46-397437e4e943.place-left::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: -1;
+        width: 10px;
+        height: 18px;
+    }
+    .t052d0801-09c1-4c81-8f46-397437e4e943.place-left::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #fff;
+        z-index: -2;
+        right: -6px;
+        top: 50%;
+        margin-top: -6px;
+        transform: rotate(45deg);
+    }
+
+    .t052d0801-09c1-4c81-8f46-397437e4e943.place-right {
+        margin-left: 10px;
+    }
+    .t052d0801-09c1-4c81-8f46-397437e4e943.place-right::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: -1;
+        width: 10px;
+        height: 18px;
+    }
+    .t052d0801-09c1-4c81-8f46-397437e4e943.place-right::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #fff;
+        z-index: -2;
+        left: -6px;
+        top: 50%;
+        margin-top: -6px;
+        transform: rotate(-135deg);
+    }
+  </style></div></article></main><div class="account-info" id="accountInfo-301"></div></div></div></div><footer class="liquid-container bellDrawer sticky col-xs-12 txtLeft margin-20-top footer-drawer"><div class="noMargin" style="background-color: rgb(255, 255, 255);" id="noMargin-302"><div class="boxshaddow bgwhite" id="boxshaddowB-303"><div class="footertopic txtBold" id="footertopic--304">Sommaire de la tarification du compte Mobilité</div><div class="txtCenter" style="top: 50px;" id="txtCenter-305"><div id="drawerSwitch" class="drawerSwitch drawerSwitch-position"><span class="icon icon-sort-asc txtBlue txtSize18 " aria-hidden="true" style="text-align: right; padding-right: 18px; padding-top: 15px;" id="iconIconSo-94"></span></div></div><section class="container liquid-container drawerSummary flex align-center" id="summary"><div class="col-md-7 col-xs-5 summaryCharges summaryPricing" id="colMd-7Col-307"><div class="txtLeft txtBold txtBlack margin-5-bottom" id="txtLeftTxtB-308"></div><ul class="noMargin noPadding list-unstyled flex" id="noMarginNoP-8"><li class="flex-column txtLeft" id="flexColumn--21"><span class="txtSize12-md width-225px" id="txtSize12Md-95">Frais uniques (exigibles maintenant)</span><span class="price txtBlue txtBold txtSize18 txtSize16-md totalOneTimeEng" id="priceTxtBlu-96">-</span></li><li class="flex-column txtLeft" id="flexColumn--22"><span class="txtSize12-md" id="txtSize12Md-97">Frais mensuels</span><span class="price txtBlue txtBold txtSize18 txtSize16-md totalMonthly" id="priceTxtBlu-98">$34.00/mois</span></li><li class="flex-column txtLeft" id="flexColumn--23"><span class="txtSize12-md" id="txtSize12Md-99">Frais uniques sur la facture</span><span class="price txtBlue txtBold txtSize18 txtSize16-md totalOneTimeEng" id="priceTxtBlu-100">-</span></li></ul></div><div class="col-md-5 col-xs-7 summaryCTA pad-10-right" id="colMd-5Col-309"><ul class="noMargin noPadding list-unstyled flex" id="noMarginNoP-9"><li id="blc-id-syfzbmdjdn"><span data-tip="This change will leave other lines of Share Group without data. You must also change the rate plan of one or all of the following lines to avoid incurring pay per use data charges.<br/>" data-for="_tootltip1" data-place="top" data-effect="solid" data-type="light" data-multiline="true" data-text-color="black" id="blc-id-z8qci59ku3"><button class="applytoOrderDisabled" id="applytoOrder-9">Confirmer la commande</button></span></li></ul></div></section></div></div><div id="blc-id-t517fk1jbo"></div></footer></div></div></div></div><!-- End of content--><div class="mainExtra1" id="mainExtra1-311"><!-- --></div><div class="mainExtra2" id="mainExtra2-312"><!-- --></div><div class="mainExtra3" id="mainExtra3-313"><!-- --></div><div class="mainExtra4" id="mainExtra4-314"><!-- --></div></div><!-- end of subWrap main--></div><!-- end of wrapMain--><!-- Content End --><!--  Footer Starts --><!-- Footer End  --></div><!-- end of wrapper--></meta content="text><div id="blc-id-6sqv5oxxmb"><div class="react-responsive-modal-root App" data-testid="root" id="reactRespon-316"><div class="react-responsive-modal-overlay" data-testid="overlay" aria-hidden="true" style="animation: 300ms ease 0s 1 normal none running react-responsive-modal-overlay-in;" id="reactRespon-317"></div><div class="react-responsive-modal-container react-responsive-modal-containerCenter" data-testid="modal-container" id="reactRespon-318"><div class="react-responsive-modal-modal" role="dialog" aria-modal="true" data-testid="modal" tabindex="-1" style="animation: 300ms ease 0s 1 normal none running react-responsive-modal-modal-in;" id="reactRespon-319"><div class="modal-header-gray pad-30 pad-15-left-right-xs" id="modalHeader-320"><div class=" modal-title line-height-20 bellSlim sans-serif-xs txtBlack txtSize20 txtSize18-xs overflow-ellipsis pad-20-right " title="" id="ModalTitle-321"><div class=" txtBlack bellSlimSemibold " id="TxtBlackBe-322">Code texte</div></div></div><div class="margin-30-left margin-20-bottom" id="margin-30Le-323"><section class=" "><div class="step-1  flex-column" id="step-1Flex-324"><div class="section-title col-sm-11 pad-10-right pad-15-bottom pad-30-top" id="sectionTitl-325"><p class="pad-5-top  pad-15-left txtSize18 txtBlack" id="pad-5TopP-25">Étape 1 : Envoyez un code texte</p></div><div class="mdn-block" id="mdnBlock-326"><div class="radioinput radioTab radioinput-active-disabled sideBySide flex col-xs-4 pad-20 margin-20-bottom margin-10-left" id="radioinputR-327"><div class="flex align-center breakword" id="flexAlignC-328"><label class="graphical_ctrl ctrl_radioBtn txtSize15" id="graphical_ct-0"><span class="txtLeft" id="txtLeft-102"><div class="valid-margin-top" id="validMargin-329"><strong>705 817 5533</strong></div><div id="blc-id-qm4gfomevb">17388290 17388290</div></span><input type="radio" name="user" value="cb872e9e-34af-4ca4-acb2-173319dc3b2d" id="blc-id-wpb9zic3cv"><span class="ctrl_element" id="ctrl_element-103"></span></label></div></div></div><div class="resend-button pad-10-left  alignCenter" id="resendButto-331"><button class=" buttonValidate" disabled="" id="ButtonValid-10">Envoyez un code texte</button></div><div id="blc-id-mzn20s8uvh"><p class="pad-15-left margin-10-top txtSize12" id="pad-15Left--26">Tentatives restantes:3</p></div></div><div class="step-2" id="step-2-333"><div class="section-title col-sm-11 pad-10-right textline-divider" id="sectionTitl-334"><p class="pad-30-top pad-15-left txtSize18 txtBlack2 " id="pad-30TopP-27">Étape 2 : Valider avec le code</p></div><div class="text-input-block pad-30-bottom" id="textInputB-335"><div class="col-sm-11 pad-10-right " id="colSm-11Pa-336"><p class="txtvalidation-margin-top pad-15-left txtSize18" id="txtvalidatio-28"><strong class="margin-b-15 surtitle-black txtSize16 txtBlack2 ">Texte Code</strong></p></div><div class="col-sm-11 pad-10-right pad-15-left validation-margin-top" id="colSm-11Pa-337">6 chiffres</div><div class="pad-15-top" id="pad-15Top-338"><div class="form-group pad-10-top pad-15-left flex flex-row align-center" id="formGroupP-339"><div class="form-group-input" id="formGroupI-340"><input type="text" class="form-controlnew txtBlack textInput" placeholder="Indiquer la valeur" maxlength="6" value="" id="formControl-48"></div><div class="flex alignCenter" id="flexAlignCe-341"><button class=" disableButton" disabled="" id="DisableButt-11">Soumettre</button></div></div></div><div class="col-sm-11 pad-10-right" id="colSm-11Pa-342"><span id="blc-id-hqmw7yp6dx"><p class="pad-15-left validation-margin-top txtSize12" id="pad-15Left--29">Tentatives restantes:2</p></span></div></div></div></section></div><div class="spacer1 bgGrayLight6" id="spacer1BgGr-343"></div><div class="modal-footer bgGray19 pad-30 pad-15-left-right-xs" id="modalFooter-344"><button class="btn btn-default floatL" id="btnBtnDefa-12">Conclusion</button></div><div class="noTxt clear" id="noTxtClear-345">&nbsp;</div></div></div></div></div></body></html>

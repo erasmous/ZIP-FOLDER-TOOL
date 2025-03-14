@@ -64,96 +64,97 @@ const extractZip = async (zipFilePath, extractPath) => {
 
 // ✅ Process Uploaded ZIP
 app.post("/upload", upload.single("zipFile"), async (req, res) => {
-    if (!req.file) {
-      return res.status(400).json({ error: "No file uploaded" });
-    }
-  
-    const zipFilePath = path.join(uploadDir, req.file.filename);
-    const baseName = path.parse(req.file.filename).name;
-    const extractPath = path.join(processedDir, baseName);
-  
-    try {
-      // ✅ Clear previous processed data
-      fs.removeSync(extractPath);
-  
-      // ✅ Extract and fix nesting
-      await extractZip(zipFilePath, extractPath);
-  
-      // ✅ Locate necessary folders
-      const viewFolderPath = path.join(extractPath, "view");
-      const assetsFolderPath = path.join(extractPath, "assets");
-      const jsonFolderPath = path.join(extractPath, "JSON"); // Path to JSON folder
-      const studioConfigPath = path.join(jsonFolderPath, "studioConfigs.json");
-  
-      if (fs.existsSync(viewFolderPath)) {
-        const htmlFiles = fs.readdirSync(viewFolderPath);
-  
-        htmlFiles.forEach((htmlFile) => {
-          if (htmlFile.endsWith(".html")) {
-            const fileNameWithoutExt = path.parse(htmlFile).name;
-            const newFolderPath = path.join(processedDir, fileNameWithoutExt);
-  
-            // ✅ Ensure the new folder exists
-            fs.ensureDirSync(newFolderPath);
-  
-            // ✅ Create `view/` and copy the HTML file
-            fs.ensureDirSync(path.join(newFolderPath, "view"));
-            fs.copySync(path.join(viewFolderPath, htmlFile), path.join(newFolderPath, "view", htmlFile));
-  
-            // ✅ Copy `assets/` folder (excluding `screenshots/`)
-            if (fs.existsSync(assetsFolderPath)) {
-              const newAssetsFolder = path.join(newFolderPath, "assets");
-              fs.ensureDirSync(newAssetsFolder);
-  
-              fs.copySync(assetsFolderPath, newAssetsFolder, {
-                overwrite: true,
-                filter: (src) => !src.includes("screenshots"),
-              });
-  
-              // ✅ Copy only relevant screenshots
-              const screenshotsFolderPath = path.join(assetsFolderPath, "screenshots");
-              const newScreenshotsFolder = path.join(newAssetsFolder, "screenshots");
-              fs.ensureDirSync(newScreenshotsFolder);
-  
-              if (fs.existsSync(screenshotsFolderPath)) {
-                const screenshotFiles = fs.readdirSync(screenshotsFolderPath);
-  
-                screenshotFiles.forEach((screenshot) => {
-                  if (screenshot.includes(fileNameWithoutExt)) {
-                    fs.copySync(
-                      path.join(screenshotsFolderPath, screenshot),
-                      path.join(newScreenshotsFolder, screenshot)
-                    );
-                  }
-                });
-              }
-            }
-  
-            // ✅ Modify `studioConfigs.json` to keep only the relevant object
-            if (fs.existsSync(studioConfigPath)) {
-              const rawData = fs.readFileSync(studioConfigPath, "utf8");
-              let jsonData = JSON.parse(rawData);
-  
-              if (jsonData.pages && Array.isArray(jsonData.pages)) {
-                // ✅ Find the object where "PageName" matches the HTML filename
-                const matchedPage = jsonData.pages.find(page => page.PageName === fileNameWithoutExt);
-  
-                if (matchedPage) {
-                  // ✅ Overwrite JSON to contain only the matched object
-                  fs.writeFileSync(studioConfigPath, JSON.stringify(matchedPage, null, 2), "utf8");
+  if (!req.file) {
+    return res.status(400).json({ error: "No file uploaded" });
+  }
+
+  const zipFilePath = path.join(uploadDir, req.file.filename);
+  const baseName = path.parse(req.file.filename).name;
+  const extractPath = path.join(processedDir, baseName);
+
+  try {
+    // ✅ Clear previous processed data
+    fs.removeSync(extractPath);
+
+    // ✅ Extract and fix nesting
+    await extractZip(zipFilePath, extractPath);
+
+    // ✅ Locate necessary folders
+    const viewFolderPath = path.join(extractPath, "view");
+    const assetsFolderPath = path.join(extractPath, "assets");
+    const jsonFolderPath = path.join(extractPath, "assets/JSON"); // Path to JSON folder
+    const studioConfigPath = path.join(jsonFolderPath, "studioConfigs.json");
+
+    if (fs.existsSync(viewFolderPath)) {
+      const htmlFiles = fs.readdirSync(viewFolderPath);
+
+      htmlFiles.forEach((htmlFile) => {
+        if (htmlFile.endsWith(".html")) {
+          const fileNameWithoutExt = path.parse(htmlFile).name;
+          const newFolderPath = path.join(processedDir, fileNameWithoutExt);
+
+          // ✅ Ensure the new folder exists
+          fs.ensureDirSync(newFolderPath);
+
+          // ✅ Create `view/` and copy the HTML file
+          fs.ensureDirSync(path.join(newFolderPath, "view"));
+          fs.copySync(path.join(viewFolderPath, htmlFile), path.join(newFolderPath, "view", htmlFile));
+
+          // ✅ Copy `assets/` folder (excluding `screenshots/`)
+          if (fs.existsSync(assetsFolderPath)) {
+            const newAssetsFolder = path.join(newFolderPath, "assets");
+            fs.ensureDirSync(newAssetsFolder);
+
+            fs.copySync(assetsFolderPath, newAssetsFolder, {
+              overwrite: true,
+              filter: (src) => !src.includes("screenshots"),
+            });
+
+            // ✅ Copy only relevant screenshots
+            const screenshotsFolderPath = path.join(assetsFolderPath, "screenshots");
+            const newScreenshotsFolder = path.join(newAssetsFolder, "screenshots");
+            fs.ensureDirSync(newScreenshotsFolder);
+
+            if (fs.existsSync(screenshotsFolderPath)) {
+              const screenshotFiles = fs.readdirSync(screenshotsFolderPath);
+
+              screenshotFiles.forEach((screenshot) => {
+                if (screenshot.includes(fileNameWithoutExt)) {
+                  fs.copySync(
+                    path.join(screenshotsFolderPath, screenshot),
+                    path.join(newScreenshotsFolder, screenshot)
+                  );
                 }
+              });
+            }
+          }
+
+          // ✅ Modify `studioConfigs.json` to keep only the relevant object in the correct folder
+          if (fs.existsSync(studioConfigPath)) {
+            const rawData = fs.readFileSync(studioConfigPath, "utf8");
+            let jsonData = JSON.parse(rawData);
+
+            if (jsonData.pages && Array.isArray(jsonData.pages)) {
+              // ✅ Find the object where "PageName" matches the HTML filename
+              const matchedPage = jsonData.pages.find(page => page.PageName === fileNameWithoutExt);
+
+              if (matchedPage) {
+                const newStudioConfigPath = path.join(newFolderPath, "studioConfigs.json");
+
+                // ✅ Overwrite JSON to contain only the matched object inside the generated folder
+                fs.writeFileSync(newStudioConfigPath, JSON.stringify(matchedPage, null, 2), "utf8");
               }
             }
           }
-        });
-      }
-  
-      res.json({ message: "✅ File uploaded and processed successfully!" });
-    } catch (err) {
-      res.status(500).json({ error: "Error processing file", details: err.message });
+        }
+      });
     }
-  });
-  
+
+    res.json({ message: "✅ File uploaded and processed successfully!" });
+  } catch (err) {
+    res.status(500).json({ error: "Error processing file", details: err.message });
+  }
+});
 
 // ✅ Start Server
 app.listen(PORT, () => console.log(`🚀 Server running on http://localhost:${PORT}`));

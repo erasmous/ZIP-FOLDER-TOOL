@@ -1,0 +1,984 @@
+.availablelinePath{
+
+position:relative;
+
+	font-weight : bold;
+
+	font-size : 125%;
+
+	line-height:20px;
+
+	border-bottom:#dcdcdc 1px solid;
+
+}
+
+
+
+.availablelinePath a{
+
+	padding-left:10px;
+
+	padding-right:3px;
+
+}
+
+
+
+
+
+.availableproductPathParent {
+
+	position:relative;
+
+ 	background: #ffffff;
+
+ 	font-weight:normal;
+
+ 	margin-top: 5px;
+
+ 	margin-left: 12px;
+
+}
+
+
+
+.availablePane {
+
+	/* width:350px;
+
+	height:600px; */
+
+	float:left;
+
+	width:100%;
+
+	display:inline-block;
+
+	
+
+}
+
+
+
+.selectedPane {
+
+	/*height:600px;*/
+
+	/*float:left;*/
+
+	background: #ffffff;
+
+	min-height: 50px;
+
+	float:left;
+
+	width:100%;
+
+}
+
+
+
+.availablelobCategoryPath {
+
+	position:relative;
+
+	margin-left: 15px;
+
+	margin-top: 5px;
+
+}
+
+.availablelobPath {
+
+	position:relative;
+
+ 	font-weight : bold;
+
+ 	font-size: 12px;
+
+ 	background: #ffffff;
+
+ 	margin-left: 10px;
+
+ 	padding-bottom: 5px;
+
+ 	padding-top: 2px;
+
+}
+
+.availablelobPath div{
+
+	overflow:hidden;
+
+}
+
+.availablelobPath a {
+
+	padding-left: 20px;
+
+	padding-right:3px;
+
+}
+
+
+
+.availableproductCategoryPath {
+
+ 	font-size : 12px;
+
+ 	color: #0F5AA5;
+
+ 	background: #ffffff;
+
+}
+
+
+
+.selectedlinePath input{
+
+	margin-left: 170px;
+
+}
+
+
+
+.removeLine{
+
+	margin-top: -20px;
+
+	margin-left: 170px;
+
+	position: absolute;
+
+}
+
+
+
+.removeLineDisconnect{
+
+/*padding:0px 0px 2px 0px;*/
+
+	top:0px;
+
+	marig-left: 170px;
+
+	right: 165px;
+
+	position: absolute;
+
+	}
+
+	
+
+.availableproductCategoryPath a {
+
+	padding-left: 30px;
+
+}
+
+.availableproductPath {
+
+	position:relative;
+
+ 	left:25px;
+
+ 	padding-top:2px;
+
+ 	padding-left:15px;
+
+ 	padding-bottom: 5px;
+
+ 	background:	#ffffff;
+
+ 	font-weight : normal;
+
+ 	overflow:hidden;
+
+}
+
+
+
+.availableproductPathPromotionCode {
+
+	position:relative;
+
+ 	left:25px;
+
+ 	padding-top:2px;
+
+ 	padding-left:15px;
+
+ 	padding-bottom:2px;
+
+ 	background:	#ffffff;
+
+ 	font-weight : normal;
+
+ 	width: 94%;
+
+}
+
+.availableproductPath a img {
+
+	position:absolute;
+
+	right:40px;
+
+}
+
+
+
+.availableproductPath img {
+
+	position:absolute;
+
+	right:40px;
+
+}
+
+
+
+.selectedlinePath {
+
+	position:relative;
+
+	/*left:10px;*/
+
+	font-weight : normal;
+
+	font-color:#006699;
+
+	margin-top: 1px;
+
+}
+
+
+
+.selectedlinePath a{
+
+	padding-left:5px;
+
+}
+
+.selectedlinePath img{
+
+	margin-left:2px;
+
+	position: relative;
+
+	margin-top: 2px;
+
+}
+
+
+
+.selectedlobPath {
+
+	position:relative;
+
+ 	/* left:10px;*/
+
+ 	/* margin-top: 10px; */
+
+}
+
+
+
+
+
+
+
+.selectedproductPath {
+
+ 	position:relative;
+
+ 	/*left:10px;*/
+
+ 	/*font-weight:bold;*/
+
+ 	/*background: #ffffff;*/
+
+ 	font-weight:normal;
+
+ 	/*margin-top: 5px;*/
+
+}
+
+
+
+.selectedproductPath img{
+
+	/* margin-left: 5px; */
+
+	position: relative;
+
+	margin-top: 0px;
+
+}
+
+
+
+.selectedlinePath  .selectedproductPath a {
+
+	padding-left: 15px;
+
+	margin-left:0px;
+
+	position:relative;
+
+	/*bottom:2px;*/
+
+} 
+
+.selectedlinePath  .selectedproductPath img {
+
+	padding-left: 0px;
+
+	margin-left:0px;
+
+	position:relative;
+
+	/*bottom:2px;*/
+
+}
+
+
+
+.expandCollapseSelected {
+
+	padding-left: 2px;
+
+}
+
+
+
+
+
+.selectedlobPath .selectedproductPath a{
+
+	padding-left: 15px;
+
+}
+
+
+
+.selectedlobPath .selectedproductPath a img{
+
+	padding-left: 0px;
+
+	position: relative;
+
+}
+
+
+
+.selectedlobPath .selectedproductPath img {
+
+	padding-left: 0px;
+
+	margin-left: 0px;
+
+}
+
+
+
+.attribute {
+
+ /*	position:relative;*/
+
+ 	/*left:10px;*/
+
+ 	/*background: #e7e7e4;*/
+
+ 	font-weight:normal;
+
+ 	margin-left:0px; 
+
+ 	width: inherit;
+
+ 	padding-top:10px;
+
+ 	padding-left: 23px;	
+
+}
+
+
+
+.attribute input{
+
+	margin-left: 0px;
+
+}
+
+.value {
+
+ 	position:relative;
+
+ 	left:15px;
+
+}
+
+
+
+a:link, a:visited, a:hover {
+
+}
+
+
+
+.selectedLobStyle {
+
+	font-weight: normal;
+
+	width:100%;
+
+	padding:5px;
+
+	padding-left: 20px;
+
+	height:auto;
+
+}
+
+.selectedLabel {
+
+	position:relative;
+
+	diplay:inline-block;
+
+	padding-top:3px;
+
+	padding-bottom:3px;
+
+}
+
+.expandCollapseStyle{
+
+	position: relative;
+
+	bottom:2px;
+
+}
+
+
+
+.availableProdLabel{
+
+	padding-left:4px;
+
+}
+
+
+
+.promotionCodeLabel {
+
+	padding: 0px;
+
+	margin: 0px;
+
+	font-size: 11px;
+
+	width: 5px !important;
+
+	display: inline;
+
+	position: relative;
+
+	font-weight: bold;
+
+}
+
+
+
+.availableSatLinePath{
+
+	position:relative;
+
+	margin-left: 15px;
+
+	font-size: 12px;
+
+	margin-bottom: 5px;
+
+	margin-top:2px;
+
+}
+
+
+
+.availableSatLinePath a img {
+
+	position:absolute;
+
+
+
+	right:43px;
+
+}
+
+
+
+.availableSatLinePathimg {
+
+	position:absolute;
+
+	right:43px;
+
+}
+
+.popUpHeaderFlow {
+
+background-color: #ccffff;
+
+width: 100%;
+
+height: 20px;
+
+padding-left: 35px;
+
+padding-top: 3px;
+
+font-weight: bold;
+
+}
+
+.availableHeaderFlow {
+
+background-color: #ccffff;
+
+width: 100%;
+
+height: 22px;
+
+padding-left: 3px;
+
+padding-top: 3px;
+
+}
+
+.lineHeaderStyle {
+
+	position:relative; 
+
+	background: url('./../img/bg_sumBoxTitle.gif') #fff repeat-x left bottom;
+
+	color:#FFFFFF;
+
+	padding:5px 0px;
+
+	width:100%;
+
+	display:block;
+
+	float:left;
+
+	height: 17px;
+}
+.ruler {
+	
+	background-color: #ddd;
+	
+	padding:5px 0px;
+
+	width:1px;
+
+	display:block;
+
+	float:left;
+
+	height: 16px;
+}
+.lineHeaderExpandedStyle{
+
+	position:relative;
+
+	background: url('./../img/bg_sumBoxTitle.gif') #fff repeat-x left bottom;
+
+	color:#FFFFFF;
+
+	padding:5px 0px 30px 0px;
+
+	margin-bottom:0px;
+
+	width:100%;
+
+	display:block;
+
+	
+
+}
+
+.subLineHeaderExpandedStyle{
+
+	position:relative;
+
+	padding-bottom:5px; 
+
+	background: url('./../img/bg_gradRibbon.gif') #fff repeat-x left bottom;
+
+	color:#FFFFFF;
+
+	padding-top:5px;
+
+	margin-bottom:2px;
+
+	width:100%;
+
+	display:block;
+
+}
+
+.productLineBox{
+
+	padding:0px 5px;
+
+}
+
+.productNewHeader{
+
+	width:550px;
+
+	float:left;
+
+	background-color:#F2F2F2; 
+
+	padding:0px 0px
+
+}
+
+
+
+.productNewHeaderLeftPan{
+
+	width:340px;
+
+	float:left;
+
+	padding-top:3px;
+
+}
+
+.productNewHeaderRightPan{
+
+	width:207px;
+
+	float:left;
+
+	background-color:#e6eff5;
+
+	font-color:#212121;
+
+}
+
+.productNewHeaderRightPan .leftLabel{
+
+	width:68px;
+
+	float: left; 
+
+	text-align:center;
+
+	height:18px;
+
+	display:block;
+
+	font-size:12px;
+
+	padding-top:3px;
+
+	border-left:1px solid #ffffff;
+
+	padding-right:0px;
+
+}
+
+.productNewHeaderRightPan .leftLabelzero{
+
+	width:68px;
+
+	float: left; 
+
+	text-align:center;
+
+	height:18px;
+
+	display:block;
+
+	font-size:12px;
+
+	padding-top:3px;
+
+	border-left:1px solid #ffffff;
+
+	padding-right:0px;
+	
+	color: #BCBCBC;
+
+}
+.productNewHeaderRightPan .rightLabel{
+
+	width:80px;
+
+	float: left; 
+
+	text-align:right;
+
+	height:18px;
+
+	display:block;
+
+	font-size:12px;
+
+	padding-top:3px;
+
+	border-left:1px solid #ffffff;
+
+	padding-right:5px;
+
+}
+
+.custPCH3{
+
+	font-size:14px !important;
+
+}
+
+
+.custPCH3 span{
+
+	margin-top:0px !important;
+
+	margin-right:0px !important;
+
+	padding-right:5px !important;
+
+}
+
+.custPCH3 .priceTag {
+	width: 55px !important;
+	font-size: 12px;
+	text-align: right;
+	padding-right: 14px !important;
+	font-family: "Arial Bold","Arial" !important;
+	font-weight: bold;
+	color: #000000;
+}
+.lineHeaderExpandedStyle .priceTag {
+	width: 68px;
+	font-size: 12px;
+	padding-right: 8px;	
+	text-align: right;
+	font-family: "Arial Regular","Arial"!important;
+	color: #000000;
+}
+.productNewHeader .priceTag {
+	font-size: 12px;
+	font-family: "Arial Regular","Arial"!important;
+	color: #000000;
+}
+.lineHeaderExpandedStyle div {
+
+		margin-top:0px !important;
+
+	margin-right:0px !important;
+
+	padding-right:5px !important;
+}
+.potMonthsStyle {
+
+	float:left;
+
+	color:#ffffff;
+
+	background-color:#5C5A53;
+
+	padding:5px;
+
+	width:38px;
+
+	text-align:center;
+
+	font-size:14px;
+
+}
+
+	
+
+.potMonthStyle_border_On {
+
+	border-right:1px solid #ffffff;
+
+}
+
+#savingPrices{
+
+	background-image:
+
+		url('./../img/priceovertime-headerBg.png');
+
+	height:40px;
+
+	width:310px;
+
+	margin-bottom:15px;
+
+	}	
+
+#savingPrices_label{
+
+	font-size:16px;
+
+	float:left;
+
+	margin:12px 0px 0px 15px;
+
+	}
+
+#savingPrices_value{
+
+	color:#0066A4;
+
+	font-size:22px;
+
+	float:left;
+
+	margin:12px 0px 0px 10px;
+
+	}	
+
+#monthGrid{
+
+	background-color:#5C5A53;color:#ffffff;
+
+	}
+
+#monthGrid_Mname{
+
+	float:left;color:#ffffff;background-color:#5C5A53;width:80px;padding:5px;border-right:1px solid #ffffff;text-align:center;font-size:14px;
+
+	}
+
+#monthGrid_Mvalue{	
+
+border:1px solid black;float:left;margin-bottom:15px;
+
+    }
+
+.monthsideStyle{
+
+	background-color:#f2f2f2;padding:5px;width:79px;float:left;height:12px;clear:left;
+
+}
+
+.border_on{
+
+	border-bottom:1px solid #000000;
+
+}
+
+.monthStyle_value{
+
+	background-color:#0066A4;float:left;height:23px;color:#ffffff;text-align:left;clear:right;font-size:12px;
+
+}
+
+.monthStyle13_36{
+
+	background-color:#5C5A53;color:#ffffff;float:left;clear:both;margin-top:20px;
+
+}
+
+.monthStyleName13_36 {	  
+
+	float:left;color:#ffffff;background-color:#5C5A53;padding:9px 5px 0px 5px;width:120px;text-align:center; font-size:14px; 
+
+}
+
+.monthStyleValue13_36 {	  
+
+	background-color:#0066A4;padding:5px;width:120px;float:left;height:15px;color:#ffffff;clear:both;text-align:center;margin-top:10px;
+
+}
+
+#messageStyle{
+
+	float:right;max-width:50%;
+
+}
+
+#imageStyle{
+
+	float:left;height:50px;margin-right:5px;
+
+}
+
+	
+
+#buttonHeight{
+
+	float:right;
+
+	}	
+
+.cmpProducts-collapse-btn{
+	display: inline-block;
+	float: right;
+	width: 16px;
+	height: 16px;
+	position: relative;
+	margin: 0px 0px 0px 5px;
+	padding: 0px 0px 0px 0px;
+	background: transparent
+		url('./../img/btn_expand_collapse_sprite_new_16x16.png')
+		no-repeat 0px -16px;
+}
+.cmpProducts-expand-btn{
+	display: inline-block;
+	float: right;
+	width: 16px;
+	height: 16px;
+	position: relative;
+	margin: 0px 12px 0px 5px;
+	padding: 0px 0px 0px 0px;
+	background: transparent
+		url('./../img/btn_expand_collapse_sprite_new_16x16.png')
+		no-repeat 0px 0px;
+}
+.cmpProducts-expand-collapse-label{
+	float: right;
+	font-size : 12px;
+ 	color: #0F5AA5;
+}
+.mobility-display-label{
+	font-size : 20px;
+ 	color: #0066A4;
+ 	width: 90%;
+ 	float: left;
+ 	padding-left: 10px;
+ 	padding-top: 10px;
+}
+.mobility-display-info{
+	width: 100%;
+	padding-bottom: 70px;
+	vertical-align: bottom;
+}
+
+/* BRS49.6 - BSH Order Summary Changes */
+.orderSummary-bsh-btn {
+	display: inline-block;
+	float: left;
+	width: 90px;
+	height: 17px;
+	font-family: arial, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: none;
+	text-align: center;
+	color: #D7D7D7 !important;
+	padding: 4px 0px 0px 0px;
+	margin: 30px auto 10px;
+	background-color: #003399;
+	border-radius: 10px;
+	cursor:default;
+}

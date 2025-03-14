@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>440D4E66-3B57-4E82-8E96-59FBA247E693@1x</title>
+    <defs>
+        <path d="M14.851,8 C14.851,4.21576726 11.7839503,1.149 8,1.149 C4.21537518,1.149 1.149,4.21537518 1.149,8 C1.149,11.7846248 4.21537518,14.851 8,14.851 C11.7839503,14.851 14.851,11.7842327 14.851,8 Z M8,0 C12.4181333,0 16,3.5808 16,8 C16,12.4192 12.4181333,16 8,16 C3.5808,16 0,12.4192 0,8 C0,3.5808 3.5808,0 8,0 Z M7.2594,4.6378 L7.2594,11.5098 L10.6954,8.0748 L7.2594,4.6378 Z" id="path-1"></path>
+    </defs>
+    <g id="🟢-Batch-2---Updates" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Assets" transform="translate(-188.000000, -236.000000)">
+            <g id="Icons-/-Small-/-Arrow-pill" transform="translate(188.000000, 236.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Stroke-2" fill="#00549A" fill-rule="nonzero" xlink:href="#path-1"></use>
+                <g id="Tint-/-Blue" mask="url(#mask-2)" fill="#00549A">
+                    <g transform="translate(-1.000000, -1.000000)" id="Tint-/-White">
+                        <rect x="0" y="0" width="18" height="18"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

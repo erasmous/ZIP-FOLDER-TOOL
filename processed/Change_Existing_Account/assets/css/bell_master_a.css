@@ -1,0 +1,1713 @@
+/*!:: BELL CANADA UIKit v1.3969
+
+bell_master_a.css
+Build Date: 2:52 PM Thursday, December 3, 2012
+
+Development Team: Son Pham, Michel Pen, Bruno-Pierre Campeau-Riberdy
+Founder Team: Jean-Francois Payant, Son Pham, Michel Pen, Miguel Matos
+Contributors: Philippe Prevost
+
+::*/
+
+
+/*:: =General ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+/* Notes and/or legal content - deprecated (use <small> instead) */
+.finePrintMsg {font-size: 11px;line-height: 14px;color: #555;margin-bottom: 2em;}
+	p.finePrintMsg, .finePrintMsg p {margin-bottom: 1.1em;}
+	.finePrintMsg ol li {margin-bottom: 5px;}
+	
+/* Superscript */
+#summaryBox .brief .superscript, .superscript, sup {font-size:0.8em;line-height:0.6em;vertical-align: top;position: relative;top: 0.2em;left: 1px;margin: 0;}
+	.supIE9AndBelow {font-size: 1em; top: auto; line-height: normal;} /* <- IE9 and below will render the <sup> with a smaller font which breaks consistency with other browsers. Adding a custom class (handled by JS) to force the font to be bigger. */
+
+/* Serie of left floated element (ul>li or div>p) - deprecated */
+ul.oneLiner {overflow: hidden;}
+	ul.oneLiner li {float: left;margin-right: 30px;}
+div.oneLiner {overflow: hidden;}
+	div.oneLiner p {float: left;margin-right: 30px;}
+
+/* Image/content positioning */
+.contCenter {text-align: center;margin: 0 0 10px;}
+	p.contCenter {margin-bottom: 15px;}
+.contRight {float: right;margin: 0 0 15px 20px;}
+.contLeft {float: left;margin: 0 20px 15px 0;}
+
+/* Image with negative top margin that's equal to sTitle bottom margin. - deprecated */
+.sBanner {margin-top: -20px;}
+
+/* Last update - deprecated, use <small> */
+.lastUpdateTag {color: #999;font-size: 11px;line-height: 14px;margin-top: 35px;}
+
+/* Basic "More" link, seeMoreLink is deprecated, use moreLink instead */
+.seeMoreLink:visited, .moreLink:visited {color: #0066A4;}
+.seeMoreLink span.seeMoreLinkExtra, .moreLink span.moreLinkExtra, .moreLink span.seeMoreLinkExtra {display: inline-block;margin: 0 0 -3px 0;position: relative;top: -1px;left: 6px;text-decoration: none;width: 14px;height: 14px;background: url('./../img/bg_iconSprite.gif') right -159px no-repeat transparent;}
+.seeMoreLink:hover, .moreLink:hover {text-decoration: none;}
+	.seeMoreLink:hover span, .moreLink:hover span {text-decoration: underline;}
+	.seeMoreLink:hover span.seeMoreLinkExtra, .moreLink:hover span.seeMoreLinkExtra, .moreLink:hover span.moreLinkExtra {text-decoration: none;}
+.moreLinkThemeA span.moreLinkExtra, .moreLinkThemeA span.seeMoreLinkExtra {background-position: right -999px;} /* <- for grayish backgrounds */
+.moreLinkThemeB, .moreLinkThemeC {padding-left: 22px; background: url('./../img/bg_iconSprite.gif') 1px -279px no-repeat transparent;}
+.moreLinkThemeC {background-position: left -680px;}
+	.moreLinkThemeB span.moreLinkExtra, .moreLinkThemeC span.moreLinkExtra {background: none; display: none;}
+	
+.moreLinkThemeD, .moreLinkThemeD span.moreLinkExtra {background-image: url('./../img/bg_moreLinkDropdown.gif'); background-repeat: no-repeat;}
+.moreLinkThemeD {background-color: #fff; padding: 7px 50px 8px 12px; font-size: 1.5em; line-height: 21px; position: relative;}
+	a.moreLinkThemeD {color: #212121;} .moreLinkThemeD:hover span {text-decoration: none;}
+	.moreLinkThemeD span.moreLinkExtra {display: block; background-position: right top; position: absolute; left: auto; right: 0; top: 0; margin-bottom: 0; height: 36px; width: 36px;}
+	
+.moreLinkThemeE span.moreLinkExtra {background-position: center -34px; left: 3px;}
+
+/* File type link (pdf by default,other file formats needs to be created) */
+.getFileLink, .pdfLink, .excelLink, .audioLink, .emailLink, .rssLink {display: inline;background: transparent url('./../img/ic_pdf.gif') no-repeat right top;padding-right: 17px;margin-right: 4px;}
+	.excelLink {background-image:url('./../img/ic_excel.gif');padding-top: 1px;padding-right: 21px;padding-bottom: 3px;}
+	.audioLink {background-image:url('./../img/ic_audio.gif');padding-top: 1px;padding-right: 21px;padding-bottom: 1px;}
+	.emailLink {background-image:url('./../img/ic_email.gif');background-position:left top;padding:2px 0 1px 33px;}
+	.rssLink {background-image:url('./../img/ic_rss.gif');background-position:left top;padding:3px 0 1px 24px;}
+
+/* Basic "Add additionnal" link */
+.addItemLink {display: inline-block;padding: 0 0 0 30px;background: url('./../img/bg_iconSprite.gif') 0 -881px no-repeat transparent;}
+	.addItemLink:visited {color: #0066a4;}
+
+/* Action link next to text item ex.: (edit) or (remove) Usage: <span class="actionLink">(<a href="#">link</a>)</span> */
+.actionLink {font-size: 12px;color: #555;}
+.actionLink a, a.actionLink {color: #0066a4 !important;}
+.actionLink a:hover, a.actionLink:hover {text-decoration: underline;}
+
+/* headingOptions */
+.headingOptions, .options {font-size: 0.75em; display: block; padding-right: 21px; position: absolute; right: 0; top: 2px; z-index: 5;} /* z-index should be higher than tabTrigSet's */
+.formSuper .options {font-size: 1em; top: 14px;}
+	.headingOptions a {font-size: 0.916em; color: #0066A4 !important;}
+	.headingOptions a:hover {text-decoration: underline;}
+.headingOptionsThemeA, .optionsThemeA {padding-right:0;}
+	.headingOptions .button, .options .button {position: relative; margin-left: 8px; margin-right: 0; top: -16px; right: 0;}
+	.options .moreLink {color: #0066a4; font-size: 12px; line-height: 1.2em;}
+	.optionsThemeA .moreLink {position: relative; right: 5px;}
+	
+	/* per-context */
+	.cIntro .options, .cIntroduction .options {font-size: inherit;}
+	/* per-element*/
+	.options .close{right:0; top:-6px;}
+
+/* Back to top links (backTopLink is deprecated, use topLink) */
+.backTopLink, .topLink {color: #0066A4 !important;font-size: 12px;background: url('./../img/bg_iconSprite.gif') right -942px no-repeat transparent;padding-right: 19px;}
+	.backTopLink, .topLinkThemeA {position: absolute;bottom: 0;right: 0px;background-position: right -938px;}
+
+/* Serie of cross reference links. Usage.: <p class="crossRef">See also: <a href="#" title="">link</a></p> - deprecated */
+.crossRef {display: block;font-size: 11px;}
+
+/* actionSort (sorting arrow) */
+.actionSort, .actionSortThemeD {display:inline-block;padding-right:15px;background:transparent url('./../img/bg_actionSort.gif') no-repeat right 4px;}
+	.actionSortThemeA, .actionSortThemeE {background-position:right -26px;}
+	.actionSortThemeB, .actionSortThemeF {background-position:right -58px;}
+	.actionSortThemeC, .actionSortThemeG  {background-position:right -92px;}
+
+/* actionSwap (Swap element)*/
+.actionSwap {position: relative; top: -2px; display:inline-block; background: url('./../img/bg_iconSprite.gif') left -1171px no-repeat transparent; height:23px; width:23px; text-indent: -999em;}
+	
+/* Give a specific color to price related text */
+.priceTag,a.priceTag,a.priceTag:hover,h3 a.priceTag, 
+.number,a.number,a.number:hover,h3 a.number, .dataListThemeD li li .priceTag {color: #0066a4;}
+
+/* Default remove button - bt_remove deprecated, please use actionRemove */
+.bt_remove, .actionRemove {display: block;float: left;padding: 1px 0 0 18px;font-size: 11px;line-height: 15px;background: url('./../img/bg_iconSprite.gif') 0 -80px no-repeat transparent;}
+	.bt_remove:visited, .actionRemove:visited {color: #0066a4;}
+	
+.actionRemoveThemeA {display: inline-block; float: none; height: 14px; margin-left: 3px; padding: 0; position: relative; top: 2px; width: 14px;}
+	
+/* List item that can be removed */
+.trashItem {padding-right: 16px;}
+	.trashItem .bt_remove, .trashItem .actionRemove {position: absolute;right: 0;top: 0px;display: block;width: 14px;height: 14px;padding: 0;text-indent: -999em;background: url('./../img/bg_iconSprite.gif') 0 -80px no-repeat transparent;}
+
+/* Text Tag */
+.textTag {position: relative;top: -1px;margin-left: 4px;padding: 3px 5px 0 13px;height: 11px;color: #555;font-size: 8px;line-height: 8px;font-weight: bold;position: relative;display: inline-block;background: url('./../img/bg_textTag.png') no-repeat left top transparent;text-transform: uppercase;}
+	.textTag .textTagExtra1 {display: none; position: absolute; right: 0; width: 13px; height: 20px; top: 0; right: -13px;}
+	
+	.textTagThemeA, .textTagThemeB, .textTagThemeC, .textTagThemeD {color: #FFF; font-size: 1em; font-weight: normal; height: 20px; line-height: 19px; padding: 0 1px 0 15px; text-transform: none;}
+		.textTagThemeA .textTagExtra1, .textTagThemeB .textTagExtra1, .textTagThemeC .textTagExtra1, .textTagThemeD .textTagExtra1 {display: block; background: url('./../img/bg_textTag.png') no-repeat left top transparent;}	
+		.textTagThemeA, .textTagThemeA .textTagExtra1 {background-position: left -32px;}
+			.textTagThemeA .textTagExtra1 {background-position: right -32px;}
+		.textTagThemeB, .textTagThemeB .textTagExtra1 {background-position: left -68px;}
+			.textTagThemeB .textTagExtra1 {background-position: right -68px;}
+		.textTagThemeC, .textTagThemeC .textTagExtra1 {background-position: left -103px;}
+			.textTagThemeC .textTagExtra1 {background-position: right -103px;}
+		.textTagThemeD, .textTagThemeD .textTagExtra1 {background-position: left -138px;}
+			.textTagThemeD .textTagExtra1 {background-position: right -138px;}
+		.textTagThemeE {background-image: none; background-color: #fff; border: 1px solid #dadada; padding: 4px 10px 3px 10px; margin-left: 0; font-size: 1.5em; height: auto; line-height: normal;}
+		.textTagThemeF {background-position: left -173px; color: #fff; font-size: 8px; line-height: 8px;}
+			.textTagThemeF .textTagExtra1 {background-position: right -173px;}
+			.rate .textTagThemeF {position: absolute; right: -20px; top: 10px;}
+		
+/* bStick (deprecated, please use stickyBottom) - Position elements at the absolute bottom of its parent */
+.bStick, .stickyBottom {position: absolute;bottom: 0;z-index: 1;clear: both;}
+	.bStick .buttonize, .stickyBottom .button {margin-left: 0;position: static;display: block;clear: left;margin-top: 15px;}
+	.bStick .fBtn, .stickyBottom .formButton {margin-bottom: 10px;}
+		.bStick .fBtn .buttonize, .stickyBottom .formButton .button {margin-top: 0;}
+	.stickyBottom .hSeparator {width: 100%;}
+
+/* List product/service features (deprecated) */
+.featureList .hType4, .featureList .headingType4 {margin-bottom: 10px;}
+	.featureList ul li,.featureList ol li {margin-bottom: 7px;}
+		.featureList .hType5, .featureList .headingType5 {margin-bottom: 2px;}
+		
+/* Symbol - contains special characters (+, -, *, /, =, etc.) for styling */
+.symbol {position: absolute;}
+	/* per-context */
+	.dataListThemeM .splitterThemeF .symbol {font-size: 20px; padding-right: 4px; right: 33%; top: 26px;}
+	.colGroup .dataListThemeM .splitterThemeF .symbol {right: 34%; padding-right: 0;}	
+	
+/*:: =Utility ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+/* Override margins - deprecated, use noMargin instead */
+.resetMargin {margin: 0!important;}
+
+/* Display the grid overlay for visual alignment */
+.grid {z-index: 99;width: 100%;height: 100%;position: fixed;top: 0;left: 50%;width: 935px;margin-left: -468px;background: url('./../img/grid.png') 0 0 repeat-y transparent;}
+
+/* Highlight one word/sentence */
+.highlighted, .highlight {background: #f9ed97;}
+
+/* Indents an element. (Mainly used on ul,p or div) */
+.indent, .indent1 {margin-left: 14px;}
+.indent2 {margin-left: 21px;}
+.indent3 {margin-left: 28px;}
+.indent4 {margin-left: 35px;}
+.indent5 {margin-left: 42px;}
+	/* per-context */
+	.formRadio .optionGroup .indent, .formRadio .optionGroup .indent1 {margin-left: 18px;}
+
+/* border - adds a border to the specified position (top, right, bottom, left); Does not impact the element's box size. */
+.borderTop, .borderBottom, .borderRight, .borderLeft {background-image: url('./../img/bg_border.gif') !important;}
+	.borderTop {background-position:center top; background-repeat: repeat-x;}
+	.borderRight {background-position:right top; background-repeat: repeat-y;}
+	.borderBottom {background-position:center bottom; background-repeat: repeat-x;}
+	.borderLeft	{background-position:left top; background-repeat: repeat-y;}
+
+/* noRepeat - removes a background-image repeat */
+.noRepeat{background-repeat: no-repeat !important;}
+
+/* Removes all borders (noBord is deprecated, please use noBorder) */
+.noBord, .noBorder, .border0, tr.noBorder td, tr.noBorder th {border: 0 none !important;}
+.noBorderTop {border-top: 0 none !important;}
+.noBorderRight {border-right: 0 none !important;}
+.noBorderBottom {border-bottom: 0 none !important;}
+.noBorderLeft {border-left: 0 none !important;}
+
+/* noCorner - removes corners; Usage: mainly use with cBoxes only, using this utility class with other elements might give unexpect results. */
+.noCorner {border-top: 1px solid #D6D6D6 !important; border-bottom: 1px solid #D6D6D6 !important;}
+.noCorner .cBoxExtra3, .noCorner .cBoxExtra5 {display: none !important;}
+
+/* noMargin - removes margins from an element */
+.noMargin {margin: 0 !important;}
+.noMarginTop {margin-top: 0 !important;}
+.noMarginRight {margin-right: 0 !important;}
+.noMarginBottom {margin-bottom: 0 !important;}
+.noMarginLeft {margin-left: 0 !important;}
+
+/* noPadding - removes paddings from an element */
+.noPadding {padding: 0 !important;}
+.noPaddingTop {padding-top: 0 !important;}
+.noPaddingRight {padding-right: 0 !important;}
+.noPaddingBottom {padding-bottom: 0 !important;}
+.noPaddingLeft {padding-left: 0 !important;}
+
+/* Horizontal line to separate content (hSepar is deprecated, please use hSeparator) */
+.hSepar, .hSepar1, .hSepar2, .hSepar3, .hSeparator, .hSeparator1, .hSeparator2, .hSeparator3, .hSeparator4, .hSeparator5 {overflow: hidden; height: 1px;background-color: #d6d6d6;margin:0;clear: both;display: block;line-height: 0;}
+.hSepar {margin: 21px 0;}
+.hSeparatorThemeA {background-color:#f5f5f5;}
+.hSeparatorThemeB {border-bottom: 1px solid #fff;}
+.hSeparatorThemeC {border-top: 1px solid #fff;}
+
+/* Edit link for admin use */
+a.btEditPage,a.btEditContent {display: block;padding: 2px 5px;position: absolute;z-index: 999;font-size: 11px;line-height: 11px;letter-spacing: 1px;background-color: #0066a4;color: #fff;}
+a.btEditPage {top: 0;left: 0;}a.btEditContent {top: 0;right: 0;}
+
+/* spacer a.k.a. vSpacer (deprecated) - Adding more spacers variation will also require some IE css editing. See ie6.css */
+.vSpacer {height: 1px;margin-top: 4em;} .vSpacerAlt {height: 1px;margin-top: 25px;}
+.spacer, .spacer1, .spacer2, .spacer3, .spacer4, .spacer5 {height: 1px;}
+.spacer, .spacer1 {margin: 0.5em 0;} /* 1em|12px */
+.spacer1-25 {margin: 0.65em 0;} /* 1.3em|15.6px */
+.spacer1-5 {margin: 0.75em 0;} /* 1.5em|18px */
+.spacer2 {margin: 1em 0;} /* 2em|24px */
+.spacer3 {margin: 1.5em 0;} /* 3em|36px */
+.spacer4 {margin: 2em 0;} /* 4em|48px */
+.spacer5 {margin: 2.5em 0;} /* 5em|60px */
+.spacerThemeA {margin-bottom: 0;}
+.spacerThemeB {margin-top: 0;}
+.spacerThemeC {margin-top: 25px; margin-bottom: 0;}
+
+/* Mostly used by JS functions to fill empty spaces */
+.transparent {background-image: url('./../img/bg_transparent.gif');}
+
+/* Reduces opacity of an element (does not work in IE6/IE7) */
+.dim, .dim1 {opacity: 0.2;}
+.dim2 {opacity: 0.4;}
+.dim3 {opacity: 0.6;}
+.dim4 {opacity: 0.8;}
+
+/* Small text */
+small {font-size: 0.9em; line-height: 1em;} small .toggle {line-height: normal;} 
+p small, .results small {color: #999;} /* ### OK for now. Check if color #999 is good in all cases */
+small em {font-style:italic;}
+h1 small, .hType1 small, .headingType1 small, h2 small, .hType2 small, .headingType2 small, h3 small, .hType3 small, .headingType3 small,
+h4 small, .hType4 small, .headingType4 small {display: inline-block; margin-bottom: -2px; position: relative;}
+h1 small, .hType1 small, .headingType1 small {font-size: 0.35em;}
+h2 small, .hType2 small, .headingType2 small {font-size: 0.45em;}
+h3 small, .hType3 small, .headingType3 small {font-size: 0.6em;}
+h4 small, .hType4 small, .headingType4 small {font-size: 0.8em;}
+
+/* Text handling */
+.center, .textCenter {text-align:center !important;}
+.left, .textLeft {text-align:left !important;}
+.right, .textRight {text-align:right !important;}
+.justify, .textJustify {text-align:justify !important;}
+.toUpperCase {text-transform: uppercase !important;}
+.toLowerCase {text-transform: lowercase !important;}
+.toCapitalize {text-transform: capitalize !important;}
+	/* Avoids text wrapping (forces text to render on one line; this will wrap through other elements) */
+	.toForceNoWrap {white-space: nowrap !important;}
+		.toForceNoWrap .toolTipAction {top: -1px;}
+.toTextBold {font-weight: bold !important;}
+.toTextNormal {font-weight: normal !important;}
+.toTextItalic {font-style: italic !important;}
+.toLineThrough {text-decoration:line-through !important;}
+
+/* Valid/Good/Correct/Green state */
+.valid, .good, .valid *, .good * {color: #22761e !important;}
+	input.valid, input.good, select.valid, select.good, textarea.valid, textarea.good, .good input, .good select, select.good optgroup, select.good option, .good textarea, .valid input, .valid select, select.valid optgroup, select.valid option, .valid textarea {color: #212121 !important;}
+
+/* Obsolete state/rebate (gives text color back do its default; set by body) */
+.obsolete, .obsolete *, .rebate {color: #555 !important;}
+
+/* Error state, Danger state */
+.error, .error .sectionHeader, .error .priceTag,.error .number, .error .sectionContent, .danger, .danger .priceTag, .danger .sectionHeader, .danger .sectionContent, .danger .sectionValue, .error *, .danger * {color:#b00303 !important;}
+
+/* Caution state */
+.caution, .caution * {color: #bd8e1a !important;}
+
+/* Unavailable state */
+.unavailable, .unavailable * {color: #909090 !important;}
+.unavailable .buttonDisabled span {color: #d6d6d6 !important;}
+
+/* Vertical alignments */
+.verticalAlignTop, .verticalAlignTop td, .verticalAlignTop th {vertical-align: top !important;}
+.verticalAlignMiddle, .verticalAlignMiddle td, .verticalAlignMiddle th {vertical-align: middle !important;}
+.verticalAlignBottom, .verticalAlignBottom td, .verticalAlignBottom th {vertical-align: bottom !important;}
+
+/* General element sizing (per %) - Not aligned with grid */
+.size0 {width: 0% !important;}
+.size, .size1 {width: 25% !important;}
+.size2 {width: 50% !important;}
+.size3 {width: 75% !important;}
+
+/* Forces width to take full/auto available space */
+.toAutoWidth, ul.toAutoWidth .sectionHeader, ul.toAutoWidth .sectionContent {width: auto !important;}
+.toFullWidth, ul.toFullWidth .sectionHeader, ul.toFullWidth .sectionContent, 
+.size4, .sizeGroup3 .size3 {width: 100% !important;}
+
+/* Removes Top and Bottom padding of a table row cell (this is mainly used when a <table> contains only a single row) */
+tr.slimRow td, tr.slimRow th {padding-top: 0 !important; padding-bottom: 0 !important;}
+
+/* toColumn - very context specific (contextual-utility) */
+.toColumn .sectionHeader {width: 199px !important;}
+.toColumn .sectionHeader h2, .toColumn .sectionHeader h3, .toColumn .sectionHeader h4, .toColumn .sectionHeader h5, .toColumn .sectionHeader h6,
+.toColumn .sectionValue h2, .toColumn .sectionValue h3, .toColumn .sectionValue h4, .toColumn .sectionValue h5, .toColumn .sectionValue h6 {margin-bottom:0 !important;}
+.toColumn .toColumn .sectionHeader {width: 185px !important;}
+.toColumn .sectionValue {width: 110px !important; float: left !important;}
+.toColumn .sectionValue .pricingOptions {padding-left: 0 !important; float: none !important;}
+.toColumn .dataListThemeN li .sectionValue {float: left !important;}
+.toColumn .pricingInfo p {padding-right: 0;}
+
+.toColumnThemeA .sectionHeader {width: 71px !important;}
+.toColumnThemeA .sectionValue {width: 174px !important;}
+
+/* Floats */
+.floatNone, .toFloatNone {float: none !important;}
+.floatLeft, .toFloatLeft {float: left !important;}
+.floatRight, .toFloatRight {float: right !important;}
+/* floatCenter - Centering floated elements; Used when floated (left/right) elements need to be centered. "centerFloat" needs to be applied to its parent element */
+.floatCenter, .toFloatCenter {float: left; left: 50% !important; position: relative;}
+.floatCenter > *, .toFloatCenter > * {right: 50%; position: relative; float: left;}
+.toStatic {position: static !important;}
+.toRelative, .floatCenterThemeA {position: relative !important;}
+.toAbsolute, .floatCenterThemeB {position: absolute !important;}
+	/* per-element context */
+	.floatCenter .button, .toFloatCenter .button {position: relative; left: -50% !important;}
+	
+/* Overflow */
+.toOverflowHidden {overflow: hidden !important;}
+.toOverflowVisible {overflow: visible !important;}
+.toOverflowAuto {overflow: auto !important;}
+
+/*:: =Lists ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+/* infoList (deprecated) - see dataList just below */
+.infoList, .dataList {position: relative;overflow: hidden;}	
+	.infoList li, .dataList li {width: 100%;float: left;clear: left;font-weight: normal;margin-bottom: 5px;padding-bottom: 3px;border-bottom: 1px solid #ededed;background: none transparent;padding-left: 0;}
+	.infoList li .infoListItem, .dataList .sectionHeader {display: block;float: left;width: 170px;font-weight: bold;}
+	.infoList li .infoListDesc, .dataList .sectionContent {display: block;padding-left: 178px;}
+
+ul.pgToolbar {float: right;margin-bottom: 0;}
+ul.pgToolbar a:visited {color: #0066a4;}
+
+dl.altStyle dt {font-weight: bold;}
+dl.altStyle dd {font-weight: normal;}
+
+dl.instructions dt {float: none;font-weight: bold;margin: 0 0 5px;}
+dl.instructions dd {font-weight: normal;margin-left: 14px;}
+dl.instructions p {margin-bottom: 3px;}
+
+dl.instructions dd dt {float: left;font-weight: bold;margin: 0 0 5px;}
+dl.instructions dd dd {font-weight: normal;margin-left: 14px;}
+
+ol.instructions {margin-left: 14px;}
+
+dl.headDesc dt {float: none;margin-bottom: 6px;color: #212121;font-weight: bold;font-size: 14px;}
+	dl.headDesc dt .unaccent {font-weight: normal;font-size: 14px;}
+dl.headDesc dd {display: block;margin-bottom: 24px;font-weight: normal;}
+
+
+
+/*:: =listView ::::::::::::::::::::::::::::::: */
+.listView li, .flyOut .listView li, .flyOut .listView li.last {position: relative; background-color: #fff; border-bottom: 1px solid #d6d6d6;}
+.listView li a, .flyOut .listView li a {padding-top: 10px; padding-bottom: 10px; padding-left: 21px; font-size: 1.166em;}
+	.listView li a, .listView li a:visited {color: #0066A4;}
+		.listView li a span {display: inline-block;}
+			.listView li a .listViewFigure {width: 75px; text-align: center; margin-right: 12px;}
+				.listView li a .listViewFigure img {vertical-align: middle; max-width: 75px; height: auto;}
+			.listView li a .listViewContent {vertical-align: middle; width: 50%;}
+				.listView li a .listViewContent small {display: block; color: #555; width: auto; margin-top: 3px;}
+	.listView li a.active {background: #dae8f1 url('./../img/bg_listViewActive.jpg') repeat-y -51px 0; color: #212121; font-weight: bold;}
+		.listView li a:active small, .listView li a.active small, .listView li a.active:active small, .flyOut .listView li a:active small {font-weight: normal;}
+		.listView li a:hover, .flyOut .listView li a:hover {background-color: transparent; text-decoration: none;}
+		.listView li a.active:hover, .flyOut .listView li a.active:hover {background-color: #dae8f1; text-decoration: none;}
+.listView li .actionRemove {display: block; height: 15px; width: 15px; padding: 0 !important; position: absolute; right: 10px; top: 12px; text-indent: -999em;}
+	.listView li .actionRemove:hover {background-color: transparent;}
+	
+.listView li.inactive a span, .listView li.disabled a span {font-size: 12px; color: #555; font-weight: normal;}
+	.listView li.inactive a:hover, .listView li.disabled a:hover {cursor: default;}
+	.listView li.inactive a .message, .listView li.disabled a .message {width: auto;}
+
+/* listViewThemeA - better formatting without images */
+.listViewThemeA li a.active {background-image: none;}
+.listViewThemeA li a .listViewContent {display: block; width: auto;}
+
+/* listViewThemeB */
+.listViewThemeB li a, .flyOut .listView li a {padding: 10px;}
+	.listViewThemeB li a:hover, .flyOut .listViewThemeB li a:hover {background-color: #dae8f1;}
+		.listViewThemeB li a .listViewFigure {width: auto; max-width: 20px; float: left; margin-right: 10px; position: relative; top: 2px;}
+		.listViewThemeB li a .listViewContent {width: 80%; overflow: hidden; font-size: 12px;}
+			.listViewThemeB li a .listViewContent small {line-height: normal; margin-top: 0;}
+.listViewThemeB, .listViewThemeB li, .listViewThemeB li.last, .flyOut .listViewThemeB, .flyOut .listViewThemeB li, .flyOut .listViewThemeB li.last {background-color: transparent; border-color: #fff;}
+
+	/* per-context */
+	.flyOutThemeC .listViewThemeB li.last {border-bottom: 0;}
+
+.flyOut .listView {border: 0;}
+
+/* per context */
+ul.pipeSpacer li ul.listView li {float:none; border-right: 0;}
+
+/*:: =dataList ::::::::::::::::::::::::::::::: */
+.dataList li {display: block;}
+.dataList li .sectionHeader {color: #212121;}
+	.dataList li .sectionHeader p, .dataList li .sectionHeader small {color: #555;}
+	.dataList li .sectionHeader ul {margin-top: 0; padding-top: 0;}
+.dataList .sectionContent {padding-left: 170px;}
+.itemGroup .dataList li .sectionContent {margin-bottom: 0;}
+.infoGroup .sectionContent .dataList .sectionContent a {font-size: 12px;}
+.dataList li .sectionHeader .unaccent {font-size: 1em; color: #555;}
+
+.dataListThemeA li {border: 0; float: none;}
+	.dataListThemeA li .sectionHeader {float: none; font-weight: normal; text-align: left; width: auto;}
+	.dataListThemeA li .sectionContent {padding-left: 0;}
+	.dataListThemeA li .sectionAside, .infoGroup .dataListThemeB li .sectionAside {margin-top: 8px;}
+
+.dataListThemeB, .dataListThemeL, .dataListThemeM {position: relative; margin-bottom: 3px; display: block;}
+	.dataListThemeB ul, .dataListThemeL ul, .dataListThemeM ul {clear: both;}
+		.dataListThemeB li, .dataListThemeL li, .dataListThemeM li, .dataListThemeC li ul li {height: auto; min-height: 0;}
+			.itemGroup .dataListThemeB li, .itemGroup .dataListThemeM li {overflow: hidden;}
+			.infoGroup .dataList li ul li {font-size: 12px;}
+			.dataListThemeB li .sectionHeader, .dataListThemeL li .sectionHeader, .dataListThemeM li .sectionHeader  {float: left; margin-bottom: 3px; width: auto;}
+				.dataListThemeB li .sectionHeader label {font-size: inherit; position: relative; top: -3px;}
+				.dataListThemeB li .sectionHeader input {position: relative; top: -1px;}
+				.itemGroup .dataListThemeB li .sectionHeader {padding-right:0px; }
+			.dataListThemeB li .sectionValue, .dataListThemeL li .sectionValue, .dataListThemeM li .sectionValue, .dataListThemeO li .sectionValue  {margin-bottom: 3px; font-weight: normal; text-align: right;}
+				.dataListThemeB li .sectionHeader, .dataListThemeO li .sectionHeader {width: 55%;}
+				.dataListThemeB li .sectionValue, .dataListThemeO li .sectionValue {position: relative; right: 0; float: right; width: 45%;}
+				.dataListThemeB li .sectionHeader em, .dataListThemeL li .sectionHeader em, .dataListThemeM li .sectionHeader em {clear: both; display: block; margin-top: 1px; margin-bottom: 5px; color: #555;}
+			.dataListThemeB li .sectionContent, .dataListThemeL li .sectionContent, .dataListThemeM li .sectionContent {clear:both; display:block; padding: 0; margin-bottom: 3px;}
+				
+				
+.dataListThemeC li {float: left; width: 175px; padding-right: 34px; padding-bottom: 1.2em; font-size:1.166em; clear: none;}
+	.dataListThemeC li .sectionHeader {display: block; float: none; padding-bottom: 5px; border-bottom: 1px solid #e5e5e5; text-align: left;}
+	.dataListThemeC li .sectionValue, .dataListThemeC li .sectionContent {display: block; padding-top: 4px; float: none; text-align: left; font-size: 1.166em; line-height: 1.33em; color: #0066A4;}
+	.dataListThemeC li .sectionContent {padding-left: 0; color: #555; font-size: 1em;}
+
+.dataListThemeB li {margin-bottom: 10px; padding-bottom: 0;}
+.dataListThemeB li, .dataListThemeM li, .dataListThemeC li {border: 0;}
+.dataListThemeB li .sectionHeader, .dataListThemeC li .sectionHeader, .dataListThemeL li .sectionHeader, .dataListThemeM li .sectionHeader {font-weight: normal;}
+.dataListThemeB li .sectionValue {width: 45%;}
+
+.dataListThemeD li .sectionHeader, ul .dataListThemeD li .sectionHeader {font-weight: normal; color: #555; margin-bottom: 0;}
+.dataListThemeD li .sectionHeader, .dataListThemeD li .sectionContent, ul .dataListThemeD li .sectionContent {clear: left; text-indent: 0; padding-left: 11px; width: 70%;}
+.dataListThemeD .priceTag, .dataListThemeD .number {color: #212121;}
+.dataListThemeD li .button {text-indent: 0;}
+.dataListThemeD li ul li {padding-top:0;padding-right:0;padding-bottom:0;margin-bottom:0 !important;}
+.dataListThemeD li ul li {float: none;}
+
+.dataListThemeE li, .dataListThemeF li, .dataListThemeG li, .dataListThemeK li {border-bottom: 0; padding-bottom: 0;}
+.dataListThemeE li .sectionHeader {font-weight: normal; color: #555;}
+.dataListThemeE li .sectionContent {padding: 0; float: right; text-align: right;}
+.dataListThemeE li .sectionValue {float: left;}
+
+.dataListThemeF li {margin-bottom: 7px;}
+.dataListThemeF li .sectionHeader, .itemGroup .dataListThemeF li .sectionHeader, .dataListThemeK li .sectionHeader {width: auto;font-weight:normal;color:#555;}
+.dataListThemeF li .sectionHeader {margin-right: 7px;}
+.dataListThemeF li .sectionContent, .dataListThemeK li .sectionContent {padding-left:0;color:#212121;}
+.shell .dataListThemeF .sectionHeader {float: left; padding-left: 0;}
+
+.dataListThemeG li {display: block; width: auto; clear: both; padding-right: 40px; line-height: 18px; margin-bottom: 0;}
+	.dataListThemeG li .sectionHeader {width: auto; float:left;}
+	.dataListThemeG li .sectionValue {float:left; margin-left: 5px;}
+		.dataListThemeG li .sectionHeader img {vertical-align: middle;}
+	.dataListThemeG li .sectionContent {float: left; padding-left: 0; margin-left: 5px;}
+.infoGroup .dataListThemeG li {margin-right: 0;}
+.pgSectionFeature .itemGroup .sectionContent .dataListThemeG .sectionContent {padding-top: 0;}
+
+.dataListThemeH li {border-bottom: 0;}
+	.dataListThemeH li .sectionContent, .dataListThemeH li .sectionValue {padding-left: 170px;}
+
+.dataListThemeI li, .dataListThemeQ li {float: left; clear: none; margin-right: 35px; width: 43%;}
+	.dataListThemeI li .sectionHeader, .dataListThemeQ li .sectionHeader {font-weight: normal; width: auto; padding-right: 5px;}
+	.dataListThemeI li .sectionContent, .dataListThemeQ li .sectionContent {float: left; padding-left: 0; width: 50%;}
+	
+.dataListThemeJ {overflow: visible; float: left;}
+	.dataListThemeJ li {border-bottom: 0; padding-bottom: 0; margin-bottom: 2px;}
+		.dataListThemeJ li .sectionContent {position: relative; padding-left: 18px; float: none;}
+			.dataListThemeJ li .sectionContent sup {left: -1px; position: absolute; text-align: right;}
+
+.dataListThemeK li .sectionHeader {width: 20%; color: #212121; margin-right: 3px;} .dataListThemeK li .sectionContent {padding-left: 25%; color: #555;}
+
+.dataListThemeL {margin-bottom: 0; margin-right: 18%;}
+	.fr .dataListThemeL {margin-right: 25%;}
+	.dataListThemeL li {clear: none; width: auto; margin-bottom: 0; margin-right: 12px; border: 0; overflow: hidden;}
+		.dataListThemeL li .sectionHeader {width: auto; font-size: 1.166em;}
+		.dataListThemeL li .sectionHeader, .dataListThemeL li .sectionContent {float: none;}
+		.dataListThemeL .last {margin-right:0;}
+		
+.dataListThemeM {overflow: visible;}
+	.dataListThemeM li {margin-bottom: 15px;}
+		.dataListThemeM li .sectionContent {width: 76.9%;} /* ### */
+		.dataListThemeM li .sectionHeader {text-align: left; float: none;}
+		.dataListThemeM li .sectionValue {width: 22%; text-align: left; position: absolute; right: 2px; top: 25px; font-weight: bold; font-size: 1.166em;}
+		.dataListThemeM li .sectionValue .toolTipAction {top: -1px;}
+			.dataListThemeM li .splitter .sectionValue {right: -23%; float: none;}
+		.dataListThemeM li .toolTipAction {margin-left: 3px;}
+		/* per-context */
+		.colGroup .dataListThemeM li .sectionHeader {white-space: nowrap;}
+		.colGroup .dataListThemeM li .sectionValue {width: 20%;}
+		.colGroup .dataListThemeM li .splitter .sectionValue {right: -31%; width: 30%;}
+
+.dataListThemeN, .dataList li .dataListThemeN {margin-top: 0; padding-top: 0;}
+	.dataListThemeN li {background: url('./../img/bl_default.gif') no-repeat scroll 0 0.48em transparent; border-bottom: 0; margin-bottom: 0; padding-bottom: 0; overflow: hidden;}
+		.dataListThemeN li .sectionHeader {width: auto; font-weight: normal; color: #555; padding-left: 14px; margin-bottom: 3px;}
+		.dataListThemeN li .sectionValue {float: right;}
+		.dataListThemeN li .sectionContent {clear: both; padding-left: 14px;}
+	
+	/* per-context - move to new theme if needed */
+	.dataList .dataListThemeN li, .colGroup .dataList .dataListThemeN li {float: none; margin-bottom: 0;}
+	.dataList .dataListThemeN li .sectionValue {clear: none; margin-bottom: 0;}
+	.dataList li .sectionContent .dataListThemeN li .sectionHeader {padding-left: 0;}
+	.colGroup .infoGroup .dataListThemeN li .sectionHeader {padding-left: 14px; width: 60%;}
+
+.dataListThemeO {border-top: 1px solid #ededed; padding-top: 4px;}
+	.dataListThemeO li {padding-bottom: 4px; margin-bottom: 4px;}	
+		.dataListThemeO li .sectionHeader, .dataListThemeO li .sectionHeader label {font-weight: normal; font-size: 1em; line-height: 18px;}
+			.dataListThemeO li.active, .dataListThemeO li.active .sectionHeader label {color: #212121;}
+				.dataListThemeO li .sectionHeader, .cBoxThemeA .infoGroup .dataListThemeO li .sectionHeader{width: auto;}
+					.dataListThemeO li .sectionHeader input {position: relative; top: 1px; margin-left: 0; margin-right: 5px;}
+				.dataListThemeO li .sectionValue {top: 3px; margin: 0; width: 30%;}
+				.dataListThemeO li .sectionContent {padding-left: 0; padding-top: 8px; clear: both;}
+		
+.dataListThemeP li {width: 49%; clear: none; border-bottom: 0;}
+.dataListThemeP li .sectionHeader {float: none; font-weight: normal; margin-bottom: 3px;}
+	.itemGroup .dataListThemeP li .sectionHeader {width: auto;}
+.dataListThemeP li .sectionContent {padding-left: 0;}
+
+/* see also dataListThemeI for styles */
+.dataListThemeQ li {width: 100%; border-bottom: 0; padding-bottom: 0; margin-right: 0;}
+
+.dataListThemeR li, .dataListThemeS li, .dataListThemeT li {float: left; clear: none; width: auto; border-bottom: 0; border-right: 1px solid #d5d5d5; padding-right: 10px; padding-bottom: 0; margin-right: 10px; margin-bottom: 10px;}
+	.dataListThemeR li .sectionHeader, .dataListThemeS li .sectionHeader, .dataListThemeT li .sectionHeader {color: #555; font-size: 11px; font-weight: normal; width: auto; max-width: 14.16em; float: none; text-transform: uppercase;}
+	.dataListThemeR li .sectionContent, .dataListThemeS li .sectionContent, .dataListThemeT li .sectionContent {padding-left: 0;}
+.dataListThemeR li.last, .dataListThemeT li.last {border-right: 0; padding-right: 0; margin-right: 0;}
+
+.dataListThemeS li {border: none; margin-right: 21px; margin-bottom: 0; padding-bottom: 10px;}
+	.dataListThemeS li .sectionHeader {width: auto; max-width: none;}
+
+.dataListThemeS li.last { margin-right:0; }
+
+	/* per-context */
+	.multiColumnThemeC .dataListThemeS {margin-bottom: 0;}
+	.multiColumnThemeC .dataListThemeS li {margin-right: 10px; margin-bottom: 0;}
+	
+.dataListThemeT li {padding-right: 7px; margin-right: 21px; margin-bottom: 5px;}
+	.dataListThemeT li .sectionHeader {text-transform: none; font-size: 1em; color: #212121; text-align: left;}
+		
+.dataListThemeU li {margin-bottom: 6px; padding-bottom: 6px;}
+	.dataListThemeU li .sectionHeader {width: auto;}
+	.dataListThemeU li .sectionContent {padding-left: 40%;}
+	
+.dataListThemeV li {border-bottom: 1px solid #E2E2E2;}
+	.dataListThemeV li .sectionHeader {float: none; width: 100%;}
+	.dataListThemeV li .sectionContent {float: none; padding-left: 0;}
+		.dataListThemeV li .sectionContent ul {margin-top: 5px;}
+			.dataListThemeV li .sectionContent ul li {background-image: none; padding-left: 0; margin-bottom: 5px;}
+	.dataListThemeV li.active a:hover {text-decoration: none;}
+
+	/* per-element */
+	.dataListThemeV li .sectionHeader .headingThemeD {margin-bottom: 3px; padding-right: 21px;}
+	.dataListThemeV li .sectionContent .formGroup {margin-top: 5px; margin-bottom: 0px;}
+		.dataListThemeV li .sectionContent .formGroup .optionGroup label {display: block; color: #0066A4; margin-left: 21px;}
+		.dataListThemeV li .sectionContent .formGroup .optionGroup label:hover {text-decoration: underline;}
+	.dataListThemeV li .sectionContent ul.treeList li {padding-left: 21px; background: url('./../img/bg_treeLine.gif') repeat-y scroll 3px top transparent;}
+		.dataListThemeV li .sectionContent ul.treeList li.last {background-image: none;}
+			
+.itemGroup .dataList .sectionHeader {width: 40%;}
+	.itemGroup .dataListThemeK .sectionHeader, .itemGroup .dataListThemeT .sectionHeader  {width: auto;}
+	.pgSectionFeature .itemGroup .dataListThemeK .sectionContent {padding-top: 0;}
+.itemGroup .dataListThemeA li {margin-bottom: 10px;}
+	.itemGroup .dataListThemeA li ul li {margin-bottom: 0;}
+	.itemGroup .dataListThemeA .sectionHeader, .itemGroup .dataListThemeA .sectionHeader {margin-bottom: 3px;}
+.itemGroup .dataList .sectionContent {overflow: visible;}
+.itemGroup .dataListThemeD .sectionContent, .itemGroup ul .dataListThemeD .sectionContent {float: none;}
+.itemGroup .dataListThemeE .sectionContent {float: right;}
+.itemGroup .dataListThemeA .sectionContent, .itemGroup .dataListThemeB .sectionContent, .itemGroup .dataListThemeM .sectionContent, .itemGroup .dataListThemeC .sectionContent, .itemGroup .dataListThemeD .sectionHeader, .itemGroup .dataList .dataListThemeD .sectionHeader {float: none;}
+.itemGroup .dataListThemeA .sectionHeader, .itemGroup .dataListThemeM .sectionHeader, .itemGroup .dataListThemeC .sectionHeader, .dataListThemeD .sectionHeader, ul .dataListThemeD .sectionHeader, .itemGroup .dataListThemeG .sectionHeader,
+.itemGroup .dataListThemeD .sectionHeader, .itemGroup ul .dataListThemeD .sectionHeader, .itemGroup .dataListThemeC .sectionHeader, .itemGroup .dataListThemeC .sectionContent {width: auto;}
+	.itemGroup ul .dataListThemeD li {background-position: 80% 0;}
+	
+.dataList li ul {margin-bottom: 0; overflow: hidden; padding-top: 0; margin-top: 0;}
+
+.itemGroup .dataListThemeB li, .itemGroup .dataListThemeM li {margin-bottom: 0; padding-bottom: 0;}
+	.itemGroup .dataListThemeB li .sectionHeader, .itemGroup .dataListThemeM li .sectionHeader, .itemGroup ul .dataListThemeD .sectionHeader {width: 70%; text-align: left; margin-left: 0;}
+	.itemGroup .dataListThemeB li .sectionValue, .itemGroup .dataListThemeM li .sectionValue {width: 30%;}
+		.itemGroup .dataListThemeB li .dataListThemeD li .sectionHeader {width: 70%;}
+		.itemGroup .dataListThemeB li .dataListThemeD li .sectionValue {width: 35%;}
+	
+.infoGroup.shell .sectionContent .formGroup .dataList .sectionHeader {width: auto; float: none; padding-left: 0; text-align: left;}
+
+/* dataList themes "last" */
+.dataListThemeB li.last {padding: 14px 0; border-top: 1px solid #E5E5E5; border-bottom: 1px solid #E5E5E5;}
+	.dataListThemeB li.last, .dataListThemeB li.last .sectionHeader, .dataListThemeB li.last .sectionValue {margin-bottom:0;}
+.dataListThemeD li.last, .dataListThemeD li.last .sectionHeader {font-weight: bold;}
+
+/*:: =infoGroup ::::::::::::::::::::::::::::::: */
+.infoGroup {position: relative; overflow:hidden; clear: both; border-bottom: 1px solid #d6d6d6; padding: 26px 0 8px 0; min-height: 28px; margin-bottom: -1px; margin-top: -2px;}
+	.infoGroup .sectionHeader {float: left; width: 20%; margin-right: 34px; text-align: right;}
+		.sectionHeader .itemFigure {float: none; margin: 0;}
+	.infoGroup .sectionContent {position: relative; float: left; width: 50%;}
+		.infoGroup .sectionAside {position: absolute; right: 17px; top: 18px; margin: 0 3px 0 0;}
+			.infoGroup .sectionAside .button {margin-right: 0; margin-left: 8px;}
+		.infoGroup .pricingInfo {float: right;}
+			.infoGroup .pricingInfo .pricingOptions, .splitter .pricingInfo .pricingOptions {padding-right: 0; display: inline-block; width: auto; padding-left: 30px;}
+		.infoGroup .moreLink {display: inline-block; margin-bottom: 0.5em;}
+
+	/* infoGroup Lists */
+	.infoGroup ul {margin-bottom: 1em;}
+		.infoGroup .dataList {overflow: visible;}
+			.infoGroup .dataList li {float: none; min-height: 25px; position: relative; padding-left: 0;}
+				.dataListThemeO li, .infoGroup .dataListThemeO li {float: left;}
+				.infoGroup .dataList li .sectionContent {float: none; width: auto;} /* ### had padding-left: 135px - to be removed (3:44 PM 6/27/2012) */
+				.colGroup .cBoxThemeA .infoGroup .dataList li .sectionContent {float: left;}
+				.infoGroup .dataList .sectionAside, .infoGroup .dataList .button {top: -19px;}	.infoGroup .sectionAside button.button {top:auto;}
+				.infoGroup .dataList .sectionAside {right: -43%;}	.shell .infoGroup .dataList .sectionAside {right: -39%; margin-right: -2px;}
+		.infoGroup .dataList .sectionHeader {padding-left: 0; margin-right: 0; margin-bottom: 3px; text-align: left; width: 170px;}			
+		.infoGroup .dataListThemeA li {min-height: 0; margin-bottom: 1em;}
+			.infoGroup .dataListThemeA li .sectionHeader {font-size: 1.166em;} .infoGroup .dataListThemeA li .sectionHeader, .infoGroup .dataListThemeA li .sectionHeader ul li {font-weight: bold;}
+			.infoGroup .dataListThemeA li .sectionContent {font-size: 0.916em;}
+		.infoGroup .dataListThemeC {float: none;}
+			.infoGroup .dataListThemeC li {width: auto;}
+				.infoGroup .dataListThemeC .button {top: 3px;}		
+		.infoGroup .dataListThemeC li {position: relative; float: none; clear: none; border: 0; padding-bottom: 0; margin-bottom: 1em;}
+		.infoGroup .dataListThemeA li .sectionContent, .infoGroup .dataListThemeB li .sectionContent, .infoGroup .dataListThemeC li .sectionContent {padding-left: 0;}
+		.infoGroup .dataList .sectionContent em {display: block; font-size: 1.3em; margin-bottom: 3px; line-height: 1.3em;}
+		.infoGroup .dataListThemeM li {margin-bottom: 3px;}
+		
+		.infoGroup .dataList li ul li, .dataList li ul li, .sumBox .dataList li ul li {width: auto; min-height: 0; list-style: none;background: url('./../img/bl_default.gif') 0 0.48em no-repeat transparent; padding-left: 14px; padding-bottom: 0; text-indent: 0; margin-bottom: 3px; border: 0;}
+		.infoGroup .dataList li ul li {margin-bottom: 0;}
+		.infoGroup .dataList .sectionHeader, .infoGroup .dataList li .sectionContent {width: auto;}
+		.infoGroup .dataListThemeD li, .infoGroup ul .dataListThemeD li {border-bottom: 0;}
+			.infoGroup .dataListThemeD li .sectionContent, .infoGroup ul .dataListThemeD li .sectionContent {float: none; clear: left; text-indent: 0; padding-left: 11px;}
+		.infoGroup .sectionContent .formGroup .sectionContent .dataList .sectionContent {font-size: 1em; line-height: 1.4em;}
+			.infoGroup .sectionContent .formGroup .sectionContent .dataListThemeD .sectionContent, .infoGroup .sectionContent .formGroup .sectionContent ul .dataListThemeD .sectionContent {float: none; padding-left: 11px;}	
+		.infoGroup .dataListThemeI li, .infoGroup .dataListThemeQ li {width: auto; margin-right: 0;}
+		.infoGroup .message, .formGroup .sectionContent .message {margin-top: 5px;}
+			.formGroup .sectionContent .inputAside .message {margin-top: 0;}
+	
+	/* Forms */
+	.infoGroup .formGroup .sectionHeader {float: none;}
+		.infoGroup .sectionContent .formGroup .sectionHeader {float: none; display: block; margin-bottom: 5px; text-align: left; padding-left: 0; top:0;}
+	.infoGroup .formGroup .sectionContent {padding-left: 0; width: auto;}
+	.infoGroup .sectionContent .formButton .sectionContent {float: left; padding-left: 0;} 
+	.infoGroup .formButton .buttonThemeC {top: -2px;}		
+	.infoGroup .sectionContent .formGroup .sectionContent label {font-size: 12px;}
+		.infoGroup .sectionContent .shell .formCheckbox .sectionContent label {font-size: 1.16em; line-height: 1em;}
+	label.active {font-weight: bold;}
+		
+	/* Shell */
+	.infoGroup.shell .sectionContent .shell .formGroup {margin-bottom: 1em;}
+	.shell.infoGroup, .colGroup .shell.infoGroup {overflow: visible; padding-top: 26px;}
+	.infoGroup.shell .sectionHeader {float: none; margin-bottom: 20px;} .infoGroup.shell .sectionContent {float: none; width: auto;}
+		.infoGroup.shell .sectionContent .formGroup .sectionHeader {float: left; text-align: right; margin-bottom: 0; top: 7px;}
+			.infoGroup.shell .sectionContent .shell .formGroup .sectionHeader {float: none; text-align: left; margin-bottom: 4px;}
+		.infoGroup.shell .sectionContent .formRadio .sectionHeader, .infoGroup.shell .sectionContent .formCheckBox .sectionHeader, 
+		.infoGroup.shell .sectionContent .formContent .sectionHeader, .infoGroup.shell .sectionContent .formSelect .sectionHeader {top: 0;}
+		.infoGroup.shell .sectionContent .formGroup .sectionContent {float: left; padding-left: 0; width: 70%;}
+			/* exceptions */
+			.infoGroup.shell .sectionContent .formContentThemeA .sectionContent {width: 100%;}
+			.infoGroup.shell .sectionContent .formButton {margin-left: 237px; position: relative;} .infoGroup.shell .sectionContent .formButtonThemeA {margin-left: 0;}
+			.infoGroup.shell .sectionHeader h2, .infoGroup.shell .sectionHeader h3, .infoGroup.shell .sectionHeader h4, .infoGroup.shell .sectionHeader h5, .infoGroup.shell .sectionHeader h6, 
+			.infoGroup.shell .sectionHeader .hType2, .infoGroup.shell .sectionHeader .hType3, .infoGroup.shell .sectionHeader .hType4, 
+			.infoGroup.shell .sectionHeader .hType5, .infoGroup.shell .sectionHeader .hType6 {font-weight: bold;}
+	.infoGroup.shell .sectionContent .formCollection .formGroupThemeB  .sectionHeader {width: auto; padding-left: 0; margin-right: 15px;}
+	.infoGroup.shell .formGroupThemeC .sectionContent {width: auto; left: 25px;}
+		
+	/* if in columns (colGroup) */
+	.colGroup .infoGroup {margin-bottom: 18px; padding-top: 0; padding-bottom: 15px;}
+			.infoGroup.shell .sectionContent .formCollection  .formGroup .sectionContent, .colGroup .infoGroup .formButton .sectionContent, .colGroup .infoGroup.shell .formButton .sectionContent {width: auto;}
+			.colGroup .infoGroup .sectionAside {position: relative; right: auto; top: 0; margin-bottom: 1em; overflow: hidden; margin-left: 30%; padding-left: 32px; clear: both;}
+			.colGroup .infoGroup .pricingInfo {text-align: right;}
+		.colGroup .infoGroup .dataList .sectionAside {margin-left: 0; padding-left: 0;}
+		
+		.colGroup .infoGroup .formText input {width: 15em;}
+		.colGroup .shell .shell .formText input {width: 14em;}
+		.colGroup .infoGroup .formButton .buttonThemeC {top: 3px;}	
+		.colGroup .infoGroup .dataList li {min-height: 0; overflow: visible;}
+			.colGroup .infoGroup .dataListThemeD li, .colGroup .infoGroup .dataListThemeN li {overflow: hidden;}
+		.colGroup .infoGroup .dataListThemeA li, .colGroup .infoGroup .dataListThemeB li, .colGroup .infoGroup .dataListThemeC li {overflow: hidden;}
+			.colGroup .dataList, .colGroup .infoGroup .dataList .sectionContent, .colGroup .infoGroup .dataList .sectionContent ul, .colGroup .infoGroup .dataList .sectionContent p {margin-bottom: 0;}
+			.colGroup .shell .dataList {margin-bottom: 1em;} 
+				/* exceptions per themes */
+				.colGroup .shell .dataListThemeB, .colGroup .shell .dataListThemeS {margin-bottom: 0;}
+				
+			.colGroup .infoGroup .dataListThemeB .button, .colGroup .infoGroup .dataListThemeM .button {display: block; overflow: visible; margin-bottom:5px; margin-top:3px;}
+			.colGroup .infoGroup .dataListThemeB li .sectionValue {width: 30%;}
+			.colGroup .infoGroup .dataList .sectionHeader {width: auto; margin-right: 0;}
+				.colGroup .infoGroup .dataListThemeB .sectionHeader {width: 70%;} .colGroup .infoGroup .dataListThemeB .sectionContent {width: 70%; float: left;} /* ### */
+			.colGroup .infoGroup .dataListThemeC .button {display: inline-block; overflow: hidden;}
+		.colGroup .infoGroup .sectionAside .button {margin-right: 8px; margin-left: 0;}
+
+		.infoGroup.noSectionHeader .sectionContent, .infoGroup .formGroup.noSectionHeader .sectionContent {margin-left: 237px; padding-left: 0; display: inline;}	
+			.infoGroup.noSectionHeader .sectionContent .sectionContent {margin-left: 0; }
+			.infoGroup.noSectionHeader .sectionContent .dataList .sectionHeader {position: static;}		
+		.colGroup .infoGroup.noSectionHeader .sectionContent, .colGroup .formGroup.noSectionHeader .sectionContent, .colGroup .infoGroup.shell .sectionContent .formButton {padding-left: 0; margin-left: 158px;}
+			.col9 .infoGroup.shell .sectionContent .formButton, .colGroup .infoGroup.noSectionHeader .sectionContent .dataList .sectionContent, .colGroup .noSectionHeader.formGroupThemeA .sectionContent {margin-left: 0;}
+		
+/* Contextual width overwrites */
+.infoGroup .sectionHeader, .infoGroup .formGroupThemeC .sectionHeader {width: 203px;}
+.colGroup .infoGroup .sectionHeader, .infoGroupThemeB .sectionHeader {width: 145px; margin-right: 13px; text-align: left;}
+.colGroup .infoGroup.shell .sectionHeader {text-align: right;}
+.col6 .infoGroup .sectionContent {width: 261px;}
+.col7 .infoGroup .sectionContent {width: 340px;}
+.col8 .infoGroup .sectionContent {width: 419px;}
+.col9 .infoGroup .sectionContent {width: 498px;}
+.col10 .infoGroup .sectionContent {width: 577px;}
+	.col10 .infoGroup.shell .sectionContent .sectionContent {width: 535px;}
+.col11 .infoGroup .sectionContent {width: 656px;}
+	.col11 .infoGroup.shell .sectionContent .sectionContent {width: 614px;}
+.col12 .infoGroup .sectionContent, .infoGroupThemeB .sectionContent {width: 735px;}
+	.col12 .infoGroup.shell .sectionContent .sectionContent {width: 693px;}
+.col9 .infoGroup.shell .sectionContent, .col10 .infoGroup.shell .sectionContent .sectionContent, .col11 .infoGroup.shell .sectionContent .sectionContent, .col12 .infoGroup.shell .sectionContent .sectionContent {width: auto;}
+		
+/* infoGroupThemeA */
+.infoGroupThemeA, .colGroup .infoGroupThemeA {margin-bottom:0; padding:21px;	border-bottom:0;}
+	.infoGroupThemeA .sectionContent, .colGroup .infoGroupThemeA .sectionContent {width:80%;}
+	.infoGroupThemeA .sectionHeader, .colGroup .infoGroupThemeA .sectionHeader {width:102px; margin-right:6px; padding-bottom:4px; padding-left: 0;}
+		.infoGroupThemeA .sectionHeader h2, .infoGroupThemeA .sectionHeader h3, .infoGroupThemeA .sectionHeader h4{color:#555;}
+		.infoGroupThemeA .dataListThemeA li .sectionHeader {font-size:1.166em;	font-weight:normal;	background:none;}
+		.infoGroupThemeA ul {margin-bottom:0;}
+
+/* infoGroupThemeB */
+.cBoxThemeA .infoGroupThemeB {margin-bottom: 18px; border-bottom: 1px solid #D6D6D6; padding-top: 0;}
+	.cBoxThemeA .infoGroupThemeB .sectionHeader {display: block; float: left;}
+	.cBoxThemeA .infoGroupThemeB .sectionContent {padding-right: 0;}
+.shell .infoGroupThemeB .sectionContent {width: 695px;}
+.infoGroupThemeB .dataList .sectionAside {right: 17px;} .shell .infoGroupThemeB .dataList .sectionAside {right: -11px;}
+.shell .infoGroupThemeB .sectionHeader {width: 103px; margin-right: 34px;}
+.shell .infoGroupThemeB.shell .sectionContent {width: auto;}
+	.shell.infoGroupThemeB .sectionContent .formButton {margin-left: 178px;}
+.infoGroupThemeB .sectionContent .formGroup .sectionHeader {width: 145px; text-align: left !important;}
+
+/* infoGroupThemeC */
+.infoGroupThemeC {margin: 0;}
+	.infoGroupThemeC .sectionHeader {width: 150px; margin-right: 12px; text-align: center; width: 20%;}
+	.infoGroupThemeC .sectionContent {width: 55%;}
+	.infoGroupThemeC .sectionAside {position: static; width: 20%; float: right; margin: 0;}
+	
+	/* exceptions/per context - to move to new themes/class if needed */
+	.infoGroupThemeC .sectionAside .dataListThemeA li {margin-bottom: 5px; line-height: 19px;}
+		.infoGroupThemeC .sectionAside .dataList li .sectionHeader {position: relative; z-index: 1;}
+		.infoGroupThemeC .sectionAside .dataListThemeA li .sectionHeader {float: left; margin-bottom: 0;}
+			.infoGroupThemeC .sectionAside .checkBoxImage {top: 0;}
+		.infoGroupThemeC .sectionAside .dataListThemeA li .sectionContent {font-size: 1em; padding-left: 30px;}
+		.infoGroupThemeC .channelsThemeB, .infoGroupThemeC .channelsThemeB li, .infoGroupThemeC .channelsThemeC, .infoGroupThemeC .channelsThemeC li {float: none;}
+			.infoGroupThemeC .channelsThemeB li, .infoGroupThemeC .channelsThemeC li {margin-right: 0;}
+
+		/* per context */
+		.colGroup .infoGroupThemeC .sectionContent{width:45%;}
+		.colGroup .infoGroupThemeC .sectionAside{clear:none; margin-left:0; padding-left:0; top:auto; width:10%;}
+		.colGroup .infoGroupThemeC .sectionValue {float:left; width:15%; }
+		
+		/* lightbox context */
+		.lbContent .infoGroupThemeC {padding-top: 0; border-bottom: 0;}
+		.lbContent .infoGroupThemeC .sectionHeader {text-align: left;}
+		.lbContent .infoGroupThemeC .sectionContent {width: 75%;}
+			
+/* infoGroup "last" element */
+.shell .infoGroup.last {border: 0;}
+.colGroup .infoGroup.last, .cBoxThemeA .infoGroupThemeB.last {margin-bottom: 0; border-bottom: 0 !important;}
+.cBoxThemeA .infoGroup.last {padding-bottom: 0;}
+	.cBoxThemeA  .colGroup .infoGroup.last {border-bottom: 0;}	
+
+/* Misc. Tweaks */
+.formCollectionThemeA {position: relative;}
+	.formCollectionThemeA .itemFigure {position: absolute; top: 0; right: 132px; margin: 0;}
+	.infoGroup .formCollectionThemeA .itemFigure {right: 48px;}
+.shell .shell.last {border: 1px solid #ccc;}
+	
+/*:: =Grid system (suite) ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+.pull0,.pull1,.pull2,.pull3,.pull4,.pull5,.pull6,.pull7,.pull8,.pull9,.pull10, .pull11,.pull12
+ {left: 100%; margin-right: 0;}
+
+.pull1 {margin-left: -66px;}
+.pull2 {margin-left: -145px;}
+.pull3 {margin-left: -224px;}
+.pull4 {margin-left: -303px;}
+.pull5 {margin-left: -382px;}
+.pull6 {margin-left: -461px;}
+.pull7 {margin-left: -540px;}
+.pull8 {margin-left: -619px;}
+.pull9 {margin-left: -698px;}
+.pull10 {margin-left: -777px;}
+.pull11 {margin-left: -856px;}
+.pull12 {margin-left: -935px;}
+
+.bord3, .bord4, .bord6, .bord8, .bord9 {background-color: transparent; background-position: -7px 0;}
+.bord3 {background-image: url('./../img/bg_bord3.gif');}
+.bord4 {background-image: url('./../img/bg_bord4.gif');}
+.bord6 {background-image: url('./../img/bg_bord6.gif');}
+.bord8 {background-image: url('./../img/bg_bord8.gif');}
+.bord9 {background-image: url('./../img/bg_bord9.gif');}
+
+.dc1,.dc2,.dc3,.dc4,.dc5,.dc6,.dc7,.dc8,.dc9,.dc10,.dc11 {left: 50%;position: relative;}
+.dc1 {margin-left: -33px;width: 66px;}
+.dc2 {margin-left: -73px;width: 145px;}
+.dc3 {margin-left: -112px;width: 224px;}
+.dc4 {margin-left: -152px;width: 303px;}
+.dc5 {margin-left: -191px;width: 382px;}
+.dc6 {margin-left: -231px;width: 461px;}
+.dc7 {margin-left: -270px;width: 540px;}
+.dc8 {margin-left: -310px;width: 619px;}
+.dc9 {margin-left: -349px;width: 698px;}
+.dc10 {margin-left: -389px;width: 777px;}
+.dc11 {margin-left: -428px;width: 856px;}
+
+ul.refLine, ul.colGroup {border: 0 none;margin-bottom: 0;}
+ul.refLine li, ul.colGroup li {padding: 0;margin-bottom: 0;background: none transparent;}
+
+/* Make sure you start from a reference point before you start building a grid layout */
+.innerWrap {overflow: hidden;position: relative;}
+	.innerWrap .refLine, .innerWrap .colGroup {margin-bottom: 21px;position: relative;left: -21px;width: 935px;}
+	
+
+
+/*:: =mGrids (micro grid system)  ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+/* Note 1: mGrids inside a shell requires side padding (left/right) of exactly 19 pixels otherwise it will break. */
+/* Note 2: mGrid1-3 might not be aligned properly on the grid */
+/* Note 3: mGrids inside a shell might not be aligned properly on the grid */
+
+.mCol1,.mCol2,.mCol3,.mCol4,.mCol5,.mCol6,.mCol7,.mCol8 {position: relative;float: left;margin-right: 13px;}
+
+.mGrid4 .mCol1,.mGrid4 .mCol2,.mGrid4 .mCol3,.mGrid4 .mCol4 {margin-right: 11px;}
+.col9 .mGrid4 .mCol1,.col9 .mGrid4 .mCol2,.col9 .mGrid4 .mCol3,.col9 .mGrid4 .mCol4 {margin-right: 8px;}
+
+.mGrid5 .mCol1,.mGrid5 .mCol2,.mGrid5 .mCol3,.mGrid5 .mCol4,.mGrid5 .mCol5 {margin-right: 12px;}
+.col9 .mGrid5 .mCol1,.col9 .mGrid5 .mCol2,.col9 .mGrid5 .mCol3,.col9 .mGrid5 .mCol4,.col9 .mGrid5 .mCol5 {margin-right: 9px;}
+
+.mGrid1 .mCol1, .mGrid2 .mCol1, .mGrid2 .mCol2, .mGrid3 .mCol1, .mGrid3 .mCol2, .mGrid3 .mCol3,
+.shell .mGrid4 .mCol1,.shell .mGrid4 .mCol2,.shell .mGrid4 .mCol3,
+.shell .mGrid5 .mCol1,.shell .mGrid5 .mCol2,.shell .mGrid5 .mCol3,.shell .mGrid5 .mCol4,
+.mGrid6 .mCol1,.mGrid6 .mCol2,.mGrid6 .mCol3,.mGrid6 .mCol4,.mGrid6 .mCol5,.mGrid6 .mCol6 {margin-right: 7px;}
+.mGrid7 .mCol2 {margin-right: 7px;}
+.mGrid8 .mCol2 {margin-right: 7px;}
+
+.col9 .mGrid6 .mCol1,.col9 .mGrid6 .mCol2,.col9 .mGrid6 .mCol3,.col9 .mGrid6 .mCol4,.col9 .mGrid6 .mCol5,.col9 .mGrid6 .mCol6 {margin-right: 10px;}
+
+
+.mGrid1 .mCol1 {width: 893px;} .shell .mGrid4 .mCol4 {width: 853px;}
+
+.mGrid2 .mCol1 {width: 443px;} .shell .mGrid2 .mCol1 {width: 423px;}
+.mGrid2 .mCol2 {width: 893px;} .shell .mGrid2 .mCol2 {width: 853px;}
+
+.mGrid3 .mCol1, .contentNavigatorWrap .mGrid1 .mCol1 {width: 293px;} .shell .mGrid3 .mCol1 {width: 279.5px;}
+.mGrid3 .mCol2 {width: 593px;} .shell .mGrid3 .mCol2 {width: 566px;}
+.mGrid3 .mCol3 {width: 893px;} .shell .mGrid3 .mCol3 {width: 853px;}
+
+.mGrid4 .mCol1 {width: 215px;} .col9 .mGrid4 .mCol1 {width: 158px;} .shell .mGrid4 .mCol1 {width: 208px;}
+.mGrid4 .mCol2 {width: 441px;} .col9 .mGrid4 .mCol2 {width: 324px;} .shell .mGrid4 .mCol2 {width: 423px;}
+.mGrid4 .mCol3 {width: 667px;} .col9 .mGrid4 .mCol3 {width: 490px;} .shell .mGrid4 .mCol3 {width: 638px;}
+.mGrid4 .mCol4 {width: 893px;} .col9 .mGrid4 .mCol4 {width: 656px;} .shell .mGrid4 .mCol4 {width: 853px;}
+
+.mGrid5 .mCol1 {width: 169px;} .col9 .mGrid5 .mCol1 {width: 124px;} .shell .mGrid5 .mCol1 {width: 165px;}
+.mGrid5 .mCol2 {width: 350px;} .col9 .mGrid5 .mCol2 {width: 257px;} .shell .mGrid5 .mCol2 {width: 337px;}
+.mGrid5 .mCol3 {width: 531px;} .col9 .mGrid5 .mCol3 {width: 390px;} .shell .mGrid5 .mCol3 {width: 509px;}
+.mGrid5 .mCol4 {width: 712px;} .col9 .mGrid5 .mCol4 {width: 523px;} .shell .mGrid5 .mCol4 {width: 681px;}
+.mGrid5 .mCol5 {width: 893px;} .col9 .mGrid5 .mCol5 {width: 656px;} .shell .mGrid5 .mCol5 {width: 853px;}
+
+.mGrid6 .mCol1 {width: 143px;} .col9 .mGrid6 .mCol1 {width: 101px;} .shell .mGrid6 .mCol1 {width: 136px;}
+.mGrid6 .mCol2 {width: 293px;} .col9 .mGrid6 .mCol2 {width: 212px;} .shell .mGrid6 .mCol2 {width: 279.5px;}
+.mGrid6 .mCol3 {width: 443px;} .col9 .mGrid6 .mCol3 {width: 323px;} .shell .mGrid6 .mCol3 {width: 423px;}
+.mGrid6 .mCol4 {width: 593px;} .col9 .mGrid6 .mCol4 {width: 434px;} .shell .mGrid6 .mCol4 {width: 567px;}
+.mGrid6 .mCol5 {width: 743px;} .col9 .mGrid6 .mCol5 {width: 545px;} .shell .mGrid6 .mCol5 {width: 704px;}
+.mGrid6 .mCol6 {width: 893px;} .col9 .mGrid6 .mCol6 {width: 656px;} .shell .mGrid6 .mCol6 {width: 853px;}
+.mGrid7 .mCol2 {width :289px;}
+.mGrid8 .mCol2 {width: 217px;}
+
+.mGrid4 .itemGroup,.mGrid5 .itemGroup {clear: none;}
+.mGrid4 .itemPict,.mGrid5 .itemPict, .mGrid4 .itemFigure,.mGrid5 .itemFigure {margin-right: 6px;}
+
+
+
+/*:: =Page title ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+/* Title of the page */		
+.pgTitle {z-index: 5;position: relative;padding-bottom: 0;margin-bottom: -15px;border: 0 none;background: url('./../img/bg_transparent.gif') 0 0 repeat transparent;/*Fix for IE when pgFeature follow pgTitle*/}
+	.pgTitle h1 {width: 740px;margin-bottom: 2px;}
+	.supportSection .pgTitle h1 {width: 780px;} /* To accomodate long article titles */
+
+/* Breadcrumbs */		
+	.bCrumbs, .breadCrumbs {margin-bottom: 3px;padding: 0;border: 0 none;width: 100%;overflow: hidden;font-size: 11px;line-height: 13px;color: #555;}
+		.bCrumbs p, .breadCrumbs p {margin: 0;}
+		.bCrumbs a, .bCrumbs a:hover, .breadCrumbs a, .breadCrumbs a:hover {display: block;float: left;}
+			.bCrumbs a:visited, .breadCrumbs a:visited {color: #0066a4;}
+			.bCrumbs span, .breadCrumbs span {margin: 0 6px 0 6px;background: url('./../img/bg_iconSprite.gif') 0 -196px no-repeat transparent;display: block;float: left;width: 3px;text-indent: -999em;}
+
+/* Right side page options inside pgTitle */	
+.pgTitleOptions {position: absolute;right: 20px;bottom: 0;}
+	.pgTitleOptions .buttonize, .pgTitleOptions .button {margin-right: 0;margin-left: 8px;}
+		.pgTitleOptions .btnDftAct,.pgTitleOptions .btnDrpDwn, .pgTitleOptions .button {position: relative;bottom: 0px;}
+	.pgTitleOptions .pipeSpacer {padding: 2px 0 ;margin-bottom: -1px;}
+
+
+
+/*:: =cBox ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+.cBox, .vTabsThemeA .tabContSet {padding-top: 24px;padding-bottom: 24px;margin-bottom: 20px;position: relative;min-height: 22px;background: #fff;}
+
+.cBoxExtra1, .vTabsThemeA .tabContSet .cBoxExtra1 {width: 1px;height: 100%;min-height: 100%;position: absolute;left: 0;top: 0;background: none #d6d6d6;z-index: 1;}
+.cBoxExtra2, .vTabsThemeA .tabContSet .cBoxExtra2 {width: 1px;height: 100%;min-height: 100%;position: absolute;right: 0;top: 0;background: none #d6d6d6;z-index: 1;}
+.cBoxExtra3, .vTabsThemeA .tabContSet .cBoxExtra3 {position: absolute;top: 0;left: 0;height: 12px;width: 100%;background: url('./../img/bg_cBoxExtra.png') right top no-repeat transparent;z-index: 1;}
+.cBoxExtra4, .vTabsThemeA .tabContSet .cBoxExtra4 {position: relative;top: 0;left: 0;margin-right: 12px;height: 12px;background: url('./../img/bg_cBoxExtra.png') left top no-repeat transparent;z-index: 1;}
+.cBoxExtra5, .vTabsThemeA .tabContSet .cBoxExtra5 {position: absolute;bottom: 0;left: 0;width: 100%;height: 17px;background: url('./../img/bg_cBoxExtra.png') right bottom no-repeat transparent;z-index: 2;}
+.cBoxExtra6, .vTabsThemeA .tabContSet .cBoxExtra6 {position: relative;bottom: 0;left: 0;margin-right: 17px;height: 17px;background: url('./../img/bg_cBoxExtra.png') left bottom no-repeat transparent;z-index: 2;}
+
+
+/* cBoxThemeA a.k.a cBoxAlt (deprecated) - Alternate style for cBox. Removes top/bottom padding. */
+.cBoxAlt, .cBoxThemeA, .cBoxThemeB, .cBoxThemeF {padding: 0; overflow: visible;}
+	.cBoxAlt .refLine, .cBoxThemeA .colGroup, .cBoxThemeB .colGroup {border-bottom: 1px solid #e2e2e2;margin-bottom: 0;}
+	.cBoxAlt ul.refLine, .cBoxThemeA ul.colGroup {border-bottom: 0 none;margin-bottom: 0;}
+		.cBoxAlt .lining, .cBoxThemeA .padder, .cBoxThemeB .padder, .cBoxAlt .padder, .cBoxThemeA .lining, .cBoxThemeB .lining, .cBoxThemeF .lining, .cBoxThemeF .padder {padding-top: 24px;padding-bottom: 24px;}
+	.cBoxAlt .bStick, .cBoxAlt .stickyBottom, .cBoxThemeA .stickyBottom, .cBoxThemeB .stickyBottom {bottom: 24px;}
+	.cBoxAlt .mGrid4 .refLine, .cBoxThemeA .mGrid4 .colGroup, .cBoxThemeB .mGrid4 .colGroup {border-bottom: 0 none;margin-bottom: auto;}
+	.cBoxThemeA .bord3 {background-position: 0 0;}
+
+/* cBoxSlim - single line cBox otherwise use normal cBox for basic content */
+.cBoxSlim {padding: 10px 0 2px 0;background: #EEEEEE url('./../img/bg_tab.gif');min-height: 2em;margin-bottom: 10px;}
+	.cBoxSlim .pgToolbar {float: left;}
+	.cBoxSlim p {margin: 0;}
+	.cBoxSlim .cBoxExtra5,.cBoxSlim .cBoxExtra6 {height: 10px;} /* reduced height so that the "clickable area" is wider */
+	
+	
+/* cHeader a.k.a cHead (deprecated) */	
+.cBox .cHead, .cBox .cHeader {position: relative;margin-top: -24px;margin-bottom: 24px;padding-top: 19px;padding-bottom: 15px;background: url('./../img/bg_gradRibbon.gif') left bottom repeat-x #fff;}
+	
+	.cHead h2, .cHead h3, .cHead h4, .cHeader h2, .cHeader h3, .cHeader h4 {margin-bottom: 0;}
+	.cHead .txtRep, .cHeader .txtRep {margin: 0;}
+		.cHead .txtRep span, .cHeader .txtRep span, .cHeader .fontFace span {color: #666;} .cHead .txtRep .priceTag, .cHeader .txtRep .priceTag, .cHeader .fontFace .priceTag {color: #0066A4;}
+	
+	.cHead h2 a.tgl, .cHeader h2 a.toggle {color: #212121;}
+	.cBox .tgl, .cBox .toggle {margin-bottom: 0px;}
+		
+	.cBoxAlt .cHead, .cBoxAlt .cHeader, .cBoxThemeA .cHeader, .cBoxThemeB .cHeader, .cBoxThemeF .cHeader, .cBoxThemeA .cHead, .cBoxThemeB .cHead, .cBoxThemeF .cHead {margin-top: 0;margin-bottom: 0;}
+	
+	.cHeadOptions, .cHeaderOptions {position: absolute;right: 21px;top: 23px;}
+		.cHeadOptions .tgl, .cHeaderOptions .toggle {display: inline-block;}
+			.cHeaderOptions .toggleThemeA {position: relative; top: -8px;}
+			.cHeaderOptions .button {position: relative; top: -13px; right: -8px;}
+			.cHeaderOptions .buttonThemeD {top:-4px;}
+
+/* cIntro deprecated, please use cIntroduction instead */
+.cIntro, .cIntroduction {background: #F5F5F5;padding-top: 21px;padding-bottom: 6px;border-bottom: 1px solid #E2E2E2;margin-top: -24px;margin-bottom: 24px; min-height:28px;}
+	.cBoxAlt .cIntro, .cBoxThemeA .cIntro, .cBoxThemeB .cIntro, .cBoxThemeA .cIntroduction, .cBoxThemeB .cIntroduction, .cBoxThemeF .cIntroduction {margin: 0;padding-top: 21px;padding-bottom: 6px;}
+.cIntroThemeA, .cBox .cIntroThemeA, .cIntroductionThemeA, .cBox .cIntroductionThemeA {padding: 0; margin: 0; border-bottom: 0;}
+/* ### .lbContent .cIntro, .lbContent .cIntroduction,*/ .cBoxThemeA .cIntroduction .colGroup {border-bottom: 0;}
+
+/* cIntroThemeB deprecated, please use cIntroductionThemeB */
+.cIntroThemeB, .cBox .cIntroThemeB, .cIntroductionThemeB, .cIntroductionThemeB, .cBox .cIntroductionThemeB {background-color: transparent; min-height: 28px;}
+/* per-element */
+.cIntroductionThemeB .formGroup {margin-bottom: 0;}
+.cIntroductionThemeB .formGroupThemeB .sectionHeader {margin-right: 7px;}
+.cIntroductionThemeB .formGroupThemeB label {font-size: 12px;}
+
+/* cIntroductionThemeC */
+.cIntroductionThemeC, .cBox .cIntroductionThemeC {padding-bottom: 21px;}
+
+/* cFooter a.k.a cFoot (deprecated) */
+.cBox .cFoot, .cBox .cFooter {position: relative;min-height: 26px;top: 24px;padding-top: 11px;padding-bottom: 13px;background: url('./../img/bg_gradRibbon.gif') left top repeat-x #ebebeb;}
+	.cBox .cFootAlt, .cBox .cFooterThemeB {background: url('./../img/bg_cFootAlt.gif') left top repeat-x transparent;}
+
+.cBoxAlt .cFoot, .cBoxAlt .cFooter, .cBoxThemeA .cFooter, .cBoxThemeB .cFooter, .cBoxThemeA .cFoot, .cBoxThemeB .cFoot, .cBoxThemeF .cFooter {top: -1px;}
+
+.cFootOptions, .cFooterOptions {float: none;}
+	.cFootOptions .pgToolbar, .cFooterOptions .pgToolbar {padding: 0;margin:5px 0 0 0;}
+	.cFootOptions .buttonize, .cFooterOptions .button {margin-right: 0;}
+	
+.cBoxEmpty {padding: 0;overflow: hidden;}
+	.cBoxEmpty .lining, .cBoxEmpty .padder {display: none;} /* IEFIX */
+	.cBoxEmpty .cHead, .cBoxEmpty .cHeader {display: block;padding-bottom: 16px;margin-top: 0;margin-bottom: 0;}
+	.cBoxEmpty .cHead h2, .cBoxEmpty .cHeader h2 {color: #999;}
+	
+/* cFooterThemeD - blank style */
+.cBox .cFooterThemeD {background-color: transparent; background-image: none; border: 0; padding-top: 0; padding-bottom: 30px;}	
+	
+/* cBoxThemeB */
+.cBoxThemeB .bord1, .cBoxThemeB .bord2, .cBoxThemeB .bord3, .cBoxThemeB .bord4, .cBoxThemeB .bord5, .cBoxThemeB .bord6, 
+.cBoxThemeB .bord7, .cBoxThemeB .bord8, .cBoxThemeB .bord9, .cBoxThemeB .bord10, .cBoxThemeB .bord11 
+{background: url('./../img/bg_itemAside.jpg') repeat-y 0 0;}
+.cBoxThemeB .bord1 {background-position:79px 0;}
+.cBoxThemeB .bord2 {background-position:158px 0;}
+.cBoxThemeB .bord3 {background-position:237px 0;}
+.cBoxThemeB .bord4 {background-position:316px 0;}
+.cBoxThemeB .bord5 {background-position:395px 0;}
+.cBoxThemeB .bord6 {background-position:514px 0;}
+.cBoxThemeB .bord7 {background-position:555px 0;}
+.cBoxThemeB .bord8 {background-position:632px 0;}
+.cBoxThemeB .bord9 {background-position:711px 0;}
+.cBoxThemeB .bord10 {background-position:790px 0;}
+.cBoxThemeB .bord11 {background-position:869px 0;}
+.cBoxThemeB .itemCollection {padding-right:7px;padding-bottom:0;}
+.cBoxThemeB .itemAside {padding-top:32px;padding-bottom:16px;}
+
+/* cBoxThemeC */
+.cBoxThemeC, .cBoxThemeE {padding-bottom: 0; background-color: #f9f9f9;}
+	.cBoxThemeC .padder, .cBoxThemeE .padder {padding-top: 24px; padding-bottom: 24px;}
+	.cBoxThemeC .cHeader, .cBoxThemeE .cHeader {margin-bottom: 0; padding-bottom: 15px; padding-top: 19px;}
+		.cBoxThemeC .cHeader .splitter {overflow: visible;}
+			.cBoxThemeC .cHeader .splitterRight { text-align: left;}
+			.cBoxThemeC .cHeader .splitterContent {margin-right: 5px; line-height: 2.3em;}
+	.cBoxThemeC .cBoxExtra3, .cBoxThemeC .cBoxExtra4, .cBoxThemeC .cBoxExtra5, .cBoxThemeC .cBoxExtra6, 
+	.cBoxThemeE .cBoxExtra3, .cBoxThemeE .cBoxExtra4, .cBoxThemeE .cBoxExtra5, .cBoxThemeE .cBoxExtra6 {background-image: url('./../img/bg_cBoxExtraWhite.png');}
+	.cBoxThemeC .toggleContent {margin-bottom: 0; margin-top: 12px; position: relative;}
+	.cBoxThemeC .shellThemeB .shellExtra1, .cBoxThemeC .shellThemeB .shellExtra2, .cBoxThemeC .shellThemeB .shellExtra3, .cBoxThemeC .shellThemeB .shellExtra4 {background-image: url('./../img/bg_grayShellThemeBExtra.png');} /* to be converted into separate theme if needed */
+
+/* cBoxThemeE */
+.cBoxThemeE {background-color: #fff;}
+
+/* cBoxThemeG - slim cBox */
+.cBoxThemeG {padding-top: 15px; padding-bottom: 3px;}
+	/* per-element */
+	.cBoxThemeG .dataList li {margin-bottom: 0;}
+
+
+/*:: =Intro & features ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+.pgIntro {margin-bottom: 24px;}
+	.finePrintMsg .pgIntro {margin-bottom: 10px;}
+
+.pgSectionFeature {position: relative;}
+	.pgSectionFeature .itemInfo, .pgSectionFeature .itemGroup .sectionContent {padding-top: 10px;}
+	.pgSectionFeature .headType01 {font-size: 30px;line-height: 32px;letter-spacing: -1px;padding: 0;margin-bottom: 14px;border: 0 none;}/* Cufon optimized for 18-20-24-30-36 */
+
+/* pgFeature is deprecated. Use "banner" instead */
+.pgFeature, .banner {z-index: 2;position: relative;margin-top: -69px;background: transparent url('./../img/bg_pgFeature.gif') repeat-x left top;border-bottom:1px solid #e2e2e2;}
+	/* imageBanner is deprecated. Use "bannerFigure" instead */
+	.pgFeature .imageBanner, .banner .bannerFigure {position: relative;margin-top: 0;display: block;}
+	.pgFeature .carouselNav, .banner .carouselNav {bottom: 10px;}
+	.pgFeature .carouselMedia a,.pgFeature .carouselNav a,.banner .carouselMedia a,.banner .carouselNav a {margin-top: 0;}
+
+/* pgFeatureThemeA is deprecated. Use "bannerThemeA" instead */
+.pgFeatureThemeA, .bannerThemeA {margin-top: 0;}
+
+/* pgFeatureAlt, pgFeatureThemeB is deprecated. Use "bannerThemeB" instead */
+.pgFeatureAlt, .pgFeatureThemeB, .bannerThemeB {margin-top: 0;background: none transparent;z-index: 1;}
+
+.bannerThemeC {margin-top: 0; z-index: 0;}
+
+img.pgFeature, img.banner  {background: none;border: 0;}
+.noJs .pgFeature, .noJs .banner {position:static;}
+
+
+/*:: =Pricing Info ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+.pricingInfo {position: relative; overflow:hidden;}
+	.pricingInfo p {float: left;max-width: 260px;}
+		.pricingInfo p select {margin-left: 5px;position: relative;top: 6px;}
+		
+	.pricingInfo .pricingOption {border-right: 1px solid #ddd;padding-right: 13px; margin-right: 13px;font-size: 11px;}
+		.pricingInfo .pricingOption .priceTag, .pricingInfo .pricingOption .number {padding-bottom: 2px;}
+		
+	.pricingInfo .last {border: 0 none;margin-right: 0;}
+		.pricingInfo span.priceLabel {display: block;font-size: 11px;line-height: 13px;margin-bottom: 3px;margin-top: 2px;}
+		
+		.pricingInfo strong, .rate {display: block;font-size: 32px;line-height: 34px;font-weight: normal;}
+			.pricingInfo strong span.superscript, .rate span.superscript {font-size: 50%;line-height: 85%;top: 0.25em;left: 0;text-transform: lowercase;}
+		
+		.pricingInfo em {display: block;font-style: normal;margin-bottom: 5px;}
+			.pricingInfo em a {display: block;} /*Drop the link on second line*/	
+	
+/*:: =rate ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+.rate {position: relative; color: #212121;}
+.rate span.superscript {display: inline-block; font-size: 12px; line-height: 1.2em; margin-left: 5px; text-transform: none; width: 50px; top: 0.15em;}
+	.rateThemeA {font-weight: bold; color: #0066A4;}
+		.rateThemeA span.superscript {color: #212121; font-weight: normal;}
+
+.priceTag span.superscript {margin-left: 0px;}
+			
+
+/*:: =itemGroup ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+.itemGroup {clear: both;}
+.itemGroup .sectionHeader {padding-right: 10px;}
+.itemInfo, .itemGroup .sectionContent {margin-bottom: 10px;}
+.capsule .formGroup .sectionContent {margin-bottom: 0px;}
+.itemPict, .itemFigure {float: left;margin-right: 15px;margin-bottom: 20px;}
+.itemGroupAlt .itemPict, .itemGroupThemeA .itemFigure {float: right;margin-right: 0;margin-left: 15px;}
+
+div.itemPict, div.itemFigure {text-align: center;}
+
+.itemInfo .frmElmnt, .itemGroup .sectionContent .formGroup {overflow: hidden;}
+.itemGroup .pricingInfo p {margin-bottom: 0;}
+
+.itemGroup .sectionContent .clearer, .itemGroup .sectionContent .colGroup {clear: right;}
+.stickyFigure .itemGroup .sectionContent .clearer {clear: both;}
+.itemGroupThemeA .sectionContent .clearer, .itemGroupThemeA .sectionContent .colGroup {clear: left;}
+.itemGroup .sectionContent .pricingInfo .clearer {clear: both;}
+
+/* ### Fixes word wrapping issue (example: when used with a productTag corner image) 
+.unit .itemGroup .sectionContent h3 a, .unit .itemGroup .sectionContent h2 a, .unit .itemGroup .sectionContent h4 a,
+.unit .itemGroup .sectionContent .headingType3 a, .unit .itemGroup .sectionContent .headingType2 a, .unit .itemGroup .sectionContent .headingType4 a 
+{display: block; word-wrap: break-word;}*/
+
+/* itemFigureCaption */
+.itemFigureCaption {text-align:left;}
+
+/* itemFigure Themes */
+.itemFigureThemeA {width: 119px; margin-bottom: 0;}
+	.itemFigureThemeA .mobility {background-color:#fff;padding:5px 20px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;margin-bottom:1em;}
+.itemFigureThemeB {width: 216px;}
+.itemFigureThemeC {margin-bottom: 0; width: 140px;}
+.itemFigureThemeD {margin-bottom: 0;}
+
+.itemGroup .sectionContentThemeA  {margin-bottom: 0;}
+	/* per-context changes */
+	.itemGroup .sectionContentThemeA .rate {line-height: 30px;}
+		.itemGroup .sectionContentThemeA .rate .superscript {display: block; width: auto; margin-left: 0; font-size: 11px;}
+
+/* itemGroupThemeB */
+.itemGroupThemeB {text-align:center;}
+.itemGroupThemeB .sectionContent {margin-left: 0 !important; margin-right: 0 !important;}
+.itemGroupThemeB .itemFigure {float:none;margin-right:0;margin-bottom:4px;text-align:center;}
+	/* per-context changes */
+	.dataListThemeS .itemGroupThemeB .sectionContentThemeA {width: 80px;}
+	.itemGroupThemeB .sectionContentThemeA .rate {text-align: center;}
+		.itemGroupThemeB .sectionContentThemeA .rate .superscript {width: 60%; margin: 0 auto;}
+		
+/*:: =Unit ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+.unit {position: relative;padding-top: 24px;padding-bottom: 24px;}
+	.cBoxAlt .unitExtra, .cBoxThemeA .unitExtra, .cBoxThemeB .unitExtra {width: 100%;height: 1px;background: #e2e2e2;position: absolute;bottom: -1px;left: -7px;padding: 0 13px 0 0;}
+
+.unit .itemPict, .unit .itemFigure {margin-bottom: 0;}
+
+/*.unit .pricingInfo {float: left;} ### - 4:35 PM 7/16/2012 */
+	.unit .pricingInfo strong span.superscript {top: 4px;}
+
+.capsule .unit {padding-top: 0;}
+.capsule .unit .bStick, .capsule .unit .stickyBottom {bottom: 12px;}
+
+.noJs .cBoxAlt .unit, .noJs .cBoxThemeA .unit, .noJs .cBoxThemeB .unit {min-height: 24em;}
+.noJs .unit .itemPict, .noJs .unit .itemFigure {margin-bottom: 1.25em;}
+.noJs .unit .bStick, .noJs .unit .stickyBottom {clear: both;position: static;top: 0;}
+
+.unitAlt .itemGroup, .unitThemeA .itemGroup {text-align: center;}
+.unitAlt .itemPict, .unitAlt .itemFigure, .unitThemeA .itemFigure {float: none;margin: 0;padding: 0;margin-bottom: 5px;}
+.unitAlt .itemInfo, .unitAlt .itemGroup .sectionContent, .unitThemeA .itemGroup .sectionContent {text-align: left;margin-bottom: 10px;}
+
+.hUnit {border-bottom: 1px solid #E2E2E2;padding-bottom: 20px;margin-bottom: 20px;}
+.hUnitLast {margin-bottom: 0;border: 0 none;}
+
+	.hUnit .itemGroup {position: relative;}
+		.hUnit .itemPict, .hUnit .itemFigure {margin-bottom: 0;}
+		.hUnit .itemInfo, .hUnit .itemGroup .sectionContent {margin-right: 45%;}
+						
+			.hUnit .pricingInfo {position: absolute;right: 0;top: 5px;margin-right: 13em;}
+			.hUnit .pricingInfo strong span.superscript {top: 4px;}
+		
+		.hUnit .itemAction, .hUnit .sectionAside {position: absolute;right: 0;top: 0;}
+			.hUnit .itemAction ul, .hUnit .sectionAside ul {width: 285px;}
+			.hUnit .itemAction select, .hUnit .sectionAside select {float: left;margin: 9px 10px 0 0;}
+			.hUnit .itemAction .buttonize, .hUnit .sectionAside .button {margin-right: 0;}
+
+
+
+/*:: =StickyFigure a.k.a Sticky Pict (deprecated) ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+.stickyPict, .stickyFigure {position:relative;overflow:hidden;min-height:120px;}
+	.stickyPict .itemInfo, .stickyFigure .itemGroup .sectionContent {margin-bottom:0;}
+		.stickyPict .itemPict, .stickyFigure .itemFigure {float:none;padding:0;margin-left: 21px;margin-bottom: 0;position:absolute;display:block;left:0;bottom:0;z-index:0;}
+		.stickyPict .itemGroupAlt .itemPict {left:auto;right:0;margin-right: 21px;}
+			.stickyPict div.itemPict img, .stickyFigure .itemFigure {display: block;}
+						
+	/* context-specific overwrites */
+	.stickyPict.unit, .stickyFigure.unit {min-height: 0px;overflow:visible;}
+	.hScrollBar .stickyPict.unit .itemGroup .itemPict,.cToggleView .stickyPict.unit .itemGroup .itemPict, 
+	.hScrollBar .unit.stickyFigure .itemGroup .itemFigure,.cToggleView .stickyFigure.unit .itemGroup .itemFigure {margin-left:0;}
+	.unit.stickyPict .productTag {right: 0;}
+	.detailPanel .stickyPict .itemPict, .detailPanel .stickyFigure .itemFigure {margin-bottom: -20px;}
+	
+	.pgSectionFeature .stickyPict, .pgSectionFeature .stickyFigure {overflow: visible;}
+	.pgSectionFeature .stickyPict .itemPict, .pgSectionFeature .stickyFigure .itemFigure {float: left;position: static;top: 0;left: 0;margin: -30px 0 0 -40px;z-index: 999;display: inline;}
+	.pgSectionFeature .stickyPict .itemInfo, .pgSectionFeature .stickyFigure .itemGroup .sectionContent {position: relative;left: -25px;top: 40px;}
+		.pgSectionFeature .stickyPict .itemGroupAlt .itemPict, .pgSectionFeature .stickyFigure .itemGroupThemeA .itemFigure {float: right;margin: -30px -40px 0 0;}
+		.pgSectionFeature .stickyPict .itemGroupAlt .itemInfo, .pgSectionFeature .stickyFigure .itemGroupThemeA .sectionContent {position: relative;left: 0;}
+	
+	.cBox .pgSectionFeature .stickyPict .itemPict, .cBox .pgSectionFeature .stickyFigure .itemFigure {margin: -24px 0 0 -21px;}
+	.cBox .pgSectionFeature .stickyPict .itemInfo, .cBox .pgSectionFeature .stickyFigure .itemGroup .sectionContent {left: 0;top: 0;}
+		.cBox .pgSectionFeature .stickyPict .itemGroupAlt .itemPict, .cBox .pgSectionFeature .stickyFigure .itemGroupThemeA .itemFigure {margin: -24px -21px 0 0;}
+		.cBox .pgSectionFeature .stickyPict .itemGroupAlt .itemInfo, .cBox .pgSectionFeature .stickyFigure .itemGroupThemeA .sectionContent {left: 0;}
+	
+	.hScrollBar .stickyFigure .itemGroupThemeA .itemFigure,.cToggleView .stickyFigure .itemGroupThemeA .itemFigure {margin-right: 0;}
+	.hScrollBar .stickyFigure .productTag, .cToggleView .stickyFigure .productTag {z-index: 2;}
+
+	/* Themes */
+	.stickyFigure .itemFigure {z-index:0;position:static;top:0;left:0;float:left;margin:-24px 0 0 -21px;}
+		.stickyFigureThemeA .itemFigure {right:0;left:auto;float:right;margin:-24px -21px 0 0;}
+		.stickyFigureThemeB .itemFigure {position:absolute;top:auto;right:0;bottom:0;left:auto;float:right;margin:0;}
+		.stickyFigureThemeC .itemFigure {position:absolute;top:auto;bottom:0;margin:0;}
+		
+		/*:: =stickyFigureThemeD/stickyFigureThemeE ::::::::: */
+		.cBox .stickyFigureThemeD, .cBox .stickyFigureThemeE {padding-top:24px;padding-bottom:24px;}
+			.stickyFigureThemeD .itemGroup, .stickyFigureThemeE .itemGroup {padding-top:0;padding-bottom:0;}
+				.stickyFigureThemeD .itemFigure, .stickyFigureThemeE .itemFigure 
+				{position:absolute;top:auto;right:auto !important;bottom:0 !important;left:auto !important;float:none;margin:0 0 0 -20px !important; width:100%;text-align:center;}
+					.stickyFigureThemeD .itemFigure img {display:inline;margin-bottom:-4px;}
+					.stickyFigureThemeE .itemFigure img {float:right;}
+				
+		.stickyFigureThemeF .itemFigure {position:absolute;top:auto;bottom:0;margin: 0 0 0 18px;}
+		.stickyFigureThemeG .itemFigure {float: none; margin: 0; position: relative; top: -18px;}
+		
+	a.itemPict, a.itemFigure {bottom: -4px !important;}
+
+		
+/*:: =Product/promotion tag ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+.productTag {position: absolute;top: 0;right: 0; z-index: 1; background-repeat: no-repeat;}
+.unit .productTag {right: -6px;} .sBuilder .colGroup .unit .productTag {right: -13px;}
+.promotionTag {position: absolute;top: -23px;right: 1px;z-index: 100;} /* <- ### should be a theme, bigger tag (example in sb) */
+.colLast .productTag, .sBuilder .colLast .unit .productTag {right: 0;}
+
+.productTagThemeA {right: auto; left: 0;}
+
+
+
+
+/*:: =Directory item ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+.dirItem {text-align: center;}
+	.dirItem a {display: block;font-size: 14px;line-height: 18px;}
+	.dirItem .hType4, .dirItem .headingType4 {margin-bottom: 2px;}
+	.dirItem p.accent {margin-bottom: 5px;font-weight: bold;font-size: 14px;line-height: 18px;color: #212121;}
+	.dirItem a.seeMoreLink, .dirItem a.moreLink {display: inline-block;}
+	.dirItem img {margin-bottom: 6px;}
+
+
+
+
+
+/*:: =Folder Tree ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+ul.folderTree {margin: 0 -11px 0 -3px;}
+
+	ul.folderTree li {background: none;padding-left: 0;margin-left: -7px;}
+		ul.folderTree li li {margin-left: 0px;padding-left: 34px;}
+		ul.folderTree li li li {margin-left: 0px;padding-left: 10px;}
+			ul.folderTree li a {background: transparent url('./../img/bl_arrowRight.gif') no-repeat 0 center;padding-left: 14px;margin-left: 10px;height: 100%;}
+				ul.folderTree li a:visited {color: #0066a4;}
+				ul.folderTree li li a {margin-left: 0px;padding-left: 0;}
+				
+		ul.folderTree li ul {display: none;}
+		
+		ul.folderTree li.open a {background: transparent url('./../img/bl_arrowDown.gif') no-repeat 0 center;height: 100%;}
+			ul.folderTree li.open ul {display: block;}
+			ul.folderTree li.open li a {background: none transparent;}
+		
+		ul.folderTree li.open ul.folderTree li a {background: transparent url('./../img/bl_arrowRight.gif') no-repeat 0 center;padding-left: 14px;height: 100%;}
+
+/* Join input with sibling label. See: contact_us_alt.html */
+.capLining {margin-bottom:1.25em;position: relative;display: block;}
+	.capLining label {display: block;position: relative;left: 0;top: 0px;margin-left: 1.75em;}
+
+
+/*:: =Shell ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+
+.shell {position: relative;background: #fff;padding: 15px 20px 0 20px;border: 1px solid #ccc;margin-bottom: 21px;padding-top:15px !important;}
+.shell .bt_remove, .shell .actionRemove {position: absolute;right: 15px;top: 13px;padding-right: 20px;padding-left: 0;background-position: right -119px;}
+.shellThemeA, .shellThemeF {display: block;background: #f2f2f2;border: 1px solid #f2f2f2;}
+	.superFooter .shellThemeC {background: #fff;} /* <- patch */
+	.cBoxAlt .shell, .cBoxThemeA .shell, .cBoxThemeB .shell {margin-top: 19px;}
+
+.shell .fLabel {width: 144px;}
+.shell .frmAlt .fLabel, .shell .formGroupThemeA .sectionHeader {width: auto;}
+.formGroup .formGroup .sectionHeader {width: auto; float: left;}
+.shell .frmInline .fLabel, .shell .formGroupThemeB .sectionHeader {width: auto;}
+.shell .fTxt input, .shell .formText input, .shell .formTerms .txtWindow {background-color: #fff;}
+.shell .shell .fTxt input, .shell .shell .formText input, .shell .shell .formTerms .txtWindow {background-color: #f8f8f8;}
+.shell .stickyBottom {bottom: 12px;}
+.itemGroup .shell {margin-bottom: 0;}
+
+/* Used in cWrap (grey background)*/
+.shellExtra1,.shellExtra2,.shellExtra3,.shellExtra4,
+.shell .shell .shellExtra1,.shell .shell .shellExtra2,.shell .shell .shellExtra3,.shell .shell .shellExtra4,
+.alphaNumMenuExtra1,.alphaNumMenuExtra2,.alphaNumMenuExtra3,.alphaNumMenuExtra4
+{display: block;position: absolute;width: 6px;height: 7px;background: url('./../img/bg_shellExtra.png') left top no-repeat transparent;z-index:2;}
+
+/* Used in cBox (white background) */
+.shellThemeA .shellExtra1,.shellThemeA .shellExtra2,.shellThemeA .shellExtra3,.shellThemeA .shellExtra4,
+.shellThemeF .shellExtra1,.shellThemeF .shellExtra2,.shellThemeF .shellExtra3,.shellThemeF .shellExtra4
+ {background-image: url('./../img/bg_cBoxShellExtra.png');}
+
+/* Glossary Menu */
+.alphaNumMenuExtra1,.alphaNumMenuExtra2,.alphaNumMenuExtra3,.alphaNumMenuExtra4 {background-image: url('./../img/bg_glossaryExtra.png');}
+
+/* positionning each corners */
+.shellExtra1,.shell .shell .shellExtra1,.alphaNumMenuExtra1 {top: -1px;left: -1px;}
+.shellExtra2,.shell .shell .shellExtra2,.alphaNumMenuExtra2 {top: -1px;right: -1px;background-position: right top;}
+.shellExtra3,.shell .shell .shellExtra3,.alphaNumMenuExtra3 {bottom: -1px;left: -1px;background-position: left bottom;}
+.shellExtra4,.shell .shell .shellExtra4,.alphaNumMenuExtra4 {bottom: -1px;right: -1px;background-position: right bottom;}
+
+.shellThemeD {position:relative;min-height:41px;border-color:#e2e2e2;border-top-color:#e0e0e0;background:#fff url('./../img/bg_shellThemeD.gif') left bottom repeat-x;}
+	.shellThemeD .shellExtra1, .shellThemeD .shellExtra2, .shellThemeD .shellExtra3, .shellThemeD .shellExtra4 {height:9px;width:8px;background:url('./../img/bg_shellThemeDExtra.png') left top no-repeat transparent;}
+		.shellThemeD .shellExtra2 {background-position:right top;}
+		.shellThemeD .shellExtra3 {background-position:left bottom;}
+		.shellThemeD .shellExtra4 {background-position:right bottom;}
+
+.shellThemeF {padding: 20px 19px 25px; margin-bottom: 10px;}
+.shellThemeG {background-color: #fff; border: 0; padding: 19px 30px; margin-bottom: 7px;}
+	.shellThemeG .shellExtra1, .shellThemeG .shellExtra2, .shellThemeG .shellExtra3, .shellThemeG .shellExtra4 {background-image: url('./../img/bg_shellExtraNoBorder.png') !important;}
+		.shellThemeG .shellExtra1, .shell .shellThemeG .shellExtra1 {top: 0;left: 0;}
+		.shellThemeG .shellExtra2, .shell .shellThemeG .shellExtra2 {top: 0;right: 0;}
+		.shellThemeG .shellExtra3, .shell .shellThemeG .shellExtra3 {bottom: 0;left: 0;}
+		.shellThemeG .shellExtra4, .shell .shellThemeG .shellExtra4 {bottom: 0;right: 0;}
+	.shellThemeG .stickyBottom {padding-right: 30px;}
+	
+.shellThemeH {background-color: #f6f6f6; padding-top: 12px !important;}
+	/* per-element */
+	.shellThemeH .formGroup {margin-bottom: 1.2em;}
+
+	
+/*:: =Capsules ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+.capsule {position: relative;background-color: #f2f2f2;border: 1px solid #f2f2f2;padding: 19px 15px 4px;margin-bottom: 10px;margin-left: 0;}
+.capSelected, .shellThemeE {background: #dae8f1;border: 1px solid #dae8f1;}
+.capDisabled, .shellDisabled {background: #fff;color: #ccc;border: 1px solid #e5e5e5;}
+
+	.capsule .capsuleExtra1,.capsule .capsuleExtra2,.capsule .capsuleExtra3,.capsule .capsuleExtra4 {display: block;position: absolute;float: left;overflow: hidden;background:url('./../img/bg_rcBox.gif') left top no-repeat transparent;}
+	.capSelected .capsuleExtra1,.capSelected .capsuleExtra2,.capSelected .capsuleExtra3,.capSelected .capsuleExtra4,
+	.shellThemeE .shellExtra1,.shellThemeE .shellExtra2,.shellThemeE .shellExtra3,.shellThemeE .shellExtra4 {background-image:url('./../img/bg_rcBoxSelected.gif');}
+	.shellThemeE .shellThemeG .shellExtra1,.shellThemeE .shellThemeG .shellExtra2,.shellThemeE .shellThemeG .shellExtra3,.shellThemeE .shellThemeG .shellExtra4 {background-image:url('./../img/bg_shellExtraNoBorderSelected.png') !important;}
+	
+	.capDisabled .capsuleExtra1,.capDisabled .capsuleExtra2,.capDisabled .capsuleExtra3,.capDisabled .capsuleExtra4,
+	.shellDisabled .shellExtra1,.shellDisabled .shellExtra2,.shellDisabled .shellExtra3,.shellDisabled .shellExtra4 {background-image:url('./../img/bg_rcBoxOutline.gif');}
+
+	.capsule .capsuleExtra1 {top: -1px;left: -1px;height: 8px;width: 8px;}
+	.capsule .capsuleExtra2 {top: -1px;right: -1px;height: 8px;width: 8px;background-position: right top;}
+	.capsule .capsuleExtra3 {bottom: -1px;left: -1px;height: 8px;width: 8px;background-position: left bottom;}
+	.capsule .capsuleExtra4 {bottom: -1px;right: -1px;height: 8px;width: 8px;background-position: right bottom;}
+
+.capsule .capInfo {margin-left: 2em;margin-bottom: 1em}
+	.capsule .capInfo label {margin-bottom: 2px;display: block;}
+	.capsule .capInfo .accent {font-weight: normal;color: #212121;}
+	
+	.capsule .capInfo ul li {background: none transparent;padding-left: 0;}
+	.capsule .capInfo ul li li {padding-left: 9px;background: url('./../img/bl_default.gif') 0 0.48em no-repeat transparent;}
+	.capsule .capInfo ul li ul {margin-bottom: 5px;}
+	.capsule .capInfo .stickyBottom {bottom: 18px;}
+
+.capsule label {color: #212121;}
+.capsule label .unaccent, .capsule label small {color: #555;}
+.capsule .fRadio .fWidget label,.capsule .fChckbx .fWidget label, .capsule .formRadio .sectionContent label,.capsule .formCheckBox .sectionContent label {color: #555;display: inline;}
+	
+.capsule input {float: left;margin: 0;position: relative;top: 0px;}
+.capsule select {float: left;margin: -3px 8px 0 0;padding: 0;}
+.capsule h4 {margin-bottom: 0.75em;}
+
+.capsule .frmElmnt input, .capsule .formGroup input {top: 0;}
+.capsule .frmElmnt select, .capsule .formGroup select {margin-top: 0;}
+.capsule .fRadio input,.capsule .fChckbx input, .capsule .formRadio input,.capsule .formCheckBox input {margin-top: 1px; margin-left: 1px;}
+
+.capsule .frmAlt {overflow: hidden;}
+.capsule .frmAlt, .capsule .formGroupThemeA {margin-bottom: 1em;}
+.capsule .frmInline, .capsule .formGroupThemeB {margin-bottom: 1em;}
+.capsule .fTxt input, .capsule .formText input {background-color: #fbfbfb;}
+			
+.capsule .finePrintMsg {margin: 15px 0 0 0;}
+
+.capDisabled h3,.capDisabled p,.capDisabled span,.capDisabled label,.capDisabled label em,
+.shellDisabled h3,.shellDisabled p,.shellDisabled span,.shellDisabled label,.shellDisabled label em {color: #ccc;}
+
+/* Decision Point trigger (Contexter) */
+.decisionPoint {padding-bottom: 0;margin-bottom: 0;}
+	.decisionPoint .hType4 span, .decisionPoint .headingType4 span {color: #212121;}
+	.decisionPoint p {position: relative;padding-right: 200px;}
+	.decisionPoint p .seeMoreLink, .decisionPoint p .moreLink {position: absolute;top: 0;right: 0;}
+		.decisionPoint p .seeMoreLink:visited, .decisionPoint p .moreLink:visited {color: #0066a4;}
+
+/* Removable page notification (Contexter) */
+.pgNotification {margin-bottom: 0;padding: 15px 19px;}
+	.pgNotification .itemGroup,.pgNotification .itemPict, .pgNotification .itemGroup,.pgNotification .itemFigure {margin-bottom: 0;}
+	.pgNotification .itemGroup .itemInfo, .pgNotification .itemGroup .sectionContent {margin-bottom: 0px;padding-top: 15px;}
+	.pgNotification .itemGroup .itemInfo p.hType3, .pgNotification .itemGroup .itemInfo p.headingType3, .pgNotification .itemGroup .sectionContent p.hType3, .pgNotification .itemGroup .sectionContent p.headingType3 {color: #212121;margin-bottom: 3px;}
+
+/* Create a reference point for inner grid system */
+.lining .shell .innerWrap .refLine, .lining .shell .innerWrap .colGroup, .padder .shell .innerWrap .refLine, .padder .shell .innerWrap .colGroup {left: 0;}
+	.lining .shell .innerWrap .col1, .padder .shell .innerWrap .col1 {width: 56px;}
+	.lining .shell .innerWrap .col4, .padder .shell .innerWrap .col4 {width: 263px;}
+	.lining .shell .innerWrap .col5, .padder .shell .innerWrap .col5 {width: 332px;}
+		.lining .shell .innerWrap .lining, .padder .shell .innerWrap .padder {padding: 0;}
+
+/* Content promo (deprecated) (Contexter) */
+.cPromo, .cBox .cPromo, .pgResultsContent .shell {padding: 21px 24px 6px;} .pgResultsContent .shellThemeB {padding: 10px 19px 9px 19px;}
+	.cPromo .resultItem, .pgResultsContent .shell .resultItem {margin-bottom: 15px;border-bottom: 1px solid #d6d6d6;}
+	.cPromo .last, .pgResultsContent .shell .last {border: 0 none;margin-bottom: 0;}
+		.cPromo .resultItem h3, .pgResultsContent .shell .resultItem h3 {margin-left: 0;}
+		.cPromo .resultItem p, .pgResultsContent .shell .resultItem p {margin-left: 0;}
+
+/* Content tag */
+.contentTag {padding-top: 9px;padding-bottom: 9px;}
+.contentTag .itemGroup {padding: 0;overflow: hidden;height: auto;}
+	.contentTag .itemGroup .itemPict, .contentTag .itemGroup .itemFigure {margin-bottom: 0;}
+	.contentTag .itemGroup .itemInfo, .contentTag .itemGroup .sectionContent {margin-bottom: 0px;}
+		.contentTag dl dt {display: block;float: none;}
+		.contentTag dl dd {font-weight: normal;color: #212121;}
+		.contentTag dl,.shell dd {margin: 0;}
+				
+.shell .aside h2 {margin-bottom:1em;}
+.shell .aside li {margin-bottom:20px;}		
+
+/*:: =User Message ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+.userMsg, .message  {overflow: visible;position: relative;padding-left: 21px;clear: both;}
+	.itemGroup .sectionContent .message {clear: right;}
+ 
+	/* TODO: validate on IE */
+	a.message, span.message {display:inline-block; min-height:15px;}
+	span.message, .txtRep .message {font-size: 16px;} .dataList .sectionContent span.message {font-size: 1em;}
+	.priceTag .message {float: right;margin-left: 5px;margin-top: -1px;}	
+	.cFoot .userMsg, .cFooter .message {margin-top: 4px;margin-bottom: 1px;}
+	.shellThemeA p.message {margin-bottom: 1.6em;}
+
+	.userMsg h3,.userMsg h2, .cFoot .userMsg p, .cFooter .message p {margin-bottom: 0;}
+	.userMsg h3,.userMsg h2, .message h3,.message h2 {line-height: 16px;}
+	.userMsg .buttonize, .userMsg .button, .message .buttonize, .message .button {position: absolute;right: 0;top: -2px;margin: 0;}
+	
+	.umStandard, .messageThemeA {background: none;padding-left: 0;}
+	.umVerified,.umConfirm, .messageThemeB {background: transparent url('./../img/bl_check.gif') left 1px no-repeat;}
+	.umUnverified,.umError, .messageThemeC {background: transparent url('./../img/bl_error.gif') left 1px no-repeat;}
+	.umWarning, .messageThemeD {background: transparent url('./../img/bl_warning.gif') left 1px no-repeat;}
+	.messageThemeE {background: transparent url('./../img/bl_info.gif') left 1px no-repeat;}
+	.messageThemeF {background: transparent url('./../img/bl_plus.gif') left 0 no-repeat;}
+	.messageThemeG {background: transparent url('./../img/bl_checked.gif') left 0 no-repeat; padding-left: 32px; padding-top: 5px;}
+
+	/* FONT tag fix - Preventing font tags of overwriting the colour of the text */
+
+	.message font {
+		color: #212121 !important;
+	}
+
+.warning {overflow: hidden;border-bottom: 1px solid #ddd;padding-bottom: 15px;margin-bottom: 20px;}	
+	.warning .userMsg h2,.warning .userMsg h3, .warning .message h2,.warning .message h3 {margin-bottom: 3px;}
+	.warning .userMsg ul,.warning .userMsg p, .warning .message ul,.warning .message p {margin-bottom: 0;}
+	.warning .userMsg li a, .warning .message li a, a.danger {text-decoration: underline;color: #a00;}
+
+.cBox .warning {overflow: hidden;border: 0 none;padding: 0;margin: 0;}	
+	.cBox .warning .userMsg h2,.warning .userMsg h3, .cBox .warning .message h2,.warning .message h3 {margin-bottom: 3px;}
+	.cBox .warning .userMsg ul,.warning .userMsg p, .cBox .warning .message ul,.warning .message p {margin-bottom: 0;}
+	.cBox .warning .userMsg li a, .cBox .warning .message li a {text-decoration: underline;color: #a00;}
+	
+.shell .warning {padding-bottom: 15px;}
+	
+table span.message {display: block; height: 15px; padding: 0; width: 14px;}
+.shell div.message {padding-bottom: 8px;}
+
+	
+	
+/*:: =ToolTip ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+/* toolTipAction a.k.a ttTrigger (deprecated)*/
+.ttTrigger, .toolTipAction {text-indent: -999em;display: inline-block;width: 14px;height: 14px;background: url('./../img/bg_iconSprite.gif') no-repeat 0 -240px transparent;position: relative; margin-left: 3px; top: -2px; vertical-align: middle;}
+	.sTitle .ttTrigger, .headingThemeA .toolTipAction {position: absolute;float: right;top: 5px;right: 0;display: block;background-repeat: no-repeat;}
+		.headingType4 .toolTipAction {top: 1px;}
+		
+.noJs .ttTrigger, .noJs .toolTipAction {display: none;}
+.noJs .ttContent, .noJs .toolTipContent {display: block;margin-bottom: 12px;}
+
+.toolTip {z-index: 999;top: 60px;left: -100px;position: absolute;min-width: 100px;display: block;}
+	.toolTip .lining, .toolTip .padder {background: #fff;}
+	.toolTip dl,.toolTip dd {margin-bottom: 0;} 
+	.toolTip dt {float: none;display: block;}
+	.toolTip p {margin-bottom: 0;padding-bottom: .5em;}
+	.toolTip .accent {font-weight: bold;display: block;margin-bottom: 10px;}
+	
+.toolTipBordRight,.toolTipBordLeft {background: url('./../img/bg_toolTipSideExtra.png') repeat-y transparent;}
+.toolTipBordRight {background-position: left top;padding-left: 11px;}
+	.toolTipBordLeft {background-position: right top;padding: 0;padding-right: 11px;}
+
+.toolTipTopRight,.toolTipBottomRight {position: absolute;width: 100%;left: 0;background: url('./../img/bg_toolTipBoxRight.png') no-repeat transparent;}
+.toolTipTopRight {top: -17px;height: 17px;background-position: right top;}
+	.toolTipBottomRight {bottom: -21px;height: 21px;background-position: right bottom;}
+
+.toolTipTopLeft,.toolTipBottomLeft {position: relative;left: 0;margin-right: 37px;background: url('./../img/bg_toolTipBoxLeft.png') no-repeat transparent;}
+.toolTipTopLeft {top: 0;height: 17px;background-position: left top;}
+	.toolTipBottomLeft {bottom: 0;height: 21px;background-position: left bottom;}
+
+.toolTipArrow, .flyOutArrow {position: absolute;bottom: -37px;left: 30px;width: 46px;height: 29px;background: transparent url('./../img/bg_toolTipArrowSprite.png') no-repeat right top;} /* default pointing down */
+	.arrowUp, .toolTipArrowThemeA, .flyOutArrowThemeA {background-position: left top;top: -36px;}
+	.arrowRight, .arrowLeft, .toolTipArrowThemeB, .toolTipArrowThemeC, .flyOutArrowThemeB, .flyOutArrowThemeC {width: 29px;height: 46px;top: 5px;}
+		.arrowLeft, .toolTipArrowThemeB, .flyOutArrowThemeB {background-position: left bottom;left: -18px;}
+		.arrowRight, .toolTipArrowThemeC, .flyOutArrowThemeC {background-position: right bottom;right: -17px;left: auto;}
+
+.contextTouch .toolTip .lining, .contextTouch .toolTip .padder {padding-top: 2.4em;}
+.contextTouch .toolTip .bt_remove, .contextTouch .toolTip .actionRemove {float: right;padding: 1px 18px 0 0;line-height:14px;background-position: right -120px;position:absolute;top:7px;right:14px;}
+
+/* glossary word */
+a.ttWord, a.toolTipWord {color: #212121;text-indent: 0;width: auto;height: auto;background: transparent url('./../img/bg_doubleDotted.gif') repeat-x bottom left;}
+	a.ttWord:hover, a.toolTipWord:hover {text-decoration: none;}
+
+/* toolTipThemeA */
+.toolTipActionThemeA {background-position:0 -400px;}
+.toolTipThemeA .lining, .toolTipThemeA .padder {color:#FFF;background:#af1a1a url('./../img/bg_toolTipThemeA.gif') repeat-x;}
+	.toolTipThemeA .toolTipBordRight, .toolTipThemeA .toolTipBordLeft {background-image:url('./../img/bg_toolTipThemeASideExtra.png');}
+	.toolTipThemeA .toolTipTopRight, .toolTipThemeA .toolTipBottomRight {background-image: url('./../img/bg_toolTipThemeABoxRight.png');}
+	.toolTipThemeA .toolTipTopLeft, .toolTipThemeA .toolTipBottomLeft {background-image: url('./../img/bg_toolTipThemeABoxLeft.png');}
+	.toolTipThemeA .toolTipArrow {background-image: url('./../img/bg_toolTipThemeAArrowSprite.png');}
+	
+/* toolTipThemeC */
+.toolTipThemeC .toolTipBordRight, .toolTipThemeC .toolTipBordLeft {background-image:url('./../img/bg_toolTipThemeCSideExtra.png');}
+	.toolTipThemeC .toolTipBordRight {padding-left: 13px; margin-left: -1px;}
+	.toolTipThemeC .toolTipBordLeft {padding-right: 13px; margin-right: -1px;}
+.toolTipThemeC .toolTipTopRight, .toolTipThemeC .toolTipBottomRight {background-image: url('./../img/bg_toolTipThemeCBoxRight.png');}
+.toolTipThemeC .toolTipTopLeft, .toolTipThemeC .toolTipBottomLeft {background-image: url('./../img/bg_toolTipThemeCBoxLeft.png');}
+.toolTipThemeC .toolTipArrow {background-image: url('./../img/bg_toolTipThemeCArrowSprite.png'); bottom: -29px;}
+.toolTipThemeC .arrowUp, .toolTipThemeC .toolTipArrowThemeA {top: -29px;}
+.toolTipThemeC .arrowLeft, .toolTipThemeC .toolTipArrowThemeB {left: -12px;}
+.toolTipThemeC .arrowRight, .toolTipThemeC .toolTipArrowThemeC {right: -11px;}
+
+/* per-context */
+.navTilesContent .toolTip {position: relative; left: auto; top: auto; min-width: 0;}
+
+/* CSS3 
+.borderradius .toolTipThemeC .toolTipTopRight, .borderradius .toolTipThemeC .toolTipBottomRight, .borderradius .toolTipThemeC .toolTipTopLeft, .borderradius .toolTipThemeC .toolTipBottomLeft, 
+.borderradius .toolTipThemeC .toolTipBordRight, .borderradius .toolTipThemeC .toolTipBordLeft
+{background: none;}
+.borderradius .toolTipThemeC {border: 1px solid #d1d1d1; background-color: #f2f2f2; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; border-radius: 4px;}
+.boxshadow .toolTipThemeC {
+	-webkit-box-shadow: inset 0px 0px 0px 1px #fff;
+	-moz-box-shadow: inset 0px 0px 0px 1px #fff;
+	-ms-box-shadow: inset 0px 0px 0px 1px #fff;
+	box-shadow: inset 0px 0px 0px 1px #fff;
+}*/
+	
+/* toolTipActionThemeB */
+.toolTipActionThemeB {background-position: left -960px;}
+
+
+
+/*:: =Page loader / Content loader ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+.pgLoader,.pgLoaderExtra1 {background: transparent url('./../img/bg_pageLoader.gif') no-repeat;}
+.pgLoader {position: fixed;left:50%;top:25%;height: 41px;width: 240px;margin-left:-120px;background-position: left top;z-index: 999999;padding: 12px 0 8px 15px;}
+	.pgLoaderExtra1 {background-position: right top;width: 20px;height: 61px;display: block;position: absolute;right: -20px;top: 0;}
+	.pgLoaderDesc,.hScrollBar img {background: transparent url('./../img/loader_pgLoader.gif') no-repeat left center;padding-left: 46px;}
+	.pgLoaderDesc {padding: 11px 0 10px 45px;}
+	.fr .pgLoaderDesc {padding-top: 0;background-position:left 0;}
+	.hScrollBar img {padding: 2px;background-position: center center;}
+	.hScrollBarJs .multiColumn .column {width: auto !important;} /* EXPECETION: DO NEVER style JS CSS className */
+
+.cLoader {background:transparent url('./../img/loader_pgLoader.gif') no-repeat;width: 36px;height: 36px;position: relative;margin: 0 auto;}
+	.tabContSet .cLoader,.lbContent .cLoader {position: absolute;}
+		.tabContSet .cLoader {left: 21px;top: 0;}
+		.lbContent .cLoader {left:46%;top:34%;}
+
+.loader, .loaderExtra1, .loaderExtra2 {background: transparent url('./../img/bg_loader.gif') no-repeat;}		
+.loader {position: fixed; left:50%; top:25%; width: 310px; margin-left: -155px; z-index: 999999; background-position: -310px 0; background-repeat: repeat-y;}
+	.loaderContent {position: relative; z-index: 999999;padding: 17px 21px 15px 68px; background: transparent url('./../img/loader_pgLoader.gif') 19px 7px no-repeat;}
+	.loaderThemeA .loaderContent {padding-top: 7px; padding-bottom: 7px;}
+	.loaderExtra1, .loaderExtra2, .loaderExtra3 {display: block; position: absolute; height: 10px; width: 310px; background: transparent url('./../img/bg_loader.gif') no-repeat; z-index: 999998;}
+	.loaderExtra1 {background-position: 0 0px; top: -10px;}
+	.loaderExtra2 {background-position: 0 -10px; bottom: -10px;}
+	.loaderExtra3 {background-position: 0 bottom; bottom: 0; height: 32px;}
+
+.ajaxLoaderOverlay {width:100%;height:100%;position:absolute;left:0;top:0;z-index:4999;background-color:#bbb;overlayColor:'#bbbbbb';opacity: 0;cursor: progress;}
+
+
+/*:: =Package toggle / =Page counter ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+.pageCounter {position: absolute;left: 0;top: 14px;width: 100%;text-align: center;}
+.resultFoot .pageCounter {top: 1.45em;z-index: 1;}
+
+.pageCounter span,.pkgToggle span {display: inline;}
+
+.pageCounter ul,.pkgToggle ul {display: inline;margin: 0;}
+	.pageCounter li,.pkgToggle li {display: inline;background: none;padding: 0;margin: 0 -3px 0 0;}
+	.sBuilder .pageCounter li, .contextBuilder .pageCounter li {margin:0;}
+	
+	.pageCounter li a,.pkgToggle li a, .pkgToggle .tgl, .pkgToggle .toggle {position: relative;overflow: hidden;display: inline-block;font-size: 11px;line-height: 10px;height: 15px;padding: 7px 12px 0;text-align: center;background: transparent url('./../img/bg_toggleSprite.gif') no-repeat left 0px;}
+		.pageCounter li a:visited {color:#0066a4;}
+		.pageCounter li a span,.pkgToggle li a span,.pkgToggle .tgl span, .pkgToggle .toggle span {margin: 0;display: block;position: absolute;line-height: normal;right: 0;top: 0;width: 8px;height: 22px;background: transparent url('./../img/bg_toggleSprite.gif') no-repeat right 0px;}
+		
+	.pageCounter li a span {background-position: right -234px;}
+	.pageCounter li a:hover,.pkgToggle li a:hover, .pkgToggle .tgl:hover, .pkgToggle .toggle:hover {text-decoration: none;}
+	
+	.pageCounter li.active a,.pkgToggle li.active a,.pkgToggle a.tglOpen, .pkgToggle a.toggleOpen {background-position: left -60px;color: #fff !important;}
+	.pageCounter li.active a:hover,.pkgToggle li.active a:hover {text-decoration: none;cursor: default;}
+		.pageCounter li.active a span,.pkgToggle li.active a span {background-position: right -60px;}
+	
+	.pageCounter li a.first,.pkgToggle li a.first {background-position: 0 -121px;padding-left: 15px;}
+		.pageCounter li.active a.first,.pkgToggle li.active a.first {background-position: 3px -182px;padding-left: 18px;}
+	
+	.pageCounter li a.last,.pkgToggle li a.last {padding-right: 16px;}
+		.pageCounter li a.last span,.pkgToggle li a.last span {background-position: right -121px;}
+		.pageCounter li.active a.last span,.pkgToggle li.active a.last span {background-position: right -182px;}	
+
+/* per-context */
+.shell .pageCounter {margin-top: 10px;position: relative;top: -15px;}
+
+
+/* CSS3 */
+.shell .pageCounter li a.first {-ms-border-radius: 7px 0 0 7px;-webkit-border-radius: 7px 0 0 7px;-moz-border-radius: 7px 0 0 7px;border-radius: 7px 0 0 7px;}
+.shell .pageCounter li a.last {-ms-border-radius: 0 7px 7px 0;-webkit-border-radius: 0 7px 7px 0;-moz-border-radius: 0 7px 7px 0;border-radius: 0 7px 7px 0;}
+.shell .pageCounter li.active a.first {-ms-border-radius: 10px 0 0 10px;-webkit-border-radius: 10px 0 0 10px;-moz-border-radius: 10px 0 0 10px;border-radius: 10px 0 0 10px;}
+.shell .pageCounter li.active a.last {-ms-border-radius: 0 10px 10px 0;-webkit-border-radius: 0 10px 10px 0;-moz-border-radius: 0 10px 10px 0;border-radius: 0 10px 10px 0;}
+
+
+
+.pkgToggle {position: relative;top: -3px;overflow: hidden;}
+	.pkgToggle ul {position: relative;float: right;}
+	 	.pkgToggle li {float: left;margin: 0;}
+		.pkgToggle li a, .pkgToggle li a:hover {min-width: 80px;}
+			.pkgToggle li a:visited {color: #0066a4;}
+			.pkgToggle li.active a:visited,.pkgToggle a.tglOpen:visited, .pkgToggle a.toggleOpen:visited {color: #fff;}
+
+.pkgToggle .tgl, .pkgToggle .toggle {width: 7em;background-position: left -121px;}.fr .pkgToggle .tgl, .fr .pkgToggle .toggle{width: 9em;}
+	.pkgToggle .tgl span, .pkgToggle .toggle span {background-position:right -121px;}
+.pkgToggle a.tglOpen, .pkgToggle a.toggleOpen {background-position: left -182px;}
+	.pkgToggle a.tglOpen span, .pkgToggle a.toggleOpen span {background-position: right -182px;}
+
+.cBoxEmpty .pkgToggle, .noJs .pkgToggle .tglJs {display: none;} /* ! */
+
+
+
+/*:: =pageCounterThemeA ::::::::::::::::::::::::::: */
+.pageCounterThemeA li a {background:transparent url('./../img/bg_toggleSprite.gif') no-repeat left 0px;}
+	/* if the links are active */
+	.pageCounterThemeA li a.first {padding-left:21px;background-position:0 -294px;}
+	.pageCounterThemeA li a.last {padding-right: 22px;background-position:0 0;}
+		.pageCounterThemeA li a.last span {width:14px;background:transparent url('./../img/bg_toggleSprite.gif') no-repeat right -294px;}
+		.pageCounterThemeA li.active a.last {background-position: left -60px; padding-right: 16px;}
+			.pageCounterThemeA li.active a.last span {background-position: right -182px; padding-right: 0;}
+		
+	/* if the links are inactive */
+	.pageCounterThemeA li.disabled, .pageCounterThemeA li.disabled a {cursor:auto;color:#999;}
+		.pageCounterThemeA li.disabled a.first {background-position:0 -355px;}
+		.pageCounterThemeA li.disabled a.last span {background-position:right -355px;}
+
+/*:: =Articles ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+/* Font size overide using headingTypeX classes is not possible anymore within article content. */
+
+.article {margin-top: 1em;}
+
+.article h2 {margin: 2.5em 0 0.5em;font-size: 18px;}
+	.article h2:first-child, .article .headingType4 {margin-top: 0;}
+.article h3 {margin: 1.5em 0 0.5em;font-size: 14px;}
+
+/*:: =Figure ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+.figure{text-align:center;}
+
+/*:: =Next/Previous links (deprecated); Use "nextPrevious" ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+.prevArticle,.nextArticle,.prevPage,.nextPage{display: block;line-height: 16px;background: transparent url('./../img/bg_iconSprite.gif') no-repeat;position: relative;z-index: 2;}
+	.prevArticle:visited,.nextArticle:visited,.prevPage:visited,.nextPage:visited {color: #0066a4;}
+	.prevArticle,.prevPage {float: left;background-position: left -280px;padding-left: 25px;left: 15px;}
+	.nextArticle,.nextPage {float: right;background-position: right -159px;padding-right: 25px;margin-right: 15px;text-align: right;}
+
+	.prevPage {background-position: left -680px;}
+	.nextPage {background-position: right -720px;}
+	
+.prevArticle {margin: 0;left: 0;width: 45%;}
+.nextArticle {margin: 0;right: 0;width: 45%;}
+
+/*:: =nextPrevious ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+.nextPrevious {margin-top: 21px;}
+	.next, .previous {width: 14px; height: 14px; display: block; background: transparent url('./../img/bg_iconSprite.gif') no-repeat left -1094px;}
+		.next {float: right; background-position: left -1054px;}
+		.previous {float: left;}
+	
+	.cFoot .nextPrevious, .cFooter .nextPrevious {position: absolute;width: 100%;margin: 0;left: 0;top: 1.6em;}
+
+	.nextPreviousThemeA .next, .nextPreviousThemeA .previous {background-position: left -681px;}
+		.nextPreviousThemeA .next {background-position: right -721px;}
+	
+	.nextPreviousThemeB .next, .nextPreviousThemeB .previous,
+	.nextPreviousThemeC .next, .nextPreviousThemeC .previous {
+		width: 58px; height: 58px; background: transparent url('./../img/bg_nextPrevious.png') no-repeat;
+	}
+	/* ### nextPreviousThemeB is not 100% modular; Need to fix that eventually */
+	.nextPreviousThemeB .next, .nextPreviousThemeB .previous {position:absolute; top:200px; z-index:2;}
+		.nextPreviousThemeB .next {background-position:center top; right:21px;}
+		.nextPreviousThemeB .previous {background-position:center -72px; left:11px;}
+	
+	.nextPreviousThemeC .next, .nextPreviousThemeC .previous {position: relative; display: block;}
+		.nextPreviousThemeC .next {background-position: right -144px;}
+		.nextPreviousThemeC .previous {background-position: left -216px;}
+	
+	/* disabled state */
+	.nextDisabled, .previousDisabled {background-image: url('./../img/bg_nextPreviousDisabled.png') !important;}
+
+	.white-button{
+		background: white;
+    	color: #0066a4;
+    	width: 58rem;
+    	height: 2rem;
+    	border: none;
+    	border-width: thin;
+    	border-radius: 0.5rem;
+    	margin-bottom: 1rem;
+	}
+
+	.blue-button{
+		background: #0066a4;
+		color: white;
+		width: 58rem;
+    	height: 2rem;
+    	border: none;
+    	border-width: thin;
+    	border-radius: 0.5rem;
+    	margin-bottom: 1rem;
+	}
+
+	.white-button:focus{
+		background: #0066a4;
+		color: white;
+	}

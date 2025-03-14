@@ -1,0 +1,3905 @@
+/*!:: BELL CANADA UIKit v1.3931
+
+bell_prime.css
+Build Date: 10:15 AM Wednesday, November 21, 2012
+
+Development Team: Son Pham, Michel Pen
+Founder Team: Jean-Francois Payant, Son Pham, Michel Pen, Miguel Matos
+Contributors: Bruno-Pierre Campeau
+
+www.bell.ca/enterprise/EntPrd_Web_Landing.page
+
+This file is part of Bell.ca UIKit style library. It is being imported 
+in bell_master.css to provide basic styles and some crucial
+structure and interaction elements. Please consider both 
+files as a whole.
+
+::*/
+
+/*:: =Reset ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+/* http://meyerweb.com/eric/tools/css/reset/ (v1.0 | 20080212) */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+	blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
+	em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup,
+	tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label,
+	legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+body {
+	line-height: 1;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+input[type="radio"] {
+	filter: grayscale(1) !important;
+}
+input[type="checkbox"] {
+	filter: grayscale(1) !important;
+}
+
+/*:: =Basic Styles ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+@font-face {
+	font-family: 'BellSlimMediumRegular';
+	src: url('./../img/bellslim_medium-webfont.eot');
+	src: url('./../img/bellslim_medium-webfont.eot')
+		format('embedded-opentype'), url('./../fonts/bellslim_medium-webfont.woff')
+		format('woff'), url('./../fonts/bellslim_medium-webfont.ttf')
+		format('truetype'),
+		url('./../img/bellslim_medium-webfont.svg#BellSlimMediumRegular')
+		format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'BellSlimSemiBoldRegular';
+	src: url('./../img/bellslim_semibold-webfont.eot');
+	src: url('./../img/bellslim_semibold-webfont.eot')
+		format('embedded-opentype'),
+		url('./../fonts/bellslim_semibold-webfont.woff') format('woff'),
+		url('./../fonts/bellslim_semibold-webfont.ttf') format('truetype'),
+		url('./../img/bellslim_semibold-webfont.svg#BellSlimSemiBoldRegular')
+		format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	font: normal 75%/1.333em Helvetica, Arial, sans-serif;
+	background-color: #fff;
+}
+
+body, .searchBarThemeC .flyOutGroup .flyOutTrig {
+	color: #555;
+}
+
+a, a:link, a:active, .results a strong {
+	text-decoration: none;
+	color: #0066a4;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited, .results a:visited strong {
+	color: #666699;
+}
+
+h1, h2, h3, h4, h5, h1 a, h2 a, h3 a, h4 a, h5 a, h1 a:link, h2 a:link,
+	h3 a:link, h4 a:link, h5 a:link, h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover,
+	h5 a:hover, h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited
+	{
+	color: #212121;
+	font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	position: relative;
+	color: #212121;
+}
+
+.hType1, .headingType1, .hType2, .headingType2, .hType3, .headingType3,
+	.hType4, .headingType4, .hType5, .headingType5 {
+	color: #212121;
+}
+
+/* Cufon (bellSlimMedium504_500) is optimized for 18-20-24-30-36px */
+h1, .hType1, .headingType1 {
+	font-size: 2.5em /*30px*/;
+	line-height: 1em;
+	margin-bottom: 0.4em;
+}
+
+h1, .txtRep, .fontFace {
+	letter-spacing: -1px;
+}
+
+h2, .hType2, .headingType2 {
+	font-size: 2em /*24px*/;
+	line-height: 1em;
+	margin-bottom: 0.333em;
+}
+
+h3, .hType3, .headingType3 {
+	font-size: 1.5em /*18px*/;
+	line-height: 1.2em;
+	margin-bottom: 0.416em; /* was 0.277em */
+}
+
+h4, .hType4, .headingType4 {
+	font-size: 1.166em /*14px*/;
+	line-height: 1.2em;
+	margin-bottom: 0.285em;
+	color: #212121;
+}
+
+h5, .hType5, .headingType5 {
+	font-size: 1em /*12px*/;
+	line-height: 1.3em;
+	margin-bottom: 0.333em;
+}
+
+.sTitle, .headingThemeA, .headingThemeC {
+	padding-bottom: 6px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #d6d6d6;
+	position: relative;
+}
+
+.headingThemeB, .headingThemeC {
+	color: #0066A4;
+}
+
+.headingThemeC {
+	border-color: #ddd;
+}
+
+.headingThemeC em, .headingThemeB small, .headingThemeC small {
+	display: block;
+	font-size: 12px;
+	color: #212121;
+	margin-top: 3px;
+}
+
+.headingThemeD {
+	margin-bottom: 1em;
+}
+
+.headingThemeE {
+	margin-bottom: 0;
+}
+
+.headingThemeF {
+	border-bottom: 1px solid #EDEDED;
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+}
+
+.headingThemeG {
+	background:
+		url('./../img/bg_headingThemeG.gif')
+		repeat-x left bottom transparent;
+	padding-bottom: 10px;
+	margin-bottom: 1em;
+}
+
+.headingAside {
+	display: block;
+	font-size: 12px;
+	line-height: normal;
+	margin-top: 5px;
+	letter-spacing: 0;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+.toolTip .headingAside {
+	margin-left: 4px;
+}
+
+.pgTitle h1 {
+	line-height: 1.2em;
+}
+
+h1, .txtRep, .fontFace {
+	font-family: "BellSlimSemiBoldRegular", Helvetica, Arial, sans-serif;
+}
+
+/* headingWrap - used to wrap any element with a heading, wrapped elements should be placed inside a "headingAside" */
+.headingWrap {
+	position: relative;
+}
+
+.pgTitle .headingWrap h1 {
+	width: auto !important;
+}
+
+.headingWrap .headingAside {
+	position: relative;
+	margin-top: 0;
+}
+
+.headingWrap h1, .headingWrap h2, .headingWrap h3, .headingWrap h4,
+	.headingWrap h5, .headingWrap h6 {
+	float: left;
+	width: auto;
+	margin-right: 10px;
+}
+
+.headingWrap, .headingWrap .headingAside, .headingWrap .moreLink {
+	float: left;
+}
+
+p, dl, address {
+	margin-bottom: 1em;
+}
+
+ol {
+	margin-bottom: 1em;
+	padding-left: 0;
+}
+
+ul {
+	margin-bottom: 1em;
+}
+
+li ul, li ol {
+	margin: 3px 0 6px 0;
+}
+
+li {
+	position: relative;
+	margin-bottom: 3px;
+}
+
+ul li {
+	list-style: none;
+	padding-left: 14px;
+	background: url('./../img/bl_default.gif')
+		0 0.5em no-repeat transparent;
+}
+
+ol li {
+	margin-left: 25px;
+	list-style: outside decimal;
+}
+
+ul li ul li, .dataList li ul li ul li, .dataListThemeN li ul li,
+	.dataList li .dataListThemeN li ul li, .dataListThemeN li .sectionContent .dataListThemeN li
+	{
+	background-image:
+		url('./../img/bl_dash.gif');
+}
+
+ul li ol li {
+	padding-left: 0;
+	background: none transparent;
+}
+
+ol li ol li {
+	list-style: outside lower-alpha;
+}
+
+ol li ul li {
+	list-style: none outside;
+	margin-left: 0;
+}
+
+dt {
+	font-weight: normal;
+	margin-right: 4px;
+	float: left;
+}
+
+dd {
+	margin: 0 0 2px 0;
+	font-weight: bold;
+}
+
+dd a {
+	font-weight: normal;
+}
+
+strong {
+	font-weight: bold;
+}
+
+sup {
+	font-size: 11px;
+	line-height: 12px;
+	position: relative;
+	top: -4px;
+}
+
+h1 sup, h1 .superscript, .txtRep sup, .txtRep .superscript, .fontFace sup,
+	.fontFace .superscript {
+	top: auto;
+	left: 2px;
+	font-size: 0.8em;
+	line-height: 100%;
+	vertical-align: top;
+}
+
+blockquote {
+	margin-bottom: 12px;
+	margin-left: 14px;
+}
+
+hr {
+	border: 0 none;
+	height: 0;
+	clear: both;
+	border-top: 1px solid #DDD;
+	display: block;
+	margin: 15px 0px 15px 0px;
+}
+
+address {
+	font-style: normal;
+}
+
+iframe {
+	border: 0 none;
+}
+
+pre {
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+/*:: =Utility ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+/* Clear after a float (use on div or span)*/
+.clearer {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	line-height: 0;
+}
+
+/* Position content outside the viewport so it can be accessed by screenreader users */
+/* For IE6, always use "top" instead of "left". Performance with "left" is lacking. */
+.accessAlt, .offScreen {
+	position: absolute !important;
+	left: -999em !important;
+	top: -999em !important;
+}
+
+.noJs .accessAlt, .noJs .offScreen {
+	position: static !important;
+	left: auto !important;
+	top: auto !important;
+}
+
+/* Give emphasis */
+.accent {
+	font-weight: bold;
+}
+
+/* Reduce emphasis */
+.unaccent, .capsule label small {
+	font-size: 11px;
+}
+
+/* pipeSpacer - List items separated by a light grey border */
+ul.pipeSpacer {
+	float: left;
+	position: relative;
+}
+
+ul.pipeSpacer li {
+	float: left;
+	background: none transparent;
+	padding: 1px 10px 0 0;
+	margin: 0 10px 5px 0;
+	border-right: 1px solid #ccc;
+}
+
+ul.pipeSpacer li.last {
+	border: 0 none;
+	margin-right: 0;
+	padding-right: 0;
+}
+
+.pgTitleOptions ul.pipeSpacer li {
+	margin-bottom: 0;
+}
+
+/* pipeSpacerThemeA - splitted in two sections (left/right); This is not a seamless theme change, it requires markup change to match the theme */
+.pipeSpacerThemeA, .footer .pipeSpacerThemeA {
+	border-right: 1px solid #CCCCCC;
+	padding-right: 12px;
+	margin-bottom: 0;
+}
+
+.pipeSpacerThemeA li, .footer .pipeSpacerThemeA li {
+	background-image: none;
+	padding-left: 0;
+	white-space: normal;
+	float: none;
+	margin-right: 0;
+	border: 0;
+}
+
+.last .pipeSpacerThemeA, .footer .last .pipeSpacerThemeA {
+	border-right: 0;
+	margin-right: 0;
+	padding-right: 0;
+}
+
+/* Default toggle widget */
+.tgl, .tgl:hover, .toggle, .toggle:hover {
+	text-decoration: none;
+}
+
+.tgl, .toggle {
+	display: inline-block;
+	margin-bottom: 21px;
+	padding-right: 25px;
+	background:
+		url('./../img/bg_iconSprite.gif')
+		no-repeat right -479px transparent;
+}
+
+.tglOpen, .toggleOpen {
+	margin-bottom: 0;
+	background-position: right -519px;
+}
+
+.tglCont, .toggleContent {
+	margin: 21px 0;
+}
+
+/* toggleThemeA - see master.css */
+/* toggleThemeB */
+.toggleThemeB {
+	background-position: left -320px;
+	line-height: 1.2em;
+	padding-left: 22px;
+	padding-right: 0;
+}
+
+.toggleThemeBOpen {
+	background-position: left -360px;
+	position: relative;
+	z-index: 1;
+}
+/* toggleThemeC - removes +/- icon */
+.toggleThemeC, .toggleThemeCOpen {
+	background: none;
+}
+
+.toggleThemeC:hover {
+	text-decoration: underline;
+}
+
+/* per-context */
+.headingThemeD .toggle {
+	position: absolute;
+	right: 0px;
+	padding-right: 0px;
+	margin-right: 8px;
+	top: 6px;
+	height: 17px;
+	width: 100%;
+	z-index: 3;
+}
+
+.dataList li .sectionHeader .toggle {
+	top: 0;
+	margin-right: 0;
+}
+
+/*:: =Forms ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+form {
+	margin-bottom: 0;
+}
+
+.requiredMark {
+	color: #555;
+	margin-right: 3px;
+}
+
+.requiredMsg {
+	color: #555;
+	font-size: 11px;
+}
+
+fieldset {
+	border: 0 none;
+	margin: 0;
+	padding: 0;
+}
+
+legend {
+	height: 0;
+	display: block;
+	line-height: 0;
+	text-indent: -999em;
+}
+
+legend span {
+	position: absolute;
+	top: -999em;
+}
+
+input, textarea {
+	font-family: helvetica, arial, sans-serif;
+}
+
+.inputWrap {
+	position: relative;
+	float: left;
+}
+
+label, .fLabel, .formGroup .sectionHeader {
+	font-size: 14px;
+	line-height: 16px;
+}
+
+label, .fLabel, .formGroup .sectionHeader, .cIntroductionThemeB .formGroupThemeB .sectionHeader label
+	{
+	color: #555;
+}
+
+.fLabel, .fLabel label, .formGroup .sectionHeader, .formGroup .sectionHeader label
+	{
+	color: #212121;
+}
+
+.fChckbx .fWidget label, .formCheckBox .sectionContent label, .fRadio .fWidget label,
+	.formRadio .sectionContent label, .fLabel span.unaccent, .formGroup .sectionHeader span.unaccent,
+	.fTerms .optGroup label, .formTerms .optionGroup label {
+	font-size: 12px;
+	line-height: 17px;
+	filter: grayscale(1)
+}
+
+/* formGroup a.k.a frmElmnt (deprecated) */
+.frmElmnt, .formGroup {
+	margin-bottom: 2em;
+}
+
+.formGroup .formCollection .formGroup {
+	margin-bottom: 0;
+} /*Search*/
+
+/* sectionHeader a.k.a fLabel (deprecated) */
+.fLabel, .formGroup .sectionHeader {
+	position: relative;
+	width: 203px;
+	margin: 0;
+	padding: 0;
+	float: left;
+	text-align: right;
+} /* ### width was 164px */
+.fLabel label, .formGroup .sectionHeader label {
+	position: relative;
+}
+
+.fLabel span, .formGroup .sectionHeader span {
+	position: relative;
+	left: 0;
+}
+
+/* sectionContent a.k.a fWidget (deprecated) */
+.fWidget, .formGroup .sectionContent {
+	position: relative;
+	padding-left: 14px;
+	float: left;
+	display: inline;
+}
+
+.fWidget input, .fWidget select, .formGroup .sectionContent input,
+	.formGroup .sectionContent select {
+	float: left;
+	margin: 1px 8px 0 1px;
+}
+
+.formGroup .formCollection .sectionContent input {
+	margin-right: 8px !important;
+}
+	/* this definition is used within Search. see margin-right in declaration above */
+.formGroup .sectionContent .inputSize4 {
+	width: 24em;
+}
+
+.fWidget .inputSize3, .formGroup .sectionContent .inputSize3 {
+	width: 14em;
+}
+
+.fWidget .inputSize2, .formGroup .sectionContent .inputSize2 {
+	width: 8.5em;
+}
+
+.fWidget .inputSize1, .formGroup .sectionContent .inputSize1 {
+	width: 4.5em;
+}
+
+.fWidget .inputSize0, .formGroup .sectionContent .inputSize0 {
+	width: 2em;
+}
+
+.formGroup .sectionContent select.inputSize4, .fWidget select.inputSize3,
+	.formGroup .sectionContent select.inputSize3, .fWidget select.inputSize2,
+	.formGroup .sectionContent select.inputSize2, .fWidget select.inputSize1,
+	.formGroup .sectionContent select.inputSize1 {
+	width: auto;
+}
+
+.formGroup .sectionContent select.inputSize4 {
+	min-width: 24em;
+}
+
+.fWidget select.inputSize3, .formGroup .sectionContent select.inputSize3
+	{
+	min-width: 16em;
+}
+
+.fWidget select.inputSize2, .formGroup .sectionContent select.inputSize2
+	{
+	min-width: 10em;
+}
+
+.fWidget select.inputSize1, .formGroup .sectionContent select.inputSize1
+	{
+	min-width: 5em;
+}
+
+/* sectionAside */
+.formGroup .sectionAside {
+	margin-left: 217px;
+}
+
+/* Contextual message (under input) */
+.hlpMsg, .helpMessage {
+	font-size: 11px;
+	margin: 4px 0 0 0;
+	clear: left;
+	float: left;
+	max-width: 35em;
+}
+/*.hlpMsg a, .helpMessage a {text-decoration: underline;} ### to be removed */
+.hlpMsg a:visited, .helpMessage a:visited {
+	color: #0066a4;
+}
+
+.hlpMsg .captcha, .helpMessage .captcha {
+	margin-top: 6px;
+}
+
+/* Contextual help link (side of input) deprecated. Use inputAside. */
+.hlpLnk, .inputAside {
+	position: relative;
+	top: 1px;
+	display: inline-block;
+}
+
+.hlpLnk:visited, .inputAside:visited {
+	color: #0066a4;
+}
+
+/* formCollection a.k.a elmntGroup (deprecated) - Element group (group two or more formGroup) */
+.elmntGroup, .formCollection {
+	overflow: hidden;
+}
+
+.elmntGroup .frmElmnt, .formCollection .formGroup {
+	float: left;
+}
+
+.elmntGroup .frmInline, .formCollection .formGroupThemeB {
+	margin-left: 14px;
+	float: left;
+}
+
+.elmntGroup .fSlct, .formCollection .formSelect {
+	margin-top: 6px;
+	margin-right: 21px;
+}
+
+.formCollection .last {
+	margin-right: 0;
+}
+/* search */
+.formGroup .formCollection {
+	margin-top: 3px;
+}
+
+.formGroup .formCollection .sectionContent {
+	float: none;
+	width: auto;
+	position: static;
+}
+
+/* Text input */
+/* formText a.k.a fTxt (deprecated) */
+.fTxt .fLabel, .formText .sectionHeader {
+	top: 7px;
+}
+
+.fTxt input, .formText input {
+	width: 21em;
+	font-weight: bold;
+	font-size: 1.16em;
+	line-height: 1.14em;
+	background:
+		url('./../img/bg_formTextInput.gif') top
+		left repeat-x #eee;
+	border-top: 1px solid #5f5f5f;
+	border-bottom: 1px solid #cdcdcd;
+	border-left: 1px solid #a6a6a6;
+	border-right: 1px solid #a6a6a6;
+}
+
+.fTxt input, .formText input, .formGroup .formGroup input {
+	padding: 7px 5px 3px 5px;
+}
+
+.formCheckbox .optionGroup input {
+	padding: 0;
+}
+
+.formGroup .formGroup input {
+	width: auto;
+}
+
+.fTxt .labelOverAct, .formText .labelOverAct {
+	position: absolute;
+	top: 7px;
+	left: 7px;
+	cursor: text;
+	z-index: 4;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.fTxt .ttTrigger, .formText .toolTipAction {
+	top: 6px;
+	right: -15px;
+	position: absolute;
+}
+
+.fTxt .hlpLnk, .formText .inputAside {
+	top: 8px;
+}
+
+.formText .button {
+	position: relative;
+	top: -5px;
+}
+
+.formText .buttonThemeB {
+	top: 2px;
+}
+
+.formText .buttonThemeD {
+	top: 0;
+}
+
+/* per-context */
+.formRadio .formText {
+	margin-top: 5px;
+}
+
+.formRadio .formText input {
+	border-top: 1px solid #5f5f5f;
+	border-bottom: 1px solid #cdcdcd;
+	border-left: 1px solid #a6a6a6;
+	border-right: 1px solid #a6a6a6;
+	margin-left: 5px;
+}
+
+/* File upload */
+/* formFile a.k.a fFile (deprecated) */
+.fFile .fLabel, .formFile .sectionHeader {
+	top: 4px;
+}
+
+/* Select */
+/* formSelect a.k.a fSlct (deprecated) */
+.fSlct .fLabel, .formSelect .sectionHeader {
+	top: 1px;
+}
+
+.fWidget select, .formGroup .sectionContent select {
+	position: relative;
+}
+
+.fSlct .ttTrigger, .formSelect .toolTipAction {
+	top: 2px;
+}
+
+.fTxt .fSlct .fLabel, .formText .formSelect .sectionHeader {
+	top: 7px;
+}
+
+.fTxt .fSlct select, .formText .formSelect select {
+	top: 5px;
+}
+
+/* Checkbox */
+/* formCheckBox a.k.a fChckbx (deprecated) */
+.fChckbx input, .formCheckBox input {
+	position: relative;
+	margin: 0;
+	padding: 0; /*top: 0px;*/
+	margin-right: 7px !important;
+	vertical-align: middle;
+	height: 16px;
+}
+
+.fChckbx .fWidget label, .formCheckBox .sectionContent label {
+	margin: 0;
+}
+
+.formGroup .formCollection .formCheckBox label {
+	float: left;
+	margin-top: 4px;
+} /*Search*/
+
+/* Radio button */
+/* formRadio a.k.a fRadio (deprecated) */
+.fRadio input, .formRadio input {
+	border: 0 none;
+	margin-right: 6px !important;
+	padding: 0;
+	vertical-align: middle;
+	height: 16px;
+	filter: grayscale(1) !important;
+}
+
+.fRadio .fWidget label, .formRadio .sectionContent label {
+	margin: 0;
+}
+/*.formRadio .sectionHeader {width: 36%;}*/
+.formRadio .sectionContent {
+	width: 60%;
+}
+/* contextual */
+.sBuilder .formRadio .sectionContent, .formCollection .formRadio .sectionContent,
+	.formSuper .formRadio .sectionContent, .lbContent .formRadio .sectionContent,
+	.splitter .formRadio .sectionContent {
+	width: auto;
+}
+
+/* Radio buttons/Checkboxes label wrap alignment support */
+.capsule .formCheckBox .optionGroup  label, .formSuper .formGroupThemeA .optionGroup label
+	{
+	padding-left: 0;
+}
+
+/* formRadioThemeA (Credit card display) */
+.formRadioThemeA .optionGroup {
+	margin-right: 5px;
+}
+
+.formRadioThemeA .optionGroup input {
+	display: none;
+}
+
+.formRadioThemeA .icon {
+	margin: 0 6px 0 0;
+	text-indent: -999em;
+}
+
+.formCollection .formRadioThemeA {
+	margin-top: 18px;
+}
+
+.formCollection .formRadioThemeA .optionGroup {
+	margin-right: 5px;
+}
+
+/* Text area */
+/* formTextArea a.k.a fTxtArea (deprecated) */
+.fTxtArea .fLabel, .formTextArea .sectionHeader {
+	top: 7px;
+}
+
+.fTxtArea textarea, .formTextArea textarea {
+	display: block;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 16px;
+	padding: 7px 5px 3px 5px;
+	background:
+		url('./../img/bg_formTextInput.gif') top
+		left repeat-x #eee;
+	border-top: 1px solid #5f5f5f;
+	border-bottom: 1px solid #cdcdcd;
+	border-left: 1px solid #a6a6a6;
+	border-right: 1px solid #a6a6a6;
+}
+
+/* Terms and condition widget */
+/* formTerms a.k.a fTerms (deprecated) */
+.formTerms .sectionContent {
+	width: 577px;
+}
+
+/* txtWindow is deprecated. Use scrollView instead */
+.fTerms .txtWindow, .formTerms .txtWindow, .scrollView, .formTerms .scrollView
+	{
+	width: 543px;
+	padding: 14px 16px 10px;
+	margin-bottom: 10px;
+	overflow: auto;
+	height: 170px;
+	background:
+		url('./../img/bg_formTextInput.gif') top
+		left repeat-x #eee;
+	border-top: 1px solid #5f5f5f;
+	border-bottom: 1px solid #cdcdcd;
+	border-left: 1px solid #a6a6a6;
+	border-right: 1px solid #a6a6a6;
+	-webkit-overflow-scroll: touch;
+}
+
+/* scrollView - makes any compatible element "scrollable" */
+.scrollView {
+	position: relative;
+	width: auto;
+	height: 120px;
+	padding: 10px 12px 6px;
+}
+
+.scrollViewSize1 {
+	height: 170px;
+}
+
+.scrollViewSize2 {
+	height: 220px;
+}
+
+.scrollViewSize3 {
+	height: 270px;
+}
+
+.scrollViewSize4 {
+	height: 320px;
+}
+
+.scrollViewSize5 {
+	height: 370px;
+}
+
+.scrollViewSize6 {
+	height: 420px;
+}
+
+.scrollViewSize7 {
+	height: 470px;
+}
+
+.scrollViewSize8 {
+	height: 520px;
+}
+
+.scrollViewSize9 {
+	height: 570px;
+}
+
+.scrollViewSize10 {
+	height: 620px;
+}
+
+.scrollViewSize11 {
+	height: 670px;
+}
+
+.scrollViewSize12 {
+	height: 720px;
+}
+
+.scrollViewSize13 {
+	height: 770px;
+}
+/* per element overwrites */
+ul.scrollView li {
+	background: none;
+	padding-left: 0;
+	margin-bottom: 6px;
+}
+
+.scrollViewThemeA {
+	padding: 0;
+	background: none;
+	border: 0;
+}
+
+.touch .fTerms .txtWindow, .touch .formTerms .txtWindow, .touch .scrollView
+	{
+	height: auto;
+}
+
+.fTerms li, .formTerms li {
+	position: static;
+}
+
+/* noSectionHeader a.k.a noLabel (deprecated) */
+.noLabel .fLabel, .noSectionHeader .sectionHeader {
+	position: absolute;
+	left: -999em;
+}
+
+.noLabel .fWidget, .noSectionHeader .sectionContent {
+	padding-left: 217px;
+} /* was 178px */
+
+/* Form buttons */
+/* formButton a.k.a fBtn (deprecated) */
+.fBtn, .formButton {
+	margin-bottom: 18px;
+}
+
+.fBtn .fWidget, .formButton .sectionContent {
+	padding-left: 217px;
+} /* was 176px */
+.formButtonThemeA .sectionContent {
+	padding-left: 123px;
+}
+
+/* optionGroup a.k.a optGroup (deprecated) : Group checkbox/radio with its label */
+.optGroup, .optionGroup {
+	clear: left;
+	margin-bottom: 5px;
+	width: 100%;
+	position: relative;
+	filter: grayscale(1)
+}
+
+.sideBySide .optGroup, .formGroup .sectionContentThemeA .optionGroup {
+	clear: none;
+	margin-bottom: 0;
+	margin-right: 20px;
+	width: auto;
+	float: left;
+	filter: grayscale(1)
+}
+
+.formRadioThemeA .sectionContentThemeA .optionGroup {
+	margin-right: 5px;
+}
+
+/* exception */
+.formContent .formCheckBox .sectionContentThemeA .optionGroup {
+	margin-bottom: 10px;
+	margin-right: 40px;
+}
+
+/* optionGroupThemeA a.k.a optGroupAlt (deprecated) : Group a optGroup with its previous sibling. Ex.: cart_billing multiple addresses */
+.optGroupAlt, .optionGroupThemeA {
+	clear: left;
+	float: left;
+	margin-top: 5px;
+	margin-bottom: 25px;
+}
+
+.sideBySide .optGroupAlt, .formGroup .sectionContentThemeA .optionGroupThemeA
+	{
+	clear: none;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	margin-right: 30px;
+}
+
+/* Add a width to sideBySide optgroup so they span on multiple columns (deprecated) */
+.multiColumn .optGroup, .multiColumn .optionGroup {
+	width: 174px;
+	margin-right: 0;
+	margin-bottom: 3px;
+	filter: grayscale(1)
+}
+
+/* optionGroupThemeB */
+.optionGroupThemeB, .multiColumn .optionGroupThemeB {
+	float: left;
+	width: auto;
+}
+
+.optionGroupThemeB .formGroup {
+	float: left;
+	margin-top: -2px !important;
+	margin-left: 15px !important;
+}
+
+/* formGroupThemeA a.k.a frmAlt (deprecated) */
+.frmAlt, .formGroupThemeA {
+	margin-bottom: 18px;
+}
+
+.itemGroup .formGroupThemeA .sectionContent, .unit .stickyBottom .formGroupThemeA .sectionContent
+	{
+	margin-bottom: 0;
+}
+
+.frmAlt .fLabel, .formGroupThemeA .sectionHeader {
+	width: auto;
+	margin-bottom: 4px;
+	float: none;
+	text-align: left;
+	top: 0;
+}
+
+.frmAlt .fLabel span.requiredMark, .formGroupThemeA .sectionHeader span.requiredMark
+	{
+	position: absolute;
+	left: -0.6em;
+	top: 0;
+}
+
+.frmAlt .fWidget, .formGroupThemeA .sectionContent {
+	padding-left: 0;
+	left: 0;
+	z-index: 3;
+}
+/*.formSuper .formGroupThemeA .optionGroup {overflow:hidden;} ### to be deleted (3:46 PM 6/27/2012) */
+.formSuper .formGroupThemeA .optionGroup label {
+	float: left;
+	margin-right: 10px;
+}
+
+/* formGroupThemeB a.k.a frmInline (deprecated) */
+.frmInline .fLabel, .formGroupThemeB .sectionHeader {
+	width: auto;
+	margin-right: 14px;
+	text-align: left;
+}
+
+.frmInline .fWidget, .formGroupThemeB .sectionContent {
+	left: 0;
+	padding-left: 0;
+	line-height: 1.6em;
+}
+
+.capsule .frmInline .sideBySide .optGroup, .capsule .formGroupThemeB .sectionContentThemeA .optionGroup
+	{
+	width: 175px;
+	filter: grayscale(1)
+}
+
+/* formGroupThemeC (to replace capInfo eventually) */
+.formGroupThemeC {
+	margin-bottom: 8px;
+}
+
+.formGroupThemeC .sectionHeader, .shell .formGroupThemeC .sectionHeader
+	{
+	float: none;
+	text-align: left;
+	width: auto;
+	margin-bottom: 10px;
+}
+
+.formGroupThemeC .sectionContent {
+	padding-left: 25px;
+	width: auto;
+}
+
+.formGroupThemeC .optionGroup {
+	position: relative;
+	width: auto;
+}
+
+.formGroupThemeC .optionGroup label {
+	margin-bottom: 4px;
+	display: block;
+}
+
+.formGroupThemeC .optionGroup input {
+	position: absolute;
+	vertical-align: middle;
+	top: 0;
+	left: -25px;
+}
+
+.formGroupThemeC label {
+	padding-left: 0 !important;
+}
+
+.formGroupThemeC .optionGroup input, .formTerms  input {
+	position: absolute;
+}
+
+.formGroupThemeC .optionGroup label, .formTerms  label {
+	display: block;
+	padding-left: 21px;
+}
+
+.formGroupThemeC .sectionContent .optionGroup label em.helpMessage {
+	display: block;
+	clear: none;
+	float: none;
+	font-size: 12px;
+	color: #555;
+}
+
+/* formGroupThemeD (modifies left spacing alignment) */
+.formGroupThemeD .sectionHeader {
+	width: 109px;
+}
+
+/* formContent (Information block displayed in a form; mainly to keep same alignment) */
+.formContent {
+	margin-bottom: 2em;
+}
+
+.formContent .formGroup {
+	margin-bottom: 1em;
+}
+
+.formContent .sectionContent {
+	position: relative;
+	display: block;
+}
+
+.formContentThemeA {
+	margin-left: 237px;
+}
+
+.infoGroupThemeB .formContentThemeA {
+	margin-left: 0;
+	margin-top: 0;
+}
+
+.colGroup .formContentThemeA, .infoGroupThemeA .formContentThemeA {
+	margin-left: 158px;
+}
+
+.formCollection .formContentThemeA {
+	margin-bottom: 1em;
+	margin-top: 10px;
+}
+/* Children formGroup (need to redeclare almost all styles; will adopt a case by case basis strategy instead) */
+.formContent .formGroup .sectionHeader label, .infoGroup.shell .sectionContent .formContent .formGroup .sectionHeader label
+	{
+	font-size: 14px;
+}
+
+.formContent .formGroup .sectionHeader, .infoGroup.shell .sectionContent .formContent .formGroup .sectionHeader
+	{
+	margin-bottom: 5px;
+}
+
+.formContent .formCheckBox .sectionHeader, .infoGroup.shell .sectionContent .formContent .formCheckBox .sectionHeader,
+	.formContent .formRadio .sectionHeader, .infoGroup.shell .sectionContent .formContent .formRadio .sectionHeader
+	{
+	margin-bottom: 10px;
+}
+
+.formContent .formText input {
+	width: 21em;
+}
+
+/* Form comboBox */
+.comboBoxAction {
+	position: absolute;
+	background: none !important;
+	border: none !important;
+	right: 5px;
+	padding: 0;
+	top: 1px;
+}
+
+.comboBoxAction span span {
+	width: 24px;
+	height: 26px;
+	background: transparent
+		url('./../img/ic_comboBox.gif')
+		no-repeat;
+	display: block;
+}
+
+.ui-state-hover span span {
+	background-position: 0 -26px;
+}
+
+/* Form error */
+/* formError a.k.a frmError (deprecated) */
+.frmError .fLabel, .frmError .fLabel label, .frmError .fLabel .requiredMark,
+	.formError .sectionHeader, .formError .sectionHeader label, .formError .sectionHeader .requiredMark
+	{
+	color: #a00 !important;
+	font-weight: bold;
+}
+
+.errorMsg, .errorMessage {
+	color: #a00;
+	font-weight: bold;
+	font-size: 11px !important;
+	line-height: 12px;
+	margin: 4px 0 0 0;
+	clear: left;
+	float: left;
+	max-width: 40em;
+}
+
+.optionGroup .errorMessage {
+	float: none;
+}
+
+optgroup {
+	font-style: normal;
+	margin: 0 3px 4px;
+	padding: 0;
+}
+
+optgroup option {
+	margin: 0;
+	padding: 0 7px;
+}
+
+/* Option message ("or") */
+/* formOptionMessage a.k.a fOptionMsg (deprecated) */
+.fOptionMsg .fLabel, .formOptionMessage .sectionHeader {
+	text-transform: uppercase;
+	color: #555;
+}
+
+.formGroup .formCollection .formOptionMessage {
+	float: right;
+	margin-top: 4px;
+}
+
+/* Date picker */
+.ui-datepicker {
+	z-index: 1000;
+}
+/*img.ui-datepicker-trigger {left:-38px;position:relative;top:5px;width:auto;height:auto;}*/
+img.ui-datepicker-trigger {
+	right: 38px;
+	position: relative;
+	top: 5px;
+	width: auto;
+	height: auto;
+}
+
+/* formDisabled a.k.a fDisabled (deprecated) */
+.fDisabled .fLabel, .fDisabled .fLabel label, .formDisabled .sectionHeader,
+	.formDisabled .sectionHeader label {
+	color: #ccc;
+}
+
+.fDisabled input, .formDisabled input {
+	background: none #fafafa;
+	border-color: #ddd;
+}
+
+/* when in table */
+table input {
+	margin-right: 5px;
+}
+
+/*:: =buttonWrap ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+.btnWrap, .buttonWrap {
+	float: left;
+	width: 100%;
+}
+
+.buttonWrap {
+	position: absolute;
+	right: 21px;
+	top: 0;
+	width: auto;
+}
+
+.lightBoxPadder .buttonWrap {
+	position: relative;
+	right: auto;
+	margin-top: 8px;
+}
+
+.message .buttonWrap, .itemGroup .buttonWrap {
+	margin-top: 10px;
+	position: static;
+}
+
+.message .buttonWrap .button, .itemGroup .buttonWrap .button {
+	position: relative;
+	margin-right: 8px;
+}
+
+.itemGroup .buttonWrap .button {
+	margin-bottom: 5px;
+}
+
+.message .buttonWrap .buttonThemeC {
+	margin-top: 3px;
+}
+
+/*:: =Buttons ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+.buttonize, .button {
+	font-family: helvetica, arial, sans-serif;
+	display: block;
+	float: left;
+	overflow: visible;
+	width: auto;
+	padding: 0;
+	margin: 0 8px 0 0;
+	border: none;
+	background: none transparent;
+}
+
+.buttonize:hover, .button:hover {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.buttonize span, .noJs .buttonize, .button span, .noJs .button {
+	position: relative;
+	top: 0;
+	display: inline;
+	float: left;
+	text-decoration: none;
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+.buttonize span span, .button span span {
+	position: absolute;
+	top: 0;
+	right: -19px;
+	width: 19px;
+	padding: 0;
+	margin: 0;
+	background-position: right top;
+	margin-right: 0;
+}
+
+.noJs .buttonize, .noJs .button {
+	padding: 4px 21px 3px;
+	margin-right: 0;
+	background: none #f2f2f2;
+	border: 1px solid #ddd;
+}
+
+.buttonize span, .button span {
+	padding-left: 19px;
+	margin-right: 19px;
+	line-height: 1em;
+	font-size: 12px;
+	height: 24px;
+	padding-top: 13px;
+	color: #fff;
+	background:
+		url('./../img/bg_buttonSprite.png') left
+		top no-repeat transparent;
+}
+
+.buttonize span span, .button span span {
+	height: 37px;
+	padding-top: 0;
+}
+
+.buttonize span.accessAlt, .button span.accessAlt, .buttonize span.offScreen,
+	.button span.offScreen {
+	display: none;
+}
+
+.btnLnk span, .btnAltAct span, .buttonLink span, .buttonThemeC span {
+	height: 20px;
+	padding-top: 11px;
+	padding-right: 19px;
+}
+
+.btnLnk span span, .btnAltAct span span, .buttonLink span span,
+	.buttonThemeC span span {
+	height: 31px;
+}
+
+.btnPrimAct span, .buttonThemeA span {
+	font-size: 14px;
+	line-height: 15px;
+	height: 27px;
+	padding-top: 14px;
+}
+
+.btnPrimAct span span, .buttonThemeA span span {
+	height: 41px;
+	padding-top: 0;
+}
+
+.buttonThemeB span, .buttonThemeD span {
+	margin-right: 12px;
+	padding-left: 15px;
+	height: 17px;
+	padding-top: 6px;
+	background-position: left -650px;
+}
+
+.buttonThemeB span span, .buttonThemeD span span {
+	margin: 0;
+	padding: 0;
+	height: 23px;
+	background-position: right -650px;
+	width: 15px;
+	right: -15px;
+}
+
+.buttonThemeD span {
+	background-position: left -400px;
+	height: 19px;
+	line-height: 19px;
+	padding-bottom: 2px;
+	padding-top: 4px;
+	color: #212121;
+}
+
+.buttonThemeD span span {
+	background-position: right -400px;
+	height: 25px;
+}
+
+.buttonThemeE span {
+	height: 15px;
+	padding-top: 4px;
+	background-position: left -696px;
+	line-height: 11px;
+}
+
+.buttonThemeE span span {
+	height: 19px;
+	padding-top: 0;
+	background-position: right -696px;
+}
+
+.btnLnkAlt span, .buttonLinkThemeB span, .buttonLinkThemeC span {
+	height: 18px;
+	padding-top: 7px;
+}
+
+.btnLnkAlt span span, .buttonLinkThemeB span span, .buttonLinkThemeC span span
+	{
+	height: 25px;
+}
+
+button.buttonize, button.button {
+	position: relative;
+	top: -1px;
+	margin-left: -3px;
+	margin-right: 5px;
+}
+
+/* default blue action button (deprecated - use "button" by default) */
+.btnDftAct span, .noJs .btnDftAct {
+	color: #fff;
+}
+
+.btnDftAct span span {
+	right: -19px;
+	width: 19px;
+	background-position: right top;
+}
+
+.noJs .btnDftAct {
+	border: 1px solid #015581;
+	background: none #035a87;
+}
+
+/* default grey action button */
+.btnAltAct, .buttonThemeC, .buttonLink {
+	margin-top: 3px;
+}
+
+.btnAltAct span, .noJs .btnAltAct, .buttonThemeC span, .noJs .buttonThemeC
+	{
+	background-position: left -150px;
+	color: #212121;
+	padding-right: 0;
+}
+
+.btnAltAct span span, .buttonThemeC span span {
+	right: -19px;
+	width: 19px;
+	background-position: right -150px;
+}
+
+.noJs .btnAltAct, .noJs .buttonThemeC {
+	border: 1px solid #ddd;
+	background: none #f2f2f2;
+}
+
+/* buttonImage */
+/* add to cart blue button (this is the default theme) */
+.btnCartAct span, .noJs .btnCartAct, .buttonImage span, .noJs .buttonImage
+	{
+	margin-right: 45px;
+	color: #fff;
+}
+
+.btnCartAct span span, .buttonImage span span {
+	right: -45px;
+	width: 45px;
+	background-position: right -50px;
+}
+
+.noJs .btnCartAct, .noJs .buttonImage {
+	border: 1px solid #015581;
+	background: none #035a87;
+}
+
+/* dropdow blue button */
+.btnDrpDwn span, .buttonImageThemeA span {
+	height: 22px;
+	padding-top: 11px;
+}
+
+.btnDrpDwn span span, .buttonImageThemeA span span {
+	height: 33px;
+}
+
+.btnDrpDwn span, .noJs .btnDrpDwn, .buttonImageThemeA span, .noJs .buttonImageThemeA
+	{
+	margin-right: 38px;
+	background-position: left -350px;
+	color: #fff;
+}
+
+.btnDrpDwn span span, .buttonImageThemeA span span {
+	right: -38px;
+	width: 38px;
+	background-position: right -350px;
+}
+
+.noJs .btnDrpDwn, .noJs .buttonImageThemeA {
+	border: 1px solid #015581;
+	background: none #035a87;
+}
+
+/* right pill grey button */
+.btnLnk span, .noJs .btnLnk, .buttonLink span, .noJs .buttonLink,
+	.btnLnkAlt span, .noJs .btnLnkAlt, .buttonLinkThemeB span, .noJs .buttonLinkThemeB,
+	buttonLinkThemeC span, .noJs .buttonLinkThemeC {
+	background-position: left -200px;
+	color: #212121;
+}
+
+.btnLnk span span, .buttonLink span span, .btnLnkAlt span span,
+	.buttonLinkThemeB span span, .buttonLinkThemeC span span {
+	right: -19px;
+	width: 38px;
+	background-position: right -200px;
+}
+
+.noJs .btnLnk, .noJs .buttonLink {
+	border: 1px solid #ddd;
+	background: none #f2f2f2;
+}
+
+/* left pill grey button */
+.buttonLinkThemeA span {
+	background-position: left -250px;
+	padding-left: 38px;
+	padding-right: 0;
+}
+
+.buttonLinkThemeA span span {
+	background-position: right -250px;
+	right: -21px;
+	width: 21px;
+}
+
+/* slim right pill grey button	*/
+.btnLnkAlt span, .noJs .btnLnkAlt, .buttonLinkThemeB span, .noJs .buttonLinkThemeB,
+	.buttonLinkThemeC span, .noJs .buttonLinkThemeC {
+	background-position: left -300px;
+	color: #212121;
+	padding-right: 20px;
+}
+
+.buttonLinkThemeC span, .noJs .buttonLinkThemeC {
+	background-position: left -750px;
+}
+
+.btnLnkAlt span span, .buttonLinkThemeB span span {
+	background-position: right -300px;
+}
+
+.buttonLinkThemeC span span {
+	background-position: right -750px;
+}
+
+.noJs .btnLnkAlt, .noJs .buttonLinkThemeB, .noJs .buttonLinkThemeC {
+	border: 1px solid #ddd;
+	background: none #f2f2f2;
+}
+
+/* primary action blue button (search,login...)*/
+.btnPrimAct span, .noJs .btnPrimAct, .buttonThemeA span, .noJs .buttonThemeA
+	{
+	margin-right: 24px;
+	padding-left: 24px;
+	background-position: 0 -100px;
+	color: #fff;
+}
+
+.btnPrimAct span span, .buttonThemeA span span {
+	margin: 0;
+	padding: 0;
+	right: -24px;
+	width: 24px;
+	background-position: right -100px;
+} /* ### under Chrome, theres a line gap bug */
+.noJs .btnPrimAct, .noJs .buttonThemeA {
+	border: 1px solid #015581;
+	background: none #035a87;
+}
+
+/* add to any of the previous button for deactivate styles */
+.btnDeactive span, .buttonDisabled span {
+	background-image:
+		url('./../img/bg_buttonDeactivSprite.png');
+	cursor: default;
+	color: #D6D6D6;
+}
+
+.noJs .btnDeactive, .noJs .buttonDisabled {
+	background: none #f2f2f2;
+	border: 1px solid #ddd;
+	color: #fff;
+}
+
+.noJs .btnDftAct, .noJs .btnAltAct, .noJs .btnCartAct, .noJs .btnPrimAct,
+	.noJs .button {
+	height: 32px;
+	line-height: 32px;
+	padding: 0 19px;
+	font-size: 12px;
+	margin-right: 5px;
+	margin-top: 3px;
+}
+
+/* buttonFullWidth - makes any button take the maximum size possible */
+.buttonFullWidth {
+	text-align: center;
+	width: 100%;
+	max-width: 400px;
+	margin-right: 0;
+}
+	/* <- anything that goes beyond 400px will either break the button or be hidden by the button */
+.buttonFullWidth span {
+	float: none !important;
+	display: block !important;
+}
+
+/* buttonAside - elements that sit next to a button element */
+.buttonAside {
+	float: left;
+	margin-top: 12px;
+}
+/*  Important note: Themes for buttonAside work differently. They match to their respective buttonThemeX. 
+		Examples:
+		1) buttonAsideThemeB "matches" buttonThemeB 
+		2) buttonAsideThemeD "matches" buttonThemeD	*/
+.buttonAsideThemeB, .buttonAsideThemeD {
+	margin-top: 4px;
+}
+
+/* per-context */
+.cTabs .buttonAside {
+	margin-top: 3px;
+}
+
+/*:: =Grid system  ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+/* colGroup a.k.a refLine (deprecated) */
+.refLine, .colGroup {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	float: left;
+	clear: both;
+}
+
+.col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10,
+	.col11, .col12 {
+	position: relative;
+	float: left;
+	display: inline;
+	margin-right: 13px;
+}
+
+.col1 {
+	width: 66px;
+}
+
+.col2 {
+	width: 145px;
+}
+
+.col3 {
+	width: 224px;
+}
+
+.col4 {
+	width: 303px;
+}
+
+.col5 {
+	width: 382px;
+}
+
+.col6 {
+	width: 461px;
+}
+
+.col7 {
+	width: 540px;
+}
+
+.col8 {
+	width: 619px;
+}
+
+.col9 {
+	width: 698px;
+}
+
+.col10 {
+	width: 777px;
+}
+
+.col11 {
+	width: 856px;
+}
+
+.col12 {
+	width: 935px;
+}
+
+.colThemeA {
+	background-color: #f5f5f5;
+}
+
+.colEmpty {
+	height: 1px;
+	visibility: hidden;
+}
+
+.colLast {
+	margin-right: 0 !important;
+	border-right: 0;
+}
+
+.colGroupThemeA {
+	border-top: solid 1px #e2e2e2;
+}
+
+.colGroupThemeB {
+	border-bottom: solid 1px #e2e2e2;
+	padding-bottom: 21px;
+}
+
+.lbContent .colGroup {
+	width: auto;
+}
+
+/*:: =Structure ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+.wrapper {
+	position: relative;
+	width: 975px;
+	margin: 0 auto;
+}
+
+.wrapHeader {
+	padding-top: 15px;
+	position: relative;
+	z-index: 2;
+}
+
+.wrapMain {
+	margin-bottom: 30px;
+	position: relative;
+	z-index: 1;
+}
+
+.wrapFooter {
+	position: relative;
+}
+
+.subWrap {
+	padding: 0;
+}
+
+.header {
+	position: relative;
+}
+
+.main {
+	position: relative;
+}
+
+.mainExtra1, .mainExtra2 {
+	width: 1px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	background-color: #dcdcdc;
+}
+
+.mainExtra1 {
+	left: 0;
+}
+
+.mainExtra2 {
+	right: 0;
+}
+
+.mainExtra3, .mainExtra4 {
+	width: 100%;
+	line-height: 0;
+	position: absolute;
+	left: 0;
+	background:
+		url('./../img/bg_mainExtra.gif') left
+		top no-repeat transparent;
+}
+
+.mainExtra3 {
+	height: 7px;
+	top: 0;
+}
+
+.mainExtra4 {
+	height: 7px;
+	background-position: left bottom;
+	position: relative;
+	margin-bottom: -7px;
+	margin-top: -7px;
+}
+
+.footer {
+	position: relative;
+	display: block;
+}
+
+.cWrap {
+	padding: 24px 20px 4px;
+	border-bottom: 1px solid #dcdcdc;
+}
+
+.cWrapAlt, .cWrapThemeA {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background-color: #fff;
+	border-bottom: 0;
+}
+
+.cWrapInsert, .cWrapThemeB {
+	padding-bottom: 0;
+	border: 0 none;
+}
+
+.cWrapThemeC {
+	padding: 24px 0 0 0;
+}
+
+.content {
+	background: #f2f2f2;
+}
+
+.lining, .padder {
+	padding: 0 21px;
+	position: relative;
+}
+
+.padderThemeA {
+	padding-left: 0;
+}
+
+.padderThemeB {
+	padding-right: 0;
+}
+
+.padderThemeC {
+	padding: 0 21px !important;
+} /* left/right only */
+.padderThemeD {
+	padding-top: 0 !important;
+}
+
+.padderThemeE {
+	padding-bottom: 0 !important;
+}
+
+.padderThemeF {
+	padding: 21px 0 !important;
+} /* top/bottom only */
+.padderThemeG {
+	padding: 0 !important;
+}
+
+.padderThemeH {
+	padding: 21px;
+}
+
+.padderThemeI {
+	padding: 21px 0 0 0 !important;
+} /* top only */
+.padderThemeJ {
+	padding: 0 0 21px 0 !important;
+} /* bottom only */
+.padderThemeK {
+	padding-left: 10px;
+}
+
+.padderThemeL {
+	padding-right: 10px;
+}
+
+.padderThemeM {
+	padding-top: 10px;
+}
+
+.padderThemeN {
+	padding-bottom: 10px;
+}
+
+.padderThemeO {
+	padding: 0 10px;
+}
+
+.padderThemeP {
+	padding: 10px 0;
+}
+
+.padderThemeQ {
+	padding: 0 21px 21px 9px !important;
+} /* right/bottom only */
+.padderThemeR {
+	padding: 0 0 21px 21px !important;
+} /* left/bottom only */
+.padderThemeS {
+	padding: 21px 21px 0 0 !important;
+} /* right/top only */
+.padderThemeT {
+	padding: 21px 0 0 21px !important;
+} /* left/top only */
+
+/*:: =LightBox ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+/* layout without javascript */
+.noJs a.lightbox {
+	text-decoration: underline;
+}
+
+.noJs div.lightbox {
+	position: relative;
+	clear: both;
+	width: auto;
+	height: auto;
+	margin: 10px;
+	padding: 20px 20px 5px 20px;
+	background: #f2f2f2;
+	border: dotted 1px #d6d6d6;
+}
+
+.noJs div.lightbox p.title {
+	margin: 0 0 8px 0;
+	font-size: 1em;
+	color: #000;
+	font-weight: bold;
+}
+
+/* lightbox itself */
+.lbWrapper {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 19;
+}
+
+#lbOverlay {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 9999;
+} /* ieFix */
+.lbFrame {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	background: transparent;
+	z-index: 21;
+	text-align: left;
+} /* ieFix */
+.lbFrame .lbBordRight {
+	background: transparent
+		url('./../img/bg_boxBordRight.png')
+		right top repeat-y;
+}
+
+.lbFrame .lbBordLeft {
+	padding: 0;
+	background: transparent
+		url('./../img/bg_boxBordLeft.png')
+		left top repeat-y;
+}
+
+.lbBoxLining {
+	padding: 0 14px;
+}
+
+.lbFrame .lbTopRight {
+	position: absolute;
+	left: 0;
+	top: -25px;
+	width: 100%;
+	height: 25px;
+	background: transparent
+		url('./../img/bg_boxRight.png')
+		right top no-repeat;
+}
+
+.lbFrame .lbTopLeft {
+	position: relative;
+	left: 0;
+	top: 0;
+	height: 25px;
+	margin-right: 28px;
+	background: transparent
+		url('./../img/bg_boxLeft.png') left
+		top no-repeat;
+}
+
+.lbFrame .lbBottomRight {
+	position: absolute;
+	left: 0;
+	bottom: -28px;
+	width: 100%;
+	height: 28px;
+	background: transparent
+		url('./../img/bg_boxRight.png')
+		right bottom no-repeat;
+}
+
+.lbFrame .lbBottomLeft {
+	position: relative;
+	left: 0;
+	bottom: 0;
+	height: 28px;
+	margin-right: 28px;
+	background: transparent
+		url('./../img/bg_boxLeft.png') left
+		bottom no-repeat;
+}
+
+.lbFrame .accessAlt, .lbFrame .offScreen {
+	position: absolute !important;
+	left: -9999em !important;
+}
+
+.lbTitle {
+	position: relative;
+	height: 42px;
+	background: #fff
+		url('./../img/bg_lbTitle.gif') left
+		bottom repeat-x;
+}
+
+.lbTitle h1 {
+	margin: 0 0 15px 15px;
+	padding: 0;
+	background: transparent;
+	border: 0 none;
+	font-size: 1.625em;
+	line-height: 1.5em;
+}
+
+.lbTitle h2 {
+	position: relative;
+	top: 2px;
+}
+
+.lbTitle a, .lbClose, .close {
+	display: block;
+	position: absolute;
+	right: 15px;
+	top: -1px;
+	width: 30px;
+	height: 30px;
+	background: transparent
+		url('./../img/bt_lbClose.gif') 0 0
+		no-repeat;
+	text-indent: -999em;
+}
+
+.lbClose, .close {
+	z-index: 1000001;
+	right: 30px;
+}
+
+.lbContent {
+	background-color: #fff;
+	position: relative;
+	z-index: 1000000;
+}
+
+.lbContent .stickyFigure {
+	overflow: visible;
+	z-index: 1000001;
+}
+
+.lbContent .stickyFigureThemeA .itemFigure {
+	margin-top: -18px;
+}
+
+.lbLining, .lightBoxPadder {
+	padding: 21px 0;
+}
+
+.noJs .lightBoxCloseJs {
+	display: none;
+}
+	/* ### normally we don't style class ending with Js but in this case we must put a rule for no Js fallBack */
+
+/*:: =FlyOut ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+.flyOut {
+	position: absolute;
+	top: 26px;
+	width: 252px;
+	right: -11px;
+	z-index: 10;
+	padding: 4px 0 3px;
+	background: transparent;
+	display: none;
+}
+
+.flyOut .lining, .flyOut .padder {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.flyOutTitle, .flyOutFooter {
+	color: #212121;
+	display: block;
+	min-height: 1.33em;
+	padding: 7px 10px 5px;
+	border-top: 1px solid #d6d6d6;
+	border-bottom: 1px solid #d6d6d6;
+	background:
+		url('./../img/bg_flyOutHeaders.gif')
+		repeat-x 0 0;
+}
+
+.flyOutTitle.first, .flyOutFooter.first {
+	border-top: 0;
+	padding-top: 3px;
+}
+
+.flyOutTitle a, .flyOutFooter a {
+	color: #0066A4 !important;
+}
+
+.flyOutContent {
+	background-color: #fff;
+}
+
+.flyOut .loading {
+	min-height: 36px;
+} /* ieFix */
+.flyOut .cLoader {
+	position: absolute;
+	left: 43%;
+	top: 20%;
+}
+
+.flyOutArrow {
+	display: none;
+}
+
+.flyOut .hType4, .flyOut .headingType4 {
+	margin-bottom: 0;
+}
+
+.flyOut ul {
+	margin: 0;
+	border: 1px solid #fff;
+	border-bottom: 0;
+	background: #fff;
+	position: relative;
+	z-index: 2;
+}
+
+.flyOut ul li {
+	position: relative;
+	background: #f2f2f2;
+	margin: 0;
+	padding: 0;
+	border-bottom: 1px solid #fff;
+}
+
+.flyOut ul li a, .flyOut ul li label {
+	display: inline-block;
+}
+
+.flyOut ul li a, .topNav .flyOut ul li a, .topNavigation .flyOut ul li a,
+	.flyOut ul li label, .flyOutSelector ul li label {
+	display: block;
+	padding: 4px 9px 3px;
+}
+
+.flyOut ul li a:hover, .topNav .flyOut ul li a:hover, .topNavigation .flyOut ul li a:hover
+	{
+	background-color: #e5e3e3;
+}
+
+.flyOut ul li.active, .flyOut ul li.active a, .flyOut ul li.active a:hover
+	{
+	background: #dae8f1;
+}
+
+.flyOut ul li.last {
+	border-bottom: 0;
+}
+
+.flyOut ul li input {
+	position: absolute;
+	left: -999em;
+}
+
+.flyOut ul li label {
+	text-align: left;
+	font-size: 12px;
+}
+
+.flyOutBordRight, .flyOutBordLeft {
+	background:
+		url('./../img/bg_flyOutSideExtra.png')
+		repeat-y transparent;
+}
+
+.flyOutBordRight {
+	background-position: left top;
+	padding-left: 11px;
+}
+
+.flyOutBordLeft {
+	background-position: right top;
+	padding: 0;
+	padding-right: 11px;
+}
+
+.flyOutTopRight, .flyOutBottomRight {
+	position: absolute;
+	left: 0;
+	height: 15px;
+	width: 100%;
+	background:
+		url('./../img/bg_flyOutBoxRight.png')
+		no-repeat transparent;
+}
+
+.flyOutTopRight {
+	top: -11px;
+	background-position: right top;
+}
+
+.flyOutBottomRight {
+	bottom: -12px;
+	background-position: right bottom;
+}
+
+.flyOutTopLeft, .flyOutBottomLeft {
+	position: relative;
+	left: 0;
+	height: 15px;
+	margin-right: 31px;
+	background:
+		url('./../img/bg_flyOutBoxLeft.png')
+		no-repeat transparent;
+}
+
+.flyOutTopLeft {
+	top: 0;
+	background-position: left top;
+}
+
+.flyOutBottomLeft {
+	bottom: 0;
+	background-position: left bottom;
+}
+
+/*	FlyOut Selector (add a custom radio button to each items) */
+.flyOutSelector ul li label, .flyOutSelector ul li label.hover, .topNav .flyOutSelector ul li a,
+	.topNav .flyOutSelector ul li a:hover, .topNavigation .flyOutSelector ul li a,
+	.topNavigation .flyOutSelector ul li a:hover {
+	color: #212121;
+	padding-left: 28px;
+	color: #212121;
+	text-decoration: none;
+	background:
+		url('./../img/bl_selector.gif') 9px
+		-29px no-repeat transparent;
+}
+
+.flyOutSelector ul li.active label, .topNav .flyOutSelector ul li.active a,
+	.topNav .flyOutSelector ul li.active a:hover, .topNavigation .flyOutSelector ul li.active a,
+	.topNavigation .flyOutSelector ul li.active a:hover {
+	color: #212121;
+	background:
+		url('./../img/bl_selector.gif') 9px 4px
+		no-repeat #dae8f1;
+}
+
+.flyOutSelector ul li label.hover, .topNav .flyOutSelector ul li a:hover,
+	.topNavigation .flyOutSelector ul li a:hover {
+	background-color: #e5e3e3;
+}
+
+/* flyOutThemeA */
+.flyOutThemeA ul {
+	border-top: 0;
+}
+
+.flyOutThemeA .flyOutTitle {
+	display: none;
+}
+
+.flyOutThemeA .flyOutFooter a {
+	font-size: 1em;
+}
+
+.flyOutThemeA .flyOutFooter {
+	border-top: 1px solid #d6d6d6;
+	border-bottom: 0;
+	padding-bottom: 1px;
+}
+
+.flyOutThemeA .flyOutTopRight, .flyOutThemeA .flyOutBottomRight {
+	background-image:
+		url('./../img/bg_flyOutBoxThemeARight.png');
+}
+
+.flyOutThemeA .flyOutTopLeft, .flyOutThemeA .flyOutBottomLeft {
+	background-image:
+		url('./../img/bg_flyOutBoxThemeALeft.png');
+}
+
+/* flyOutThemeB & flyOutThemeC - with arrow support */
+.flyOutThemeB {
+	left: 50%;
+	margin-left: -135px;
+	top: 45px;
+	width: 270px;
+}
+
+.flyOutThemeB .flyOutTitle {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.flyOutThemeB .flyOutFooter {
+	padding: 10px;
+	border: 0;
+	padding-bottom: 3px;
+}
+
+.flyOutThemeB .padder, .flyOutThemeC .padder {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.flyOutThemeB .flyOutBordRight, .flyOutThemeB .flyOutBordLeft {
+	background-image:
+		url('./../img/bg_flyOutThemeBSideExtra.png');
+}
+
+.flyOutThemeB .flyOutBordRight, .flyOutThemeC .flyOutBordRight {
+	padding-left: 14px;
+	margin-left: -2px;
+}
+
+.flyOutThemeB .flyOutBordLeft, .flyOutThemeC .flyOutBordLeft {
+	padding-right: 14px;
+	margin-right: -2px;
+}
+
+.flyOutThemeB .flyOutTopRight, .flyOutThemeB .flyOutBottomRight {
+	background-image:
+		url('./../img/bg_flyOutBoxThemeBRight.png');
+}
+
+.flyOutThemeB .flyOutTopLeft, .flyOutThemeB .flyOutBottomLeft {
+	background-image:
+		url('./../img/bg_flyOutBoxThemeBLeft.png');
+}
+
+.flyOutThemeB .flyOutBottomLeft, .flyOutThemeB .flyOutBottomRight,
+	.flyOutThemeC .flyOutBottomLeft, .flyOutThemeC .flyOutBottomRight {
+	height: 20px;
+	bottom: auto;
+}
+
+.flyOutThemeB .flyOutTopRight, .flyOutThemeB .flyOutTopLeft,
+	.flyOutThemeC .flyOutTopRight, .flyOutThemeC .flyOutTopLeft {
+	height: 14px;
+}
+
+.flyOutThemeB .flyOutTopRight, .flyOutThemeC .flyOutTopRight {
+	top: -10px;
+}
+
+.flyOutThemeB .flyOutArrow, .flyOutThemeC .flyOutArrow {
+	display: block;
+	bottom: -27px;
+}
+
+.flyOutThemeB .flyOutArrow {
+	background-image:
+		url('./../img/bg_flyOutBoxThemeBArrow.png');
+}
+
+.flyOutThemeB .flyOutArrow, .flyOutThemeB .arrowUp, .flyOutThemeB .flyOutArrowThemeA,
+	.flyOutThemeC .flyOutArrow, .flyOutThemeC .arrowUp, .flyOutThemeC .flyOutArrowThemeA
+	{
+	left: 50%;
+	margin-left: -23px;
+}
+
+.flyOutThemeB .arrowLeft, .flyOutThemeB .flyOutArrowThemeB,
+	.flyOutThemeB .arrowRight, .flyOutThemeB .flyOutArrowThemeC,
+	.flyOutThemeC .arrowLeft, .flyOutThemeC .flyOutArrowThemeB,
+	.flyOutThemeC .arrowRight, .flyOutThemeC .flyOutArrowThemeC {
+	left: auto;
+	top: 50%;
+	margin-left: 0;
+	margin-top: -23px;
+}
+
+.flyOutThemeB .arrowUp, .flyOutThemeB .flyOutArrowThemeA, .flyOutThemeC .arrowUp,
+	.flyOutThemeC .flyOutArrowThemeA {
+	top: -25px;
+}
+
+.flyOutThemeB .arrowLeft, .flyOutThemeB .flyOutArrowThemeB,
+	.flyOutThemeC .arrowLeft, .flyOutThemeC .flyOutArrowThemeB {
+	left: -12px;
+}
+
+.flyOutThemeB .arrowRight, .flyOutThemeB .flyOutArrowThemeC,
+	.flyOutThemeC .arrowRight, .flyOutThemeC .flyOutArrowThemeC {
+	right: -11px;
+}
+
+/* flyOutThemeC */
+.flyOutThemeC {
+	margin-right: -100px;
+	top: 32px;
+	right: 13px;
+	width: 200px;
+}
+
+.flyOutThemeC .flyOutBordRight, .flyOutThemeC .flyOutBordLeft {
+	background-image:
+		url('./../img/bg_flyOutThemeCSideExtra.png');
+}
+
+.flyOutThemeC .flyOutTopRight, .flyOutThemeC .flyOutBottomRight {
+	background-image:
+		url('./../img/bg_flyOutBoxThemeCRight.png');
+}
+
+.flyOutThemeC .flyOutTopLeft, .flyOutThemeC .flyOutBottomLeft {
+	background-image:
+		url('./../img/bg_flyOutBoxThemeCLeft.png');
+}
+
+.flyOutThemeC .flyOutArrow {
+	background-image:
+		url('./../img/bg_flyOutBoxThemeCArrow.png');
+}
+
+.flyOutThemeC .flyOutContent {
+	background-color: #f2f2f2;
+}
+
+/* topNavigation flyOut alias corrections */
+.topNavigation .flyOut ul {
+	margin-left: 0;
+}
+
+.cssgradients .topNavigation .flyOut ul li {
+	background: #f2f2f2;
+	padding-top: 0;
+	padding-bottom: 0;
+	border: 0;
+	border-bottom: 1px solid #fff;
+}
+
+.borderradius .topNavigation .flyOut ul li.last {
+	padding-right: 0;
+	border-bottom: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	-ms-border-radius: 0;
+	border-radius: 0;
+}
+
+.noJs .flyOut {
+	display: block;
+}
+
+.noJs .flyOutThemeB .buttonFullWidth {
+	width: auto;
+}
+
+/*:: =Caroussel ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+.carousel {
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	height: 1px;
+}
+
+.carouselMedia {
+	text-align: center;
+	z-index: 99;
+	top: 0;
+	left: 0;
+}
+
+.carouselMedia img {
+	float: left;
+	text-align: center;
+}
+
+.carouselMedia .first, .carouselMedia .first img {
+	padding: 0;
+}
+
+.carouselNav {
+	width: 100%;
+	position: absolute;
+	z-index: 998;
+	bottom: 0;
+	left: 0;
+}
+
+.carouselNav a {
+	display: inline-block;
+	margin-top: 6px;
+	margin-right: 2px;
+	margin-left: 2px;
+	width: 13px;
+	height: 13px;
+	background: transparent
+		url('./../img/bl_carousel.png')
+		no-repeat scroll 0px 0px;
+}
+
+.carouselNav a span {
+	position: absolute;
+	left: -999em;
+}
+
+.carouselNav a.active {
+	background-position: 0px -70px;
+}
+
+.noJs .carousel {
+	height: 299px;
+}
+
+.noJs .carouselMedia .first, .noJs .carouselMedia .first img {
+	display: block;
+}
+
+.noJs .carouselMedia img, .noJs .carouselMedia a {
+	display: none;
+}
+
+.noJs .carouselNav {
+	display: none;
+}
+
+.noJs .detailPanel .carouselMedia {
+	position: static;
+}
+
+/*:: =TopNav (deprecated) - use topNavigation (see below) ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+.topNav {
+	color: #666;
+	float: right;
+	margin-bottom: 14px;
+	position: relative;
+	z-index: 10;
+}
+
+.topNav ul {
+	padding: 0;
+	margin: 0;
+	float: right;
+}
+
+.topNav li {
+	float: left;
+	padding: 5px 15px 3px 15px;
+	margin: 0;
+	background: none transparent;
+	border-right: 1px solid #d6d6d6;
+	background: transparent
+		url('./../img/bg_buttonSprite.png')
+		no-repeat 0 -500px;
+	height: 1.416em;
+}
+
+.topNav li .itemExtra {
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: block;
+	width: 5px;
+	height: 25px;
+	background:
+		url('./../img/bg_buttonSprite.png') 0
+		-400px no-repeat #fff;
+}
+
+.topNav li a:visited {
+	color: #0066a4;
+}
+
+.topNav label {
+	font-size: 12px;
+}
+
+/* Cart */
+#topNavCartItem {
+	background-position: 0 -400px;
+}
+
+#topNavCartItem a {
+	padding-left: 26px;
+}
+
+#topNavCartItem a span {
+	display: block;
+	float: left;
+	overflow: hidden;
+	width: 21px;
+	height: 16px;
+	margin: 0 5px 0 0;
+	background:
+		url('./../img/bg_iconSprite.gif') 0 0
+		no-repeat transparent;
+	text-indent: -999em;
+	position: absolute;
+	top: 5px;
+	left: 15px;
+}
+
+/* Province selector */
+#topNavSelectProvinceItem {
+	background-position: right -400px;
+	padding-right: 0;
+	border-right: 0 none;
+}
+
+/* Search engine */
+#topNavSearchItem, .scSearch {
+	border-right: 0 none;
+	position: relative;
+	top: -1px;
+	right: 0;
+	padding: 0;
+	margin: 0 0 0 10px;
+	display: inline-block;
+	background: none;
+}
+
+#topNavSearchItem .labelOverAct, .scSearch .labelOverAct {
+	position: absolute;
+	top: 6px;
+	left: 8px;
+	cursor: text;
+}
+
+#topNavSearchItem .frmElmnt, #topNavSearchItem .formGroup {
+	margin: 0;
+}
+
+#topNavSearchItem label, .scSearch label {
+	font-size: 12px;
+	line-height: 16px;
+	color: #555;
+}
+
+#topNavSearchItem input, .scSearch input {
+	float: left;
+	width: 11.25em;
+	height: 23px;
+	padding: 2px 0 0 5px;
+	margin: 1px 0 0 0;
+	background:
+		url('./../img/bg_topNavSearchInput.gif')
+		left top no-repeat transparent;
+	border: 0 none;
+	font-size: 1em;
+}
+
+#topNavSearchItem button, .scSearch button {
+	float: left;
+	display: block;
+	width: 28px;
+	height: 26px;
+	background:
+		url('./../img/bg_topNavSearchInput.gif')
+		right top no-repeat transparent;
+	text-indent: -1000em;
+	border: 0 none;
+	position: relative;
+	margin: 1px 0 0 0;
+}
+
+.scSearch input {
+	background-position: left bottom;
+}
+
+.scSearch button {
+	background-position: right bottom;
+	top: -1px;
+}
+
+/* User's name */
+#topNavUserItem {
+	background-position: left -400px;
+	margin-left: 10px;
+	padding-right: 8px;
+}
+
+#topNavUserItem a {
+	padding-right: 21px;
+	display: inline-block;
+	background:
+		url('./../img/bg_iconSprite.gif')
+		no-repeat right -720px transparent;
+}
+
+/* Log out link item */
+#topNavLogOutItem {
+	background-position: right -400px;
+	border-right: 0;
+}
+
+/* Log in link item */
+#topNavLogInItem {
+	background-position: right -400px;
+	border-right: 0;
+	margin-left: 10px;
+}
+
+#topNavLogInItem a {
+	margin: 0;
+	padding: 0;
+}
+
+/* Dropdown menu items */
+.topNav .flyOut ul, .topNavigation .flyOut ul {
+	float: none;
+}
+
+.topNav .flyOut ul li, .topNavigation .flyOut ul li {
+	float: none;
+	background: #f2f2f2;
+	height: auto;
+	padding: 0;
+	border-right: 0;
+}
+
+#topNavSelectProvinceItem .flyOutTrig {
+	background:
+		url('./../img/bg_iconSprite.gif')
+		no-repeat right -34px transparent;
+	display: inline-block;
+	position: relative;
+	padding-right: 30px;
+	text-decoration: none;
+	margin-left: 3px;
+}
+
+/* no javascript enabled specific styles */
+.noJs #topNavLanguageItem {
+	background-position: right -400px;
+	border: 0 none;
+}
+
+.noJs #topNavSelectProvinceItem {
+	background: none transparent;
+}
+
+.noJs #topNavSelectProvinceItem div {
+	margin-top: -1px;
+}
+
+.noJs #topNavSelectProvinceItem .flyOutGroup {
+	display: none;
+}
+
+.noJs #topNavSearchItem .labelOver {
+	float: left;
+	margin: 6px 5px 0 0;
+}
+
+.topNavigation {
+	display: block;
+	float: right;
+	margin-bottom: 15px;
+}
+
+.topNavigation a:visited {
+	color: #0066a4;
+}
+
+.topNavigation ul {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+/* default */
+.topNavigation ul li {
+	float: left;
+	margin: 0;
+	padding: 5px 15px 3px 15px;
+	height: 1.416em;
+	border-right: 1px solid #d6d6d6;
+	background: transparent
+		url('./../img/bg_buttonSprite.png')
+		no-repeat 0 -500px;
+	z-index: 1;
+}
+
+.topNavigation ul li.first {
+	padding-left: 17px;
+	background-position: left -400px;
+}
+
+.topNavigation ul li.last {
+	padding-right: 17px;
+	border-right: 0;
+	background-position: right -400px;
+}
+
+.topNavigation ul, .topNavigation .searchBar {
+	margin-left: 10px;
+}
+
+/* button type */
+.topNavigation .option {
+	padding-left: 16px;
+	border-right: 0;
+	background-position: 0 -400px;
+}
+
+.topNavigation ul li.option:last-child {
+	padding-right: 15px;
+	background-position: 0 -400px;
+}
+
+.topNavigation .option span {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 26px;
+	width: 15px;
+	background: #fff
+		url('./../img/bg_buttonSprite.png')
+		no-repeat right -750px;
+}
+
+/* search bar type */
+.searchBar {
+	position: relative;
+	float: left;
+	padding: 0;
+	height: 26px;
+	width: 170px;
+	border-right: 0;
+	background: transparent
+		url('./../img/bg_topNavSearchInput.gif')
+		no-repeat scroll left top;
+}
+
+.searchBar label {
+	cursor: text;
+	position: absolute;
+	top: 6px;
+	left: 11px;
+	font-size: 1em;
+	color: #555;
+}
+
+.searchBar input {
+	padding: 7px 0 0 11px;
+	width: 130px;
+	font-size: 1em;
+	border: 0 none;
+	background: transparent;
+}
+
+.searchBar button {
+	position: absolute;
+	right: 0;
+	height: 26px;
+	width: 28px;
+	text-indent: -1000em;
+	border: 0 none;
+	top: 0;
+	background: transparent
+		url('./../img/bg_topNavSearchInput.gif')
+		no-repeat scroll right top;
+}
+
+.searchBar .flyOutGroup {
+	display: none;
+}
+
+/* searchBarThemeA + searchBarThemeC - searchBar (with filters) */
+.searchBarThemeA, .searchBarThemeC {
+	width: 310px;
+	z-index: 10;
+}
+
+.searchBarThemeA form, .searchBarThemeC form {
+	overflow: hidden;
+}
+
+.searchBarThemeA input, .searchBarThemeC input {
+	float: left;
+}
+
+.searchBarThemeA button {
+	position: relative;
+	height: 25px;
+	background-position: right -40px;
+}
+	/* -> margin-right is set in relation with the flyOutGroup's width - see line below */
+.searchBarThemeA .flyOutGroup, .searchBarThemeC .flyOutGroup,
+	.searchBarThemeD .flyOutGroup, .searchBarThemeE .flyOutGroup,
+	.searchBarThemeF .flyOutGroup {
+	display: block;
+	float: right;
+	height: 25px;
+	text-align: right;
+	width: auto;
+	background:
+		url('./../img/bg_topNavSearchInput.gif')
+		no-repeat scroll right -83px transparent;
+}
+
+.searchBarThemeA .flyOutGroup .flyOutTrig, .searchBarThemeC .flyOutGroup .flyOutTrig,
+	.searchBarThemeD .flyOutGroup .flyOutTrig, .searchBarThemeE .flyOutGroup .flyOutTrig,
+	.searchBarThemeF .flyOutGroup .flyOutTrig {
+	position: relative;
+	top: -1px;
+	background:
+		url('./../img/bg_iconSprite.gif')
+		no-repeat scroll right -35px transparent;
+	font-size: 11px;
+	padding-left: 7px;
+	padding-right: 34px;
+}
+
+.searchBarThemeA .flyOutGroup .flyOut, .searchBarThemeC .flyOutGroup .flyOut,
+	.searchBarThemeD .flyOutGroup .flyOut, .searchBarThemeE .flyOutGroup .flyOut,
+	.searchBarThemeF .flyOutGroup .flyOut {
+	text-align: left;
+	width: 200px;
+} /* <- width here could be set by JS */
+.searchBarThemeA .flyOutGroup .flyOut ul, .searchBarThemeC .flyOutGroup .flyOut ul,
+	.searchBarThemeD .flyOutGroup .flyOut ul, .searchBarThemeE .flyOutGroup .flyOut ul,
+	.searchBarThemeF .flyOutGroup .flyOut ul {
+	margin-left: 0;
+}
+
+.searchBarThemeA .flyOutGroup .flyOut ul li, .searchBarThemeC .flyOutGroup .flyOut ul li,
+	.searchBarThemeD .flyOutGroup .flyOut ul li, .searchBarThemeE .flyOutGroup .flyOut ul li,
+	.searchBarThemeF .flyOutGroup .flyOut ul li {
+	height: 1.916em;
+}
+
+.searchBarThemeA .flyOutGroup .flyOut ul li.last, .searchBarThemeC .flyOutGroup .flyOut ul li.last,
+	.searchBarThemeD .flyOutGroup .flyOut ul li.last, .searchBarThemeE .flyOutGroup .flyOut ul li.last,
+	.searchBarThemeF .flyOutGroup .flyOut ul li.last {
+	padding-right: 0;
+}
+
+.searchBarThemeA .flyOutGroup .flyOut ul li a, .searchBarThemeC .flyOutGroup .flyOut ul li a,
+	.searchBarThemeD .flyOutGroup .flyOut ul li a, .searchBarThemeE .flyOutGroup .flyOut ul li a,
+	.searchBarThemeF .flyOutGroup .flyOut ul li a {
+	color: #212121;
+}
+	/* <- need to redeclare font color for some reason for IE6 (no impact on other browser) */
+.searchBarThemeA .flyOutGroup .flyOut ul li label, .searchBarThemeC .flyOutGroup .flyOut ul li label,
+	.searchBarThemeD .flyOutGroup .flyOut ul li label, .searchBarThemeE .flyOutGroup .flyOut ul li label,
+	.searchBarThemeF .flyOutGroup .flyOut ul li label {
+	top: 0;
+	left: 0;
+	position: relative;
+	line-height: 16px;
+}
+
+/* searchBarThemeB */
+.searchBarThemeB {
+	background-position: left -168px;
+	width: 293px;
+	height: 37px;
+}
+
+.searchBarThemeB label, .searchBarThemeB input {
+	font-size: 1.33em;
+}
+
+.searchBarThemeB label {
+	top: 12px;
+}
+
+.searchBarThemeB input {
+	padding-top: 10px;
+	width: 272px;
+}
+
+.searchBarThemeB button {
+	background-position: right -168px;
+	width: 92px;
+	height: 41px;
+	right: -99px;
+	top: -3px;
+}
+
+/* searchBarThemeC */
+.searchBarThemeC {
+	width: 240px;
+	margin-right: 40px;
+}
+
+.searchBarThemeC input {
+	width: 100px;
+}
+
+.searchBarThemeC button {
+	width: 31px;
+	right: -40px;
+	background:
+		url('./../img/bg_topNavSearchInput.gif')
+		no-repeat left -227px transparent;
+}
+
+.searchBarThemeC button:hover {
+	cursor: pointer;
+}
+
+.searchBarThemeC .flyOutGroup .flyOutTrig {
+	top: 3px;
+	background-position: right -31px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 11px;
+	border-left: 1px solid #d6d6d6;
+	display: block;
+}
+
+/* searchBarThemeD/searchBarThemeE/searchBarThemeF */
+.searchBarThemeD, .searchBarThemeE, .searchBarThemeF {
+	height: auto;
+	background: none;
+}
+
+.searchBarThemeD .labelOver, .searchBarThemeE .labelOver,
+	.searchBarThemeF .labelOver {
+	z-index: 1;
+}
+
+.searchBarThemeD button, .searchBarThemeE button, .searchBarThemeF button
+	{
+	background:
+		url('./../img/bg_topNavSearchInput.gif')
+		no-repeat right -168px transparent;
+	height: 41px;
+	width: 92px;
+	right: -105px;
+}
+
+/* searchBarThemeE/searchBarThemeF (centered) */
+.searchBarThemeE, .searchBarThemeF {
+	float: none;
+	margin: 0 auto;
+	left: -50px;
+}
+	/* width value is hardcoded depending on its input width; see master.css */
+.searchBarThemeE label, .searchBarThemeF label {
+	font-size: 1.33em;
+	top: 14px;
+	left: -165px;
+	width: 160px;
+	color: #212121;
+	text-align: right;
+}
+
+.searchBarThemeE .labelOver, .searchBarThemeF .labelOver {
+	width: auto;
+}
+
+.searchBarThemeE .buttonAside, .searchBarThemeF .buttonAside {
+	position: absolute;
+	right: -205px;
+}
+
+/* per-element */
+/* styling DL list; move to a new component/theme if necessary (IE specific css fixes exist - please check respective files) */
+.searchBar dl {
+	padding-top: 15px;
+	margin-bottom: 0;
+	overflow: hidden;
+	clear: both;
+}
+
+.searchBar dd {
+	float: left;
+	margin-left: 10px;
+}
+
+.searchBar dd, .searchBar dt.headingType4 {
+	margin-bottom: 0;
+}
+
+/* per-context */
+/* move to new theme if needed - will need to transfer ThemeA from BCE.core/BCE ie6/BCE ie7 to prime for consistency */
+.shellThemeA .searchBar {
+	background-position: left -125px;
+}
+
+.shellThemeA .searchBar button {
+	background-position: right -125px;
+}
+
+/*:: =Primary Navigation ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+.primNav {
+	position: relative;
+	width: 100%;
+	height: 85px;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+
+.primNavExtra {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 5px;
+	height: 85px;
+	background:
+		url('./../img/bg_primNavBox.png') right
+		top no-repeat transparent;
+}
+
+.primNav ul {
+	margin: 0;
+	float: left;
+}
+
+.primNav ul li {
+	margin: 0 0 20px;
+	padding-left: 0;
+	background: none transparent;
+	float: left;
+}
+
+.primNav ul li a, .primNav ul li a:hover {
+	display: block;
+	float: left;
+}
+
+.primNav ul li a:visited {
+	color: #0066a4;
+}
+
+/* Button dimensions and background */
+#primNavHomeButton, #primNavShopButton, #primNavSupportButton,
+	#primNavMyBellButton {
+	height: 85px;
+	text-indent: -999em;
+}
+
+#primNavHomeButton {
+	width: 116px;
+	background:
+		url('./../img/bt_primNavHome.gif') 0 0
+		no-repeat transparent;
+}
+
+#primNavShopButton {
+	width: 133px;
+}
+
+#primNavSupportButton {
+	width: 133px;
+}
+
+.en #primNavShopButton {
+	background: url('./../img/bt_primNavShop.gif') 0 0
+		no-repeat transparent;
+}
+
+.en #primNavSupportButton {
+	background: url('./../img/bt_primNavSupport.gif') 0 0
+		no-repeat transparent;
+}
+
+.fr #primNavShopButton {
+	background: url('./../img/bt_primNavShop.gif') 0 0
+		no-repeat transparent;
+}
+
+.fr #primNavSupportButton {
+	background: url('./../img/bt_primNavSupport.gif') 0 0
+		no-repeat transparent;
+}
+
+/* List width and background */
+#primNavShopList {
+	/*width: 748px;*/
+	position: absolute;
+	background: url('./../img/bg_primNav.gif')
+		0 0 repeat-x transparent;
+}
+
+#primNavSupportList {
+	width: 751px;
+	position: absolute;
+	background: url('./../img/bg_primNav.gif')
+		0 0 repeat-x transparent;
+}
+
+#primNavShopList ul, #primNavSupportList ul {
+	width: 860px;
+	overflow: hidden;
+}
+
+/* List initial position */
+#primNavShopList {
+	left: 116px;
+}
+
+#primNavSupportList {
+	left: 970px;
+}
+
+.supportSection #primNavSupportList {
+	left: 222px;
+}
+
+.primNav li li {
+	position: relative;
+	float: left;
+	margin-left: 4px;
+	padding-top: 10px;
+}
+
+.primNav li li a {
+	background-position: left top;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	width: 109px;
+	height: 19px; /* 62px - padding*/
+	padding-top: 43px;
+	text-indent: 0;
+	text-align: center;
+}
+
+#primNavShopMobile {
+	background-image:
+		url('./../img/bt_primNavShopMobile.gif');
+}
+
+#primNavShopInternet {
+	background-image:
+		url('./../img/bt_primNavShopInternet.gif');
+}
+
+#primNavShopTv {
+	background-image:
+		url('./../img/bt_primNavShopTv.gif');
+}
+
+#primNavShopPhone {
+	background-image:
+		url('./../img/bt_primNavShopPhone.gif');
+}
+
+#primNavShopBundles {
+	background-image:
+		url('./../img/bt_primNavShopBundles.gif');
+}
+
+#primNavShopAliant {
+	width: 150px;
+	background-image:
+		url('./../img/bt_primNavShopAliant.gif');
+}
+
+#primNavSupportMobile {
+	width: 100px;
+	background-image:
+		url('./../img/bt_primNavSupportMobile.gif');
+}
+
+#primNavSupportInternet {
+	width: 100px;
+	background-image:
+		url('./../img/bt_primNavSupportInternet.gif');
+}
+
+#primNavSupportTv {
+	width: 100px;
+	background-image:
+		url('./../img/bt_primNavSupportTv.gif');
+}
+
+#primNavSupportPhone {
+	width: 100px;
+	background-image:
+		url('./../img/bt_primNavSupportPhone.gif');
+}
+
+#primNavSupportCustomer {
+	width: 150px;
+	background-image:
+		url('./../img/bt_primNavSupportCustomer.gif');
+}
+
+.primNav li li a:hover {
+	background-position: 0 -62px;
+}
+
+.primNav li.active a, .primNav li.active a:hover, .primNav li.active a:visited
+	{
+	background-position: 0 -62px;
+	color: #222;
+}
+
+/* Alt navigation used in checkout process */
+.altNav {
+	margin-top: 10px;
+}
+
+.altNav #primNavHomeButton {
+	width: 114px;
+}
+
+#primNavBack {
+	background: #ffffff
+		url('./../img/bg_primNavAlt.gif') top
+		left repeat-x;
+	width: 849px;
+	height: 85px;
+	padding-top: 21px;
+	padding-right: 10px;
+}
+
+#primNavBack a.buttonize, #primNavBack a.button {
+	float: right;
+}
+
+/*:: =Secondary Navigation ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+.secNav {
+	z-index: 1;
+	background: url('./../img/bg_secNav.gif')
+		left bottom repeat-x #fff;
+	padding-bottom: 1px;
+}
+
+.secNav ul {
+	position: absolute;
+	left: 1px;
+	top: 0;
+	z-index: 2;
+	float: left;
+	position: relative;
+	width: 100%;
+	margin: 0;
+}
+
+.secNav li {
+	float: left;
+	position: relative;
+	padding: 0;
+	margin: 0;
+	background: none transparent;
+}
+
+.secNav li a {
+	text-decoration: none;
+	line-height: 15px;
+	float: left;
+	position: relative;
+	text-align: center;
+	padding: 15px 15px 11px 15px;
+	display: block;
+}
+
+.secNav li a:hover {
+	text-decoration: none;
+}
+
+.secNav li a:visited {
+	color: #0066a4;
+}
+
+.secNav li a span {
+	display: block;
+	float: left;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 10px;
+	height: 100%;
+	background:
+		url('./../img/bt_secNavItem.gif') right
+		top no-repeat transparent;
+}
+
+.secNav li.active {
+	position: relative;
+	margin-left: -1px;
+}
+
+.secNav li.active a {
+	padding: 22px 15px 12px 16px;
+	position: relative;
+	left: 0;
+	top: 1px;
+	margin-top: -8px;
+	color: #212121;
+	background:
+		url('./../img/bt_secNavItemActive.gif')
+		left top no-repeat transparent;
+}
+
+.secNav li.active a span {
+	background:
+		url('./../img/bt_secNavItemActive.gif')
+		right top no-repeat transparent;
+}
+
+.secNav li a span.breaker {
+	position: relative;
+	margin-top: -15px;
+	left: 0;
+	top: 7px;
+	width: auto;
+	height: auto;
+	display: block;
+	background: none transparent;
+	cursor: pointer;
+}
+
+/*:: =Footer ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+.superFooter .shell {
+	padding: 30px 19px 18px;
+}
+
+.superFooter .hType4, .superFooter .headingType4 {
+	margin-bottom: 10px;
+}
+
+.superFooter .fTxt, .superFooter .formText {
+	margin-bottom: 10px;
+}
+
+.superFooter .fTxt input, .superFooter .formText input {
+	width: 12em;
+	background-color: #fff;
+}
+
+.footer .lining, .footer .padder {
+	padding: 0;
+}
+
+.footer .pipeSpacer {
+	display: block;
+}
+
+.footer .pipeSpacer li {
+	white-space: nowrap;
+}
+
+.footer .unaccent {
+	color: #999;
+}
+
+/* per-context */
+.footer .multiColumn {
+	float: left;
+	margin-bottom: 1em;
+} /* ### evaluate if not too generic (3:45 PM 6/27/2012) */
+.footer .socialMedia {
+	float: right;
+}
+
+.footer .socialMedia li {
+	float: left;
+	background: none;
+	padding-left: 0;
+	padding-right: 0;
+	margin-left: 4px;
+	margin-right: 0;
+}
+
+.footer .socialMedia .first {
+	margin: 10px 6px 0 0;
+}
+
+/*:: =multiColumn ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+.multiColumn {
+	overflow: hidden;
+}
+
+.multiColumn .column {
+	float: left;
+	margin-right: 12px;
+	min-height: 1px;
+} /* min-height use for splitterJs */
+.multiColumn .aside {
+	margin: 26px 0 0 -25px;
+	padding-left: 25px;
+	font-size: 0.9em;
+	border-left: solid 1px #d0d0d0;
+}
+
+.multiColumn .aside .dataListThemeA li .sectionHeader {
+	font-weight: bold;
+}
+
+.multiColumn .aside ul, .multiColumn .aside ul li {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.multiColumn .aside .dataList li .sectionContent {
+	padding-left: 0;
+}
+
+.multiColumn .aside .dataList li .sectionHeader {
+	float: none;
+	width: auto;
+}
+
+.multiColumnThemeA .column {
+	margin-right: 0;
+}
+
+.multiColumnThemeB .column {
+	margin-right: 50px;
+}
+
+.multiColumnThemeC {
+	overflow: visible;
+}
+
+.multiColumnThemeC .column {
+	border-right: 1px solid #d6d6d6;
+	padding-right: 19px;
+	margin-right: 19px;
+	margin-bottom: 21px;
+}
+
+.shell .multiColumnThemeC .first {
+	width: 285px;
+}
+
+.multiColumn .last {
+	margin-right: 0;
+}
+
+.multiColumnThemeC .last {
+	border-right: 0;
+	padding-right: 0;
+}
+
+.shellThemeF .column {
+	margin-bottom: 0;
+}
+
+/*:: =HomePage (contexter) ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+.hmPge {
+	min-height: 600px;
+	position: relative;
+	padding: 0;
+	z-index: 0;
+	min-height: 578px;
+	overflow: hidden;
+}
+
+.hmPge .pgFeature {
+	z-index: 2;
+	background: none #fff;
+	margin: 0;
+	border: 0 none;
+	top: 0;
+	left: 1px;
+	position: absolute;
+	height: 578px;
+	width: 973px;
+}
+
+.hmPge .pgFeature .carouselNav {
+	bottom: 18.5em;
+}
+
+.hmPge .shrtcts {
+	z-index: 5;
+	position: absolute;
+	bottom: 2.6em;
+	left: 20px;
+	overflow: visible;
+}
+
+.hmPge .shrtcts .lining, .hmPge .shrtcts .padder {
+	height: 12.5em;
+	overflow: hidden;
+}
+
+.hmPge .shrtcts img {
+	float: right;
+	margin: 0;
+}
+
+.personalShrtct, .enterpriseShrtct {
+	display: block;
+	background: transparent
+		url('./../img/bg_hmPgShrtct.png')
+		repeat-y 0 0;
+	position: relative;
+	padding: 10px 0;
+}
+
+.shrtctExtra1, .shrtctExtra2 {
+	position: absolute;
+	left: 0;
+	width: 461px;
+	background: transparent
+		url('./../img/bg_hmPgShrtctExtra.png')
+		no-repeat left top;
+}
+
+.shrtctExtra1 {
+	height: 9px;
+	top: -9px;
+}
+
+.shrtctExtra2 {
+	height: 10px;
+	background-position: left bottom;
+	bottom: -10px;
+}
+
+.hmPge .shrtcts h2 {
+	text-indent: -999em;
+	width: 187px;
+	height: 31px;
+	display: block;
+	margin: 0 0 8px;
+}
+
+.hmPge .shrtcts p {
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+
+.en .hmPge .personalShrtct h2 {
+	background: url('./../img/t_hmPgePersonal.gif') 0 0
+		no-repeat transparent;
+}
+
+.en .hmPge .enterpriseShrtct h2 {
+	background: url('./../img/t_hmPgeEnterprise.gif') 0 0
+		no-repeat transparent;
+}
+
+.fr .hmPge .personalShrtct h2 {
+	background: url('./../img/t_hmPgePersonal.gif') 0 0
+		no-repeat transparent;
+}
+
+.fr .hmPge .enterpriseShrtct h2 {
+	background: url('./../img/t_hmPgeEnterprise.gif') 0 0
+		no-repeat transparent;
+}
+
+.regionSelector .multiColumn .optGroup, .regionSelector .multiColumn .optionGroup
+	{
+	width: 215px;
+	filter: grayscale(1)
+}
+
+.noJs .pgFeature {
+	position: static;
+}
+
+.optGroup {
+	float: left;
+	filter: grayscale(1)
+}
+
+.smscheckboxstyle {
+	position: relative;
+	top: -24px;
+	left: 455px;
+}
+
+.checkboxlabel {
+	position: relative;
+	top: 1px;
+}
+
+/* Opacity IE 8- */
+#lbOverlay {
+	filter: alpha(opacity = 60);
+}
+
+.dim {
+	filter: alpha(opacity = 20);
+}
+
+.ajaxLoaderOverlay {
+	filter: alpha(opacity = 0);
+}
+
+.progressGradient.dim {
+	filter: alpha(opacity = 0);
+}
+
+/*:: =Show/hide element ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+/* Keep at the end of this file */
+.hide {
+	display: none;
+}
+
+.forceHide {
+	display: none !important;
+}
+
+.show {
+	display: block;
+}
+
+.forceShow {
+	display: block !important;
+}
+
+.forMobile {
+	display: none;
+}
+
+/* IMPORTANT NOTICE! */
+/* Please do not put additionnal styles/overwrites in the core files (bell_prime.css and bell_master.css)
+   For new styles/overwrites or styles not related with the bell UIKit core files, use bell_custom.css */
+.cmpAttributeDetails .fLabel {
+	text-align: left;
+	margin-left: 10px;
+}
